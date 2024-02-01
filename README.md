@@ -1,0 +1,2 @@
+# MindSync
+Education website
