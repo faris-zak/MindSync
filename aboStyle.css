@@ -1,0 +1,200 @@
+section div.introCard{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0 5px;
+    position: relative;
+}
+
+section div.introCard p.introTitle{
+    color: black;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+section div.introCard p.introAbout{
+    color: #868686;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section div.welcomeCard{
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    background: #f5f5f5;
+    position: relative;
+    padding: auto;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid #c3c6ce;
+    overflow: visible;
+    animation: 5s linear 0s infinite running welcomeCard;
+}
+
+section div.welcomeCard div.welcomeDetails{
+    text-align: center;
+}
+
+section div.welcomeCard p.welcomeTitle{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+section div.welcomeCard p.welcomeBody{
+    color: #868686;
+}
+
+section div.welcomeCard:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.22);
+}
+
+section div.welcomeCard:hover div.welcomeDetails p.welcomeTitle{
+    color: #FCA311;
+}
+
+section div.welcomeCard div.welcomeDetails p.welcomeBody a:hover{
+    text-decoration: underline;
+}
+
+section div.card{
+    display: inline-block;
+    width: 240px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border: 2px solid #c3c6ce;
+    margin: 5% 3%;
+    overflow: visible;
+}
+
+section div.card div.cardDetails{
+    gap: 0.5em;
+    display: grid; 
+    place-content: center;
+}
+
+section div.card div.cardDetails p.textTitle{
+    font-size: 1.4em;
+    font-weight: bold;
+    color: black;
+}
+
+section div.card div.cardDetails p.textBody{
+    color: #868686;
+}
+
+section div.card:hover{
+    transform: scale(1.02);
+}
+
+section div.card:hover div.cardDetails p.textTitle{
+    color: #14213D;
+}
+
+section div.card div.cardDetails p.textBody a:hover{
+    text-decoration: underline;
+}
+
+section div.card div.cardDetails ul.featuresList{
+    padding-right: 20px;
+}
+
+section div.card div.cardDetails ul.featuresList li.feature{
+    color: #868686;
+    margin-bottom: 10px;
+}
+
+section div.card div.cardDetails a.homepageLink{
+    color: #868686;
+    font-size: 17px;
+    padding-bottom: 16px;
+    text-decoration: none;
+    animation: 5s linear 0s infinite running homepageLink;
+}
+
+section div.card div.cardDetails a.homepageLink:hover{
+    transform: scale(1.03);
+}
+
+@keyframes welcomeCard{
+    0%{border: 3px solid #14213D;}
+    50%{border-color: #c3c6ce;}
+    100%{border: 3px solid #14213D;}
+}
+
+@keyframes homepageLink{
+    0%{color: #868686;}
+    50%{color: #FCA311;}
+    100%{color: #868686;}
+}
+
+@keyframes card1{
+    0%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+    15%{border-color: #c3c6ce; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.10);}
+    100%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+}
+@keyframes card2{
+    0%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+    30%{border-color: #c3c6ce; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.10);}
+    100%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+}
+@keyframes card3{
+    0%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+    45%{border-color: #c3c6ce; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.10);}
+    100%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+}
+@keyframes card4{
+    0%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+    60%{border-color: #c3c6ce; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.10);}
+    100%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+}
+@keyframes card5{
+    0%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+    75%{border-color: #c3c6ce; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.10);}
+    100%{border: 3px solid #FCA311; box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.20);}
+}
+
+@media screen and (max-width: 600px){
+
+    section div.introCard p.introTitle{
+        font-size: 2.1em;
+    }
+
+    section div.introCard p.introAbout{
+        margin-top: 10px;
+        font-size: 1em;
+    }
+
+    section div.welcomeCard{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    section div.welcomeCard p.welcomeTitle{
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+
+    section div.card{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0;
+    }
+
+    section div.card div.cardDetails p.textTitle{
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+}
