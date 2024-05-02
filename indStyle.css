@@ -166,7 +166,7 @@ section div.welcomeSection div.welcomeDetails p.welcomeBody{
     margin-bottom: 30px;
 }
 
-section div.welcomeSection div.welcomeDetails a.aboutSiteLink{
+section div.welcomeSection div.welcomeDetails a.followUp{
     font-size: 18px;
     color: #14213D;
     font-weight: 600;
@@ -176,20 +176,73 @@ section div.welcomeSection div.welcomeDetails a.aboutSiteLink{
     border: 3px solid #14213D;
 }
 
-section div.welcomeSection div.welcomeDetails a.aboutSiteLink:hover{
+section div.welcomeSection div.welcomeDetails a.followUp:hover{
     color: #FCA311;
     background-color: #14213D;
     border: none;
 }
 
-section div.welcomeSection div.welcomeDetails a.aboutSiteLink:active{
-    color: #FCA311;
-    background-color: #3c4355;
+section div.benefitSection{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    position: relative;
 }
 
-section div.welcomeSection div.welcomeDetails a.aboutSiteLink:hover span{
-    margin-right: 5px;
-    font-size: 23px;
+section div.benefitSection div.benefitSectionDetails{
+    padding: 0px 20px;
+}
+
+section div.benefitSection div.benefitSectionDetails p.benefitSectionBody{
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+section div.benefitSection div.benefitSectionDetails p.benefitSectionBody span{
+    padding: 2px;
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+section div.benefitSection div.benefitSectionDetails p.benefitSectionBody span span{
+    background-color: #FCA311;
+}
+
+section div.blank{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #14213D;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin: 0;
+}
+
+section div.blank p{
+    direction: ltr;
+    font-size: 30px;
+    letter-spacing: 20px;
+}
+
+section div.blank p span.lastWord{
+    color: #14213D;
+    background-color: #FCA311;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+section div.blank p span.lastWord span.lastLetter{
+    letter-spacing: 0px;
+}
+
+section div.blank p span.firstWord{
+    direction: ltr;
+    color: #FCA311;
 }
 
 section div.selfDevelopmentSection, section div.academicEducationSection, section div.servicesToolsSection{
@@ -200,7 +253,6 @@ section div.selfDevelopmentSection, section div.academicEducationSection, sectio
     border-radius: 0px;
     background-color: #f5f5f5;
     position: relative;
-    margin-bottom: 40px;
     overflow: visible;
 }
 
@@ -231,6 +283,116 @@ section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle a:hov
 section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle:hover, section div.academicEducationSection div.subSectionDetails p.subSectionTitle:hover, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle:hover{
     transform: scale(1.04);
 }
+
+section div.purposeSection{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+section div.purposeSection div.purposeSectionDetails{
+    padding: 0px 20px;
+}
+
+section div.purposeSection div.purposeSectionDetails p.purposeSectionBody{
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+section div.moreSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCA311;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0;
+}
+
+section div.moreSection div.moreSectionDetails{
+    padding: 30px 30px 40px;
+}
+
+section div.moreSection div.moreSectionDetails p.moreSectionTitle{
+    font-size: 26px;
+    color: black;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+section div.moreSection div.moreSectionDetails hr{
+    height: 1.5px;
+    background-color: #14213D;
+    border: none;
+    margin: 0;
+}
+
+section div.moreSection div.moreSectionDetails p.moreSectionBody{
+    font-size: 20px;
+    color: #14213D;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+section div.moreSection div.moreSectionDetails a.aboutSiteLink{
+    font-size: 18px;
+    color: #14213D;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 3px solid #14213D;
+}
+
+section div.moreSection div.moreSectionDetails a.aboutSiteLink:hover{
+    color: #FCA311;
+    background-color: #14213D;
+    border: none;
+}
+
+section div.moreSection div.moreSectionDetails a.aboutSiteLink:active span{
+    margin-right: 5px;
+}
+
+section div.opinionSection{
+    direction: rtl;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+section div.opinionSection div.opinionSectionDetails{
+    padding: 0px 20px;
+}
+
+section div.opinionSection div.opinionSectionDetails p.opinionSectionQuote{
+    font-size: 22px;
+    color: #14213D;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+section div.opinionSection div.opinionSectionDetails p.opinionSectionQuote span.quoteSymbol{
+    font-size: 22px;
+    color: #FCA311;
+    font-weight: 600;
+}
+
+section div.opinionSection div.opinionSectionDetails p.opinionSectionAuthor{
+    font-size: 18px;
+    color: #868686;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
 
 @media screen and (max-width: 600px){
 
