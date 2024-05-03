@@ -6,20 +6,19 @@ section{
     width: 100%;
 }
 
-section div.welcomeSection{
+section div.aboutSection{
     background-color: #f5f5f5;
-    width: 100%;
     height: auto;
     margin-bottom: 50px;
     position: relative;
     overflow: visible;
 }
 
-section div.welcomeSection div.welcomeDetails{
+section div.aboutSection div.aboutSectionDetails{
     padding: 20px;
 }
 
-section div.welcomeSection div.welcomeDetails p.welcomeTitle{
+section div.aboutSection div.aboutSectionDetails p.aboutSectionTitle{
     font-size: 26px;
     color: black;
     font-weight: 600;
@@ -27,14 +26,14 @@ section div.welcomeSection div.welcomeDetails p.welcomeTitle{
     margin-bottom: 20px;
 }
 
-section div.welcomeSection div.welcomeDetails hr{
+section div.aboutSection div.aboutSectionDetails hr{
     height: 1.5px;
     background-color: #FCA311;
     border: none;
     margin: 0;
 }
 
-section div.welcomeSection div.welcomeDetails p.welcomeBody{
+section div.aboutSection div.aboutSectionDetails p.aboutSectionBody{
     font-size: 20px;
     color: #14213D;
     font-weight: 500;
@@ -227,7 +226,6 @@ section div.supporterSection div.supporterSectionDetails a div.cityOfTechnicalEx
 }
 
 section div.founderSection{
-    background-color: #f5f5f5;
     direction: rtl;
     width: 100%;
     height: auto;
@@ -257,32 +255,21 @@ section div.founderSection div.founderSectionDetails p.founderSectionBody a:hove
 
 @media screen and (max-width: 600px){
 
-    section div.introCard p.introTitle{
+    section div.aboutSection p.aboutSectionTitle{
         font-size: 2.1em;
     }
 
-    section div.introCard p.introAbout{
+    section div.aboutSection p.aboutSectionBody{
         margin-top: 10px;
         font-size: 1em;
     }
 
-    section div.welcomeCard{
+    section div.aboutSection{
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    section div.welcomeCard p.welcomeTitle{
-        margin-bottom: 0;
-        margin-top: 20px;
-    }
-
-    section div.card{
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 0;
-    }
-
-    section div.card div.cardDetails p.textTitle{
+    section div.aboutSection p.aboutSectionTitle{
         margin-bottom: 0;
         margin-top: 20px;
     }
