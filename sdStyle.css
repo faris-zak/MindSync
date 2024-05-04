@@ -34,65 +34,141 @@ section div.introSection div.introSectionDetails hr{
     margin: 0;
 }
 
-section div.introSection ul.introSectionTypeList li a.saTypes:hover{
-    color: #FCA311;
+section div.accessMethodSection{
+    width: 100%;
+    height: auto;
+    position: relative;
 }
 
-section div.goalSection{
+section div.accessMethodSection div.accessMethodSectionDetails{
+    padding: 0px 20px;
+}
+
+section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSectionTitle{
+    font-size: 24px;
+    color: #14213D;
+    font-weight: 600;
+}
+
+section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSectionBody{
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+section div.sectionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+ 
+section div.sectionContainer input#searchbar{
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    /* background-color: #E5E5E5; */
+}
+
+section div.sectionContainer input#searchbar:focus{
+    border: 3px solid #FCA311;
+    padding: 8px;
+    font-size: 16px;
+}
+
+section div.sectionContainer button.clearField{
+    font-size: 16px;
+    cursor: pointer;
+    color: #14213D;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+section div.sectionContainer button.clearField:hover{
+    padding: 6px 12px;
+    border: 2px solid #14213D;
+}
+
+section div.sectionContainer button.clearField:active{
+    color: #FCA311;
+    background-color: #14213D;
+    border: none;
+}
+
+section div.sectionContainer button.clearField i{
+    padding-bottom: 0px;
+}
+ 
+section div.sectionContainer ul#list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+section div.sectionContainer ul#list li.sections{
+    font-size: 1.2em;
+    padding: 0px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+ 
+section div.sectionContainer ul#list li.sections:last-child{
+    border-bottom: none;
+}
+
+section div.sectionContainer ul#list 
+li.sections div.educationalArticlesSection,
+li.sections div.explanatoryVideosSection,
+li.sections div.websitesSection,
+li.sections div.dailyTipsSection,
+li.sections div.successStoriesSection,
+li.sections div.appliedExercises{
     width: 100%;
     height: auto;
     margin-bottom: 50px;
     position: relative;
 }
 
-section div.goalSection div.goalSectionDetails{
+section div.sectionContainer ul#list
+li.sections div.educationalArticlesSection div.educationalArticlesSectionDetails,
+li.sections div.explanatoryVideosSection div.explanatoryVideosSectionDetails,
+li.sections div.websitesSection div.websitesSectionDetails,
+li.sections div.dailyTipsSection div.dailyTipsSectionDetails,
+li.sections div.successStoriesSection div.successStoriesSectionDetails,
+li.sections div.appliedExercises div.appliedExercisesDetails{
     padding: 0px 20px;
 }
 
-section div.goalSection div.goalSectionDetails p.goalSectionTitle{
-    font-size: 24px;
-    color: #14213D;
-    font-weight: 600;
-}
-
-section div.goalSection div.goalSectionDetails p.goalSectionBody{
-    font-size: 18px;
+section div.sectionContainer ul#list
+li.sections div.educationalArticlesSection div.educationalArticlesSectionDetails p.educationalArticlesSectionTitle,
+li.sections div.explanatoryVideosSection div.explanatoryVideosSectionDetails p.explanatoryVideosSectionTitle,
+li.sections div.websitesSection div.websitesSectionDetails p.websitesSectionTitle,
+li.sections div.dailyTipsSection div.dailyTipsSectionDetails p.dailyTipsSectionTitle,
+li.sections div.successStoriesSection div.successStoriesSectionDetails p.successStoriesSectionTitle,
+li.sections div.appliedExercises div.appliedExercisesDetails p.appliedExercisesTitle{
+    font-size: 26px;
     color: black;
-    font-weight: 500;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
- 
-#searchbar{
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    width: 50%;
-    box-sizing: border-box;
-}
- 
-#list{
+section div.sectionContainer ul#list
+li.sections div.educationalArticlesSection div.educationalArticlesSectionDetails ul.educationalArticlesmidContentSectionBody,
+li.sections div.explanatoryVideosSection div.explanatoryVideosSectionDetails ul.explanatoryVideosSectionmidContentBody,
+li.sections div.websitesSection div.websitesSectionDetails ul.websitesSectionmidContentBody,
+li.sections div.dailyTipsSection div.dailyTipsSectionDetails ul.dailyTipsSectionmidContentBody,
+li.sections div.successStoriesSection div.successStoriesSectionDetails ul.successStoriesSectionmidContentBody,
+li.sections div.appliedExercises div.appliedExercisesDetails ul.appliedExercisesmidContentBody{
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
 }
- 
-.sections{
-    font-size: 1.2em;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    animation: fadeIn 0.5s ease-in-out;
-}
- 
-.sections:last-child{
-    border-bottom: none;
-}
- 
+
 @keyframes fadeIn{
     from{
         opacity: 0;
@@ -105,130 +181,6 @@ section div.goalSection div.goalSectionDetails p.goalSectionBody{
     }
 }
 
-section div.subPage{
-    display: block;
-    width: 240px;
-    height: auto;
-    align-items: center;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    margin: 0% 3%;
-    margin-bottom: 40px;
-    margin: auto;
-    border: 2px solid #c3c6ce;
-    overflow: visible;
-}
-
-section div.subPage div.subPageDetails{
-    gap: 0.5em;
-    display: grid; 
-    place-content: center;
-}
-
-section div.subPage div.subPageDetails p.subPageTitle a{
-    font-size: 1.4em;
-    font-weight: bold;
-    color: black;
-}
-
-section div.subPage:hover{
-    transform: scale(1.02);
-    border-color: #FCA311;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.22);
-}
-
-section div.subPage:hover div.subPageDetails p.subPageTitle a{
-    color: #14213D;
-}
-
-section div.subPage div.subPageDetails p.subPageTitle a:hover{
-    color: #FCA311;
-}
-
-section div.subPage div.subPageDetails p.subPageTitle:hover{
-    transform: scale(1.04);
-}
-
-section div.subTypes{
-    margin: 0 auto;
-    display: block;
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 5%;
-    border: 2px solid #c3c6ce;
-    transition: all 0.3s ease 0s;
-}
-
-section div.subTypes:hover{
-    transform: scale(1.02);
-    border-color: #FCA311;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.22);
-}
-
-section div.subTypes:hover div.subTypesDetails p.subTypesTitle{
-    color: #14213D;
-}
-
-section div.subTypes div.subTypesDetails p.subTypesTitle{
-    font-weight: 600;
-    font-size: 1.5em;
-    color: black;
-}
-
-section div.subTypes div.subTypesDetails p.midContentTitle{
-    font-weight: 600;
-    font-size: 1.25em;
-    color: black;
-    margin-bottom: 10px;
-}
-
-section div.subTypes div.subTypesDetails ul.midContentBody{
-    margin-top: 0;
-    padding: 0;
-}
-
-section div.subTypes div.subTypesDetails ul.midContentBody li{
-    display: block;
-    margin: 10px 0;
-}
-
-section div.subTypes div.subTypesDetails ul.midContentBody li a{
-    font-size: 1.2em;
-}
-
-section div.subTypes div.subTypesDetails ul.midContentBody li:hover{
-    transform: scale(1.03);
-}
-
-@media screen and (max-width: 800px){
-    section div.introSection ul.introSectionTypeList{
-        display: none;
-    }
-
-    section div.downList div.downListContent input#myInput{
-        box-sizing: border-box;
-        background-position: 14px 12px;
-        background-repeat: no-repeat;
-        font-size: 16px;
-        padding: 8px;
-        border: none;
-        border-bottom: 1px solid #ddd;
-    }
-
-    section div.downList{
-        display: block;
-    }
-}
 
 @media screen and (max-width: 600px){
 
@@ -241,12 +193,8 @@ section div.subTypes div.subTypesDetails ul.midContentBody li:hover{
         font-size: 1em;
     }
 
-    section div.subTypes{
-        width: 90%;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 15%;
+    section div.sectionContainer input#searchbar{
+        width: 80%;
     }
 
     section div.subTypes div.subTypesDetails p.subTypesTitle{

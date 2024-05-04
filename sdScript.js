@@ -1,4 +1,4 @@
-function search_animal(){
+function search_section(){
   let input = document.getElementById('searchbar').value
   input = input.toLowerCase();
   let x = document.getElementsByClassName('sections');
@@ -11,3 +11,28 @@ function search_animal(){
     x[i].style.display = "list-item";
     }
 }};
+
+
+function clearField(){
+  document.getElementById('searchbar').value = "";
+}
+
+
+const searchbar = document.getElementById('searchbar');
+const clearButton = document.getElementById('clearButton');
+
+function updateButtonVisibility() {
+  if (searchbar.value === ""){
+    clearButton.style.opacity = 0;
+    clearButton.style.marginBottom = "0px";
+    searchbar.style.marginBottom = "0px";
+  } else{
+    clearButton.style.opacity = 1;
+    clearButton.style.marginBottom = "50px";
+    searchbar.style.marginBottom = "10px";
+  }
+}
+
+updateButtonVisibility();
+
+searchbar.addEventListener('input', updateButtonVisibility);

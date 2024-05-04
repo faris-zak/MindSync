@@ -37,135 +37,111 @@
                     <div class="introSectionDetails">
                         <p class="introSectionTitle" title="Self Development">التطوير الذاتي</p><hr>
                         <p class="introSectionAbout">هنا، يقدم لك الموقع مجموعة من الموارد والأدوات التي تساعدك على بناء نفسك وتحسين أدائك في مختلف جوانب حياتك الشخصية والمهنية.</p>
-                        <ul class="introSectionTypeList">
-                            <li><a class="saTypes" href="#educationalArticles" title="Educational Articles">مقالات تعليمية</a></li>
-                            <li><a class="saTypes" href="#explanatoryVideos" title="Explanatory Videos">فيديوهات توضيحية</a></li>
-                            <li><a class="saTypes" href="#eBooks" title="E-Books">كتب إلكترونية</a></li>
-                            <li><a class="saTypes" href="#websites" title="Websites">مواقع إلكترونية</a></li>
-                            <li><a class="saTypes" href="#dailyTips" title="Daily Tips">نصائح يومية</a></li>
-                            <li><a class="saTypes" href="#successStories" title="Success Stories">قصص نجاح</a></li>
-                            <li><a class="saTypes" href="#appliedExercises" title="Applied Exercises">تمارين تطبيقية</a></li>
-                        </ul>
                     </div>
                 </div>
 
-                <div class="goalSection">
-                    <div class="goalSectionDetails">
-                      <p class="goalSectionTitle">ما هدف الموقع؟</p>
-                      <p class="goalSectionBody">تقديم بيئة تعليمية ملهمة وداعمة تشجع على النمو الشخصي والتحسن المستمر.</p>
+                <div class="accessMethodSection">
+                    <div class="accessMethodSectionDetails">
+                      <p class="accessMethodSectionTitle">هل الجميع يستوعب المعلومة بطريقة موحده؟</p>
+                      <p class="accessMethodSectionBody">بالطبع لا، لذلك يمكنك أن تبحث عن طريقتك الخاصة لإستيعاب المعلومة سواء كانت بالمقالات تعليمية، بالفيديوهات التوضيحية، بالمواقع الإلكترونية، أو بالنصائح اليومية.</p>
                     </div>
                 </div>
 
-                <div class="container">
-                    <input id="searchbar"
-                           onkeyup="search_animal()"
-                           type="text" name="search"
-                           placeholder="ابحث، مثال: مقالات تعليمية..">
-             
+                <div class="sectionContainer">
+                    <input id="searchbar" onkeyup="search_section();" type="text" name="search" placeholder="إبحث - مثال: مقالات تعليمية...">
+                    <button class="clearField" id="clearButton" type="button" onclick="clearField();" title="Search Again">مرة أخرى <i class="fi fi-rr-rotate-right"></i></button>
                     <ul id='list'>
                         <li class="sections">
-                            <div class="subTypes" id="educationalArticles">
-                                <div class="subTypesDetails">
-                                    <p class="subTypesTitle" title="Educational Articles">مقالات تعليمية</p>
-                                    <p class="subTypesBody">معلومات تهدف إلى تحسين المعرفة.</p>
-                                    <ul class="midContentBody">
-                                        <li><a href="https://www.thebalancemoney.com/what-are-soft-skills-2060852" target="_blank" title="What Are Soft Skills?" style="animation: 5s linear 0s infinite running typList1;"><i class="fi fi-sr-document"></i> - ما هي المهارات الناعمة؟</a></li>
-                                        <li><a href="https://www.aljamila.com/node/159316/%D8%B9%D9%85%D9%84-%D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1/5-%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D9%85%D9%87%D9%85%D8%A9-%D9%84%D8%AA%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A7%D9%84%D8%AB%D9%82%D8%A9-%D8%A8%D8%A7%D9%84%D9%86%D9%81%D8%B3-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D9%85%D9%84" target="_blank" title="5 important tips to boost self-confidence at work" style="animation: 5s linear 0s infinite running typList2;"><i class="fi fi-sr-document"></i> - نصائح مهمة لتعزيز الثقة بالنفس في العمل</a></li>
-                                        <li><a href="https://www.for9a.com/learn/%D9%83%D9%8A%D9%81-%D8%AA%D8%AD%D9%82%D9%82-%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B2%D9%86-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D9%88%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9-%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9" target="_blank" title="How do you achieve balance between work and personal life?" style="animation: 5s linear 0s infinite running typList3;"><i class="fi fi-sr-document"></i> - كيف تحقق التوازن بين العمل والحياة الشخصية؟</a></li>
+                            <div class="educationalArticlesSection" id="educationalArticles">
+                                <div class="educationalArticlesSectionDetails">
+                                    <p class="educationalArticlesSectionTitle" title="Educational Articles">مقالات تعليمية</p>
+                                    <p class="educationalArticlesSectionBody">معلومات تهدف إلى تحسين المعرفة.</p>
+                                    <ul class="educationalArticlesmidContentSectionBody">
+                                        <li><a href="https://www.thebalancemoney.com/what-are-soft-skills-2060852" target="_blank" title="What Are Soft Skills?"><i class="fi fi-sr-document"></i> - ما هي المهارات الناعمة؟</a></li>
+                                        <li><a href="https://www.aljamila.com/node/159316/%D8%B9%D9%85%D9%84-%D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1/5-%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D9%85%D9%87%D9%85%D8%A9-%D9%84%D8%AA%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A7%D9%84%D8%AB%D9%82%D8%A9-%D8%A8%D8%A7%D9%84%D9%86%D9%81%D8%B3-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D9%85%D9%84" target="_blank" title="5 important tips to boost self-confidence at work"><i class="fi fi-sr-document"></i> - نصائح مهمة لتعزيز الثقة بالنفس في العمل</a></li>
+                                        <li><a href="https://www.for9a.com/learn/%D9%83%D9%8A%D9%81-%D8%AA%D8%AD%D9%82%D9%82-%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B2%D9%86-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D9%88%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9-%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9" target="_blank" title="How do you achieve balance between work and personal life?"><i class="fi fi-sr-document"></i> - كيف تحقق التوازن بين العمل والحياة الشخصية؟</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
 
                         <li class="sections">
-                            <div class="subTypes" id="explanatoryVideos">
-                                <div class="subTypesDetails">
-                                    <p class="subTypesTitle" title="Orientation Videos">فيديوهات توضيحية</p>
-                                    <p class="subTypesBody">محتوى يساهم في تعزيز وتعميق المعرفة.</p>
-                                    <ul class="midContentBody">
-                                        <li><a href="https://youtu.be/bKI_S98BckM" target="_blank" title="How do you set yourself SMART goals?" style="animation: 5s linear 0s infinite running typList4;"><i class="fi fi-brands-youtube"></i> - كيف تضع لنفسك أهداف ذكية؟</a></li>
-                                        <li><a href="https://youtu.be/KdRP7VncPac" target="_blank" title="The most important rules for achievement and productivity!" style="animation: 5s linear 0s infinite running typList5;"><i class="fi fi-brands-youtube"></i> - أهم القواعد للانجاز والانتاجية!</a></li>
-                                        <li><a href="https://youtu.be/VpQn48MV1Js" target="_blank" title="How to be creative in time management?" style="animation: 5s linear 0s infinite running typList6;"><i class="fi fi-brands-youtube"></i> - كيف تكون مبدع في ادارة الوقت؟</a></li>
+                            <div class="explanatoryVideosSection" id="explanatoryVideos">
+                                <div class="explanatoryVideosSectionDetails">
+                                    <p class="explanatoryVideosSectionTitle" title="Orientation Videos">فيديوهات توضيحية</p>
+                                    <p class="explanatoryVideosSectionBody">محتوى يساهم في تعزيز وتعميق المعرفة.</p>
+                                    <ul class="explanatoryVideosSectionmidContentBody">
+                                        <li><a href="https://youtu.be/bKI_S98BckM" target="_blank" title="How do you set yourself SMART goals?"><i class="fi fi-brands-youtube"></i> - كيف تضع لنفسك أهداف ذكية؟</a></li>
+                                        <li><a href="https://youtu.be/KdRP7VncPac" target="_blank" title="The most important rules for achievement and productivity!"><i class="fi fi-brands-youtube"></i> - أهم القواعد للانجاز والانتاجية!</a></li>
+                                        <li><a href="https://youtu.be/VpQn48MV1Js" target="_blank" title="How to be creative in time management?"><i class="fi fi-brands-youtube"></i> - كيف تكون مبدع في ادارة الوقت؟</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
 
                         <li class="sections">
-                            <div class="subTypes" id="websites">
-                                <div class="subTypesDetails">
-                                    <p class="subTypesTitle" title="Websites">مواقع إلكترونية</p>
-                                    <p class="subTypesBody">توسيع المعرفة للمدى البعيد.</p>
-                                    <ul class="midContentBody">
-                                        <li><a href="https://www.coursera.org/" target="_blank" title="Online courses in the areas of self and professional development" style="animation: 5s linear 0s infinite running typList7;"><i class="fi fi-ss-site-browser"></i> - دورات عبر الإنترنت في مجالات التطوير الذاتي والمهني</a></li>
-                                        <li><a href="https://learn.microsoft.com/ar-sa/" target="_blank" title="Build your skills with Microsoft" style="animation: 5s linear 0s infinite running typList8;"><i class="fi fi-ss-site-browser"></i> - قم ببناء مهاراتك مع مايكروسوفت</a></li>
-                                        <li><a href="https://www.lifehack.org/" target="_blank" title="Articles and tips on how to improve personal performance" style="animation: 5s linear 0s infinite running typList9;"><i class="fi fi-ss-site-browser"></i> - مقالات ونصائح حول كيفية تحسين الأداء الشخصي</a></li>
+                            <div class="websitesSection" id="websites">
+                                <div class="websitesSectionDetails">
+                                    <p class="websitesSectionTitle" title="Websites">مواقع إلكترونية</p>
+                                    <p class="websitesSectionBody">توسيع المعرفة للمدى البعيد.</p>
+                                    <ul class="websitesSectionmidContentBody">
+                                        <li><a href="https://www.coursera.org/" target="_blank" title="Online courses in the areas of self and professional development"><i class="fi fi-ss-site-browser"></i> - دورات عبر الإنترنت في مجالات التطوير الذاتي والمهني</a></li>
+                                        <li><a href="https://learn.microsoft.com/ar-sa/" target="_blank" title="Build your skills with Microsoft"><i class="fi fi-ss-site-browser"></i> - قم ببناء مهاراتك مع مايكروسوفت</a></li>
+                                        <li><a href="https://www.lifehack.org/" target="_blank" title="Articles and tips on how to improve personal performance"><i class="fi fi-ss-site-browser"></i> - مقالات ونصائح حول كيفية تحسين الأداء الشخصي</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
 
                         <li class="sections">
-                            <div class="subTypes" id="dailyTips">
-                                <div class="subTypesDetails">
-                                    <p class="subTypesTitle" title="Daily Tips">نصائح يومية</p>
-                                    <p class="subTypesBody">جزء أساسي من عملية التطوير الشخصي، حيث تساعد الأفراد على النمو والتحسين المستمر في حياتهم اليومية.</p>
-                                    <ul class="midContentBody">
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Promote awareness">تعزيز الوعي:</strong> تساعد النصائح اليومية في زيادة الوعي بأهمية العادات والسلوكيات الصحيحة لتحقيق النجاح والرفاهية.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Work direction">توجيه العمل:</strong> تقدم النصائح اليومية توجيهًا واضحًا حول الخطوات التي يمكن للأفراد اتخاذها لتحقيق أهدافهم وتحسين حياتهم.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Motivating self-work">تحفيز العمل الذاتي:</strong>  تعزز النصائح اليومية الدافعية الشخصية وتشجع الأفراد على اتخاذ الخطوات اللازمة لتحقيق أهدافهم.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-lightbulb-on"></i> - <strong title="improve the performance">تحسين الأداء:</strong> تساعد النصائح اليومية في تحسين الأداء الشخصي والمهني من خلال تقديم الإرشاد والتوجيه في المجالات المختلفة.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Promote positivity">تعزيز الإيجابية:</strong> تعمل النصائح اليومية على تعزيز التفكير الإيجابي والتحفيز، مما يساعد في تحسين مزاج الأفراد ونوعية حياتهم.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Promote continuity">تعزيز الاستمرارية:</strong> بتقديم النصائح بشكل يومي، يمكن للأفراد تحقيق التحسين المستمر والاستمرار في رحلتهم نحو التطوير الشخصي.</p></li>
+                            <div class="dailyTipsSection" id="dailyTips">
+                                <div class="dailyTipsSectionDetails">
+                                    <p class="dailyTipsSectionTitle" title="Daily Tips">نصائح يومية</p>
+                                    <p class="dailyTipsSectionBody">جزء أساسي من عملية التطوير الشخصي، حيث تساعد الأفراد على النمو والتحسين المستمر في حياتهم اليومية.</p>
+                                    <ul class="dailyTipsSectionmidContentBody">
+                                        <li><p><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Promote awareness">تعزيز الوعي:</strong> تساعد النصائح اليومية في زيادة الوعي بأهمية العادات والسلوكيات الصحيحة لتحقيق النجاح والرفاهية.</p></li>
+                                        <li><p><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Work direction">توجيه العمل:</strong> تقدم النصائح اليومية توجيهًا واضحًا حول الخطوات التي يمكن للأفراد اتخاذها لتحقيق أهدافهم وتحسين حياتهم.</p></li>
+                                        <li><p><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Motivating self-work">تحفيز العمل الذاتي:</strong>  تعزز النصائح اليومية الدافعية الشخصية وتشجع الأفراد على اتخاذ الخطوات اللازمة لتحقيق أهدافهم.</p></li>
+                                        <li><p><i class="fi fi-sr-lightbulb-on"></i> - <strong title="improve the performance">تحسين الأداء:</strong> تساعد النصائح اليومية في تحسين الأداء الشخصي والمهني من خلال تقديم الإرشاد والتوجيه في المجالات المختلفة.</p></li>
+                                        <li><p><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Promote positivity">تعزيز الإيجابية:</strong> تعمل النصائح اليومية على تعزيز التفكير الإيجابي والتحفيز، مما يساعد في تحسين مزاج الأفراد ونوعية حياتهم.</p></li>
+                                        <li><p><i class="fi fi-sr-lightbulb-on"></i> - <strong title="Promote continuity">تعزيز الاستمرارية:</strong> بتقديم النصائح بشكل يومي، يمكن للأفراد تحقيق التحسين المستمر والاستمرار في رحلتهم نحو التطوير الشخصي.</p></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
 
                         <li class="sections">
-                            <div class="subTypes" id="successStories">
-                                <div class="subTypesDetails">
-                                    <p class="subTypesTitle" title="Success Stories">قصص نجاح</p>
-                                    <p class="subTypesBody">مصدرًا هامًا للتحفيز والإلهام، وتساهم في بناء جيل من الأفراد الملهمين والمتحفزين لتحقيق النجاح في حياتهم.</p>
-                                    <ul class="midContentBody">
-                                        <li><a href="https://mqall.org/elon-s-success-story-space/" target="_blank" title="Elon Musk success story" style="animation: 5s linear 0s infinite running typList10;"><i class="fi fi-ss-medal"></i> - قصة نجاح ايلون ماسك</a></li>
-                                        <li><a href="https://mqall.org/bill-gates-success-story-in-a-nutshell/" target="_blank" title="Bill Gates success story" style="animation: 5s linear 0s infinite running typList11;"><i class="fi fi-ss-medal"></i> - قصة نجاح بيل جيتس</a></li>
-                                        <li><a href="https://mqall.org/success-story-steve-jobs/" target="_blank" title="Steve Jobs success story" style="animation: 5s linear 0s infinite running typList12;"><i class="fi fi-ss-medal"></i> - قصة نجاح ستيف جوبز</a></li>
+                            <div class="successStoriesSection" id="successStories">
+                                <div class="successStoriesSectionDetails">
+                                    <p class="successStoriesSectionTitle" title="Success Stories">قصص نجاح</p>
+                                    <p class="successStoriesSectionBody">مصدرًا هامًا للتحفيز والإلهام، وتساهم في بناء جيل من الأفراد الملهمين والمتحفزين لتحقيق النجاح في حياتهم.</p>
+                                    <ul class="successStoriesSectionmidContentBody">
+                                        <li><a href="https://mqall.org/elon-s-success-story-space/" target="_blank" title="Elon Musk success story"><i class="fi fi-ss-medal"></i> - قصة نجاح ايلون ماسك</a></li>
+                                        <li><a href="https://mqall.org/bill-gates-success-story-in-a-nutshell/" target="_blank" title="Bill Gates success story"><i class="fi fi-ss-medal"></i> - قصة نجاح بيل جيتس</a></li>
+                                        <li><a href="https://mqall.org/success-story-steve-jobs/" target="_blank" title="Steve Jobs success story"><i class="fi fi-ss-medal"></i> - قصة نجاح ستيف جوبز</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
 
                         <li class="sections">
-                            <div class="subTypes" id="appliedExercises">
-                                <div class="subTypesDetails">
-                                    <p class="subTypesTitle" title="Applied Exercises">تمارين تطبيقية</p>
-                                    <p class="subTypesBody">تحويل المعرفة إلى تطبيق عملي وتحقيق التحسينات الفعلية.</p>
-                                    <ul class="midContentBody">
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-head-side-brain"></i> - <strong title="Analysis of personal goals">تحليل الأهداف الشخصية:</strong> قم بتحديد أهدافك الشخصية للمدى القصير والمتوسط ​​والطويل الأمد، ثم قم بتطوير خطة عمل لتحقيقها، مع وضع خطوات محددة وزمنية لكل هدف.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-head-side-brain"></i> - <strong title="Practice positive thinking">ممارسة التفكير الإيجابي:</strong> قم بتمرين نفسك على التفكير الإيجابي، وذلك من خلال ممارسة ممارسات التحفيز الذاتي، مثل كتابة قائمة بالأشياء التي تقدرها في حياتك يوميًا.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-head-side-brain"></i> - <strong title="Develop communication skills">تطوير مهارات التواصل:</strong> اختر مهارة تواصل معينة ترغب في تطويرها، مثل مهارات الاستماع الفعال أو التعبير عن الرأي بوضوح، ثم قم بممارسة هذه المهارة في مواقف الحياة اليومية.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-head-side-brain"></i> - <strong title="Time management">إدارة الوقت:</strong> قم بإنشاء جدول زمني أسبوعي يحتوي على مهامك اليومية والأسبوعية، وحاول الالتزام بهذا الجدول لتحسين إدارتك للوقت.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-head-side-brain"></i> - <strong title="Practice relaxation and meditation">ممارسة الاسترخاء والتأمل:</strong>  قم بتخصيص بعض الوقت يوميًا لممارسة التأمل أو تقنيات الاسترخاء، مثل التنفس العميق أو اليوغا، لتقليل مستويات التوتر وزيادة الوعي الذاتي.</p></li>
-                                        <li><p style="color: #868686;"><i class="fi fi-sr-head-side-brain"></i> - <strong title="Improve problem solving skills">تحسين مهارات حل المشكلات:</strong>  اختر مشكلة صغيرة تواجهك في الحياة اليومية، وقم بتطبيق أساليب مختلفة لحلها، مع التركيز على تحليل الوضع واختيار الخطوات الأمثل للتعامل معها.</p></li>
+                            <div class="appliedExercises" id="appliedExercises">
+                                <div class="appliedExercisesDetails">
+                                    <p class="appliedExercisesTitle" title="Applied Exercises">تمارين تطبيقية</p>
+                                    <p class="appliedExercisesBody">تحويل المعرفة إلى تطبيق عملي وتحقيق التحسينات الفعلية.</p>
+                                    <ul class="appliedExercisesmidContentBody">
+                                        <li><p><i class="fi fi-sr-head-side-brain"></i> - <strong title="Analysis of personal goals">تحليل الأهداف الشخصية:</strong> قم بتحديد أهدافك الشخصية للمدى القصير والمتوسط ​​والطويل الأمد، ثم قم بتطوير خطة عمل لتحقيقها، مع وضع خطوات محددة وزمنية لكل هدف.</p></li>
+                                        <li><p><i class="fi fi-sr-head-side-brain"></i> - <strong title="Practice positive thinking">ممارسة التفكير الإيجابي:</strong> قم بتمرين نفسك على التفكير الإيجابي، وذلك من خلال ممارسة ممارسات التحفيز الذاتي، مثل كتابة قائمة بالأشياء التي تقدرها في حياتك يوميًا.</p></li>
+                                        <li><p><i class="fi fi-sr-head-side-brain"></i> - <strong title="Develop communication skills">تطوير مهارات التواصل:</strong> اختر مهارة تواصل معينة ترغب في تطويرها، مثل مهارات الاستماع الفعال أو التعبير عن الرأي بوضوح، ثم قم بممارسة هذه المهارة في مواقف الحياة اليومية.</p></li>
+                                        <li><p><i class="fi fi-sr-head-side-brain"></i> - <strong title="Time management">إدارة الوقت:</strong> قم بإنشاء جدول زمني أسبوعي يحتوي على مهامك اليومية والأسبوعية، وحاول الالتزام بهذا الجدول لتحسين إدارتك للوقت.</p></li>
+                                        <li><p><i class="fi fi-sr-head-side-brain"></i> - <strong title="Practice relaxation and meditation">ممارسة الاسترخاء والتأمل:</strong>  قم بتخصيص بعض الوقت يوميًا لممارسة التأمل أو تقنيات الاسترخاء، مثل التنفس العميق أو اليوغا، لتقليل مستويات التوتر وزيادة الوعي الذاتي.</p></li>
+                                        <li><p><i class="fi fi-sr-head-side-brain"></i> - <strong title="Improve problem solving skills">تحسين مهارات حل المشكلات:</strong>  اختر مشكلة صغيرة تواجهك في الحياة اليومية، وقم بتطبيق أساليب مختلفة لحلها، مع التركيز على تحليل الوضع واختيار الخطوات الأمثل للتعامل معها.</p></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
-    
-                
-    
-
-
-
-
-
-
-
-
-
             </section>
         </main>
 
