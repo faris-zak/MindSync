@@ -212,6 +212,7 @@ li.sections div.appliedExercises div.appliedExercisesDetails ul.appliedExercises
 }
 
 strong{
+    user-select: none;
     cursor: default;
     direction: rtl;
     box-shadow: inset 0px 0px 0px 0px #14213D;
@@ -255,17 +256,5 @@ strong{
 
     section div.sectionContainer input#searchbar{
         width: 80%;
-    }
-
-    section div.subTypes div.subTypesDetails p.subTypesTitle{
-        font-size: 1.4em;
-    }
-
-    section div.subTypes div.subTypesDetails ul.midContentBody li a{
-        font-size: 1.1em;
-    }
-
-    section div.subTypes div.subTypesDetails p.subTypesBody{
-        font-size: 1.25em;
     }
 }
