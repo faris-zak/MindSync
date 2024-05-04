@@ -3,11 +3,11 @@ function search_section(){
   input = input.toLowerCase();
   let x = document.getElementsByClassName('sections');
   
-  for (i = 0; i < x.length; i++) {
-    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+  for (i = 0; i < x.length; i++){
+    if (!x[i].innerHTML.toLowerCase().includes(input)){
     x[i].style.display = "none";
     }
-    else {
+    else{
     x[i].style.display = "list-item";
     }
 }};
@@ -26,7 +26,8 @@ function updateButtonVisibility() {
     clearButton.style.opacity = 0;
     clearButton.style.marginBottom = "0px";
     searchbar.style.marginBottom = "0px";
-  } else{
+  }
+  else{
     clearButton.style.opacity = 1;
     clearButton.style.marginBottom = "50px";
     searchbar.style.marginBottom = "10px";
@@ -36,3 +37,7 @@ function updateButtonVisibility() {
 updateButtonVisibility();
 
 searchbar.addEventListener('input', updateButtonVisibility);
+
+clearButton.addEventListener('click', function(){
+  location.reload();
+});

@@ -64,22 +64,23 @@ section div.sectionContainer{
 }
  
 section div.sectionContainer input#searchbar{
-    padding: 5px;
+    padding: 8px;
     border-radius: 5px;
     width: 50%;
     margin-bottom: 10px;
     box-sizing: border-box;
     border: none;
-    /* background-color: #E5E5E5; */
+    background-color: #f5f5f5;
 }
 
 section div.sectionContainer input#searchbar:focus{
     border: 3px solid #FCA311;
+    background-color: white;
     padding: 8px;
     font-size: 16px;
 }
 
-section div.sectionContainer button.clearField{
+section div.sectionContainer button.clearButton{
     font-size: 16px;
     cursor: pointer;
     color: #14213D;
@@ -90,18 +91,19 @@ section div.sectionContainer button.clearField{
     margin-bottom: 50px;
 }
 
-section div.sectionContainer button.clearField:hover{
+section div.sectionContainer button.clearButton:hover{
     padding: 6px 12px;
     border: 2px solid #14213D;
+
 }
 
-section div.sectionContainer button.clearField:active{
+section div.sectionContainer button.clearButton:active{
     color: #FCA311;
     background-color: #14213D;
     border: none;
 }
 
-section div.sectionContainer button.clearField i{
+section div.sectionContainer button.clearButton i{
     padding-bottom: 0px;
 }
  
@@ -131,6 +133,7 @@ li.sections div.appliedExercises{
     width: 100%;
     height: auto;
     margin-bottom: 50px;
+    background-color: #f5f5f5;
     position: relative;
 }
 
@@ -141,7 +144,7 @@ li.sections div.websitesSection div.websitesSectionDetails,
 li.sections div.dailyTipsSection div.dailyTipsSectionDetails,
 li.sections div.successStoriesSection div.successStoriesSectionDetails,
 li.sections div.appliedExercises div.appliedExercisesDetails{
-    padding: 0px 20px;
+    padding: 20px;
 }
 
 section div.sectionContainer ul#list
@@ -167,7 +170,64 @@ li.sections div.successStoriesSection div.successStoriesSectionDetails ul.succes
 li.sections div.appliedExercises div.appliedExercisesDetails ul.appliedExercisesmidContentBody{
     list-style: none;
     padding: 0px;
+    
+    li{
+		margin-left: .75em;
+		margin-right: .75em;
+        margin-bottom: 15px;
+        font-size: 18px;
+	}
+	
+	&:hover{
+		a{
+			color: #CCC;
+			&:hover{
+				color: #14213D;
+                font-size: 19px;
+				box-shadow: 0 2px 0 0 currentcolor;
+			}
+		}
+	}
 }
+
+section div.sectionContainer ul#list
+li.sections div.educationalArticlesSection div.educationalArticlesSectionDetails ul.educationalArticlesmidContentSectionBody li a,
+li.sections div.explanatoryVideosSection div.explanatoryVideosSectionDetails ul.explanatoryVideosSectionmidContentBody li a,
+li.sections div.websitesSection div.websitesSectionDetails ul.websitesSectionmidContentBody li a,
+li.sections div.dailyTipsSection div.dailyTipsSectionDetails ul.dailyTipsSectionmidContentBody li a,
+li.sections div.successStoriesSection div.successStoriesSectionDetails ul.successStoriesSectionmidContentBody li a,
+li.sections div.appliedExercises div.appliedExercisesDetails ul.appliedExercisesmidContentBody li a{
+    color: #FCA311;
+}
+
+section div.sectionContainer ul#list
+li.sections div.educationalArticlesSection div.educationalArticlesSectionDetails ul.educationalArticlesmidContentSectionBody i,
+li.sections div.explanatoryVideosSection div.explanatoryVideosSectionDetails ul.explanatoryVideosSectionmidContentBody i,
+li.sections div.websitesSection div.websitesSectionDetails ul.websitesSectionmidContentBody i,
+li.sections div.dailyTipsSection div.dailyTipsSectionDetails ul.dailyTipsSectionmidContentBody i,
+li.sections div.successStoriesSection div.successStoriesSectionDetails ul.successStoriesSectionmidContentBody i,
+li.sections div.appliedExercises div.appliedExercisesDetails ul.appliedExercisesmidContentBody i{
+    color: #14213D;
+    cursor: default;
+}
+
+strong{
+    cursor: default;
+    direction: rtl;
+    box-shadow: inset 0px 0px 0px 0px #14213D;
+    color: #14213D;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+strong:hover{
+    color: #fff;
+    box-shadow: inset -200px 0px 0px 0px #14213D;
+}
+
+strong{
+    color: #FCA311;
+}
+
 
 @keyframes fadeIn{
     from{
