@@ -16,3 +16,18 @@ function handleMouseOut(){
 
 mindsyncBrandSection.addEventListener('mouseover', handleMouseOver);
 mindsyncBrandSection.addEventListener('mouseout', handleMouseOut);
+
+
+const justPapersSectionTitle = document.getElementById('justPapersSectionWord');
+const justPapersSectionBody = document.getElementById('justPaperSectionSoon');
+
+function showSoon(){
+    justPapersSectionBody.style.opacity = '1';
+}
+
+function hideSoon(){
+    justPapersSectionBody.style.opacity = '0';
+}
+
+justPapersSectionTitle.addEventListener('mouseover', showSoon);
+justPapersSectionTitle.addEventListener('mouseout', hideSoon);
