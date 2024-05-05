@@ -14,7 +14,7 @@ section div.headerIcon div.headerIconDetails{
     direction: ltr;
 }
 
-section div.omanFlagContainer{
+/* section div.omanFlagContainer{
     position: fixed;
     z-index: 1;
     top: 10px;
@@ -35,7 +35,7 @@ section a div.omanFlagContainer img:hover{
 
 section a div.omanFlagContainer img:active{
     transform: scale(95%);
-}
+} */
 
 /* section div.omanEducationalPortalContainer{
     display: inline-block;
@@ -84,28 +84,6 @@ section a div.omanOmanunaContainer img:active{
     transform: scale(95%);
 }
 
-section div.cityOfTechnicalExpertsContainer{
-    display: inline-block;
-    float: left;
-    margin-left: 20px;
-    width: auto;
-    margin-bottom: 20px;
-}
-
-section a div.cityOfTechnicalExpertsContainer img{
-    user-select: none;
-    max-width: 100%;
-    max-height: 100%;
-    width: 200px;
-}
-
-section a div.cityOfTechnicalExpertsContainer img:hover{
-    transform: scale(105%);
-}
-
-section a div.cityOfTechnicalExpertsContainer img:active{
-    transform: scale(95%);
-}
 
 section div.omanMinistryOfEducationContainer{
     display: inline-block;
@@ -211,7 +189,8 @@ section div.benefitSection div.benefitSectionDetails p.benefitSectionBody span s
     background-color: #FCA311;
 }
 
-section div.blank{
+section div.mindsyncBrandSection{
+    user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,13 +201,20 @@ section div.blank{
     margin: 0;
 }
 
-section div.blank p{
+section div.mindsyncBrandSection img.mindsyncLogo{
+    position: absolute;
+    width: 70px;
+    opacity: 0;
+}
+
+section div.mindsyncBrandSection p{
     direction: ltr;
     font-size: 30px;
     letter-spacing: 20px;
+    opacity: 1;
 }
 
-section div.blank p span.lastWord{
+section div.mindsyncBrandSection p span.lastWord{
     color: #14213D;
     background-color: #FCA311;
     padding: 2px 10px;
@@ -236,11 +222,11 @@ section div.blank p span.lastWord{
     font-weight: 600;
 }
 
-section div.blank p span.lastWord span.lastLetter{
+section div.mindsyncBrandSection p span.lastWord span.lastLetter{
     letter-spacing: 0px;
 }
 
-section div.blank p span.firstWord{
+section div.mindsyncBrandSection p span.firstWord{
     direction: ltr;
     color: #FCA311;
 }

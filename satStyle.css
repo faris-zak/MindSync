@@ -34,6 +34,28 @@ section div.introSection div.introSectionDetails hr{
     margin: 0;
 }
 
+section div.accessMethodSection{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+section div.accessMethodSection div.accessMethodSectionDetails{
+    padding: 0px 20px;
+}
+
+section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSectionTitle{
+    font-size: 24px;
+    color: #14213D;
+    font-weight: 600;
+}
+
+section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSectionBody{
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
 section div.sectionContainer{
     display: flex;
     flex-direction: column;
