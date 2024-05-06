@@ -18,16 +18,21 @@ mindsyncBrandSection.addEventListener('mouseover', handleMouseOver);
 mindsyncBrandSection.addEventListener('mouseout', handleMouseOut);
 
 
-const justPapersSectionTitle = document.getElementById('justPapersSectionWord');
+const justPapersSection = document.getElementById('justPapers');
 const justPapersSectionBody = document.getElementById('justPaperSectionSoon');
+const justPapersSectionDetails = document.getElementById('justPapersSectionDetails');
 
 function showSoon(){
     justPapersSectionBody.style.opacity = '1';
+    justPapersSectionBody.style.transform = 'translateY(10px)';
+    justPapersSectionDetails.style.paddingBottom = '20px';
 }
 
 function hideSoon(){
     justPapersSectionBody.style.opacity = '0';
+    justPapersSectionBody.style.transform = 'translateY(-0px)';
+    justPapersSectionDetails.style.paddingBottom = '0px';
 }
 
-justPapersSectionTitle.addEventListener('mouseover', showSoon);
-justPapersSectionTitle.addEventListener('mouseout', hideSoon);
+justPapersSection.addEventListener('mouseover', showSoon);
+justPapersSection.addEventListener('mouseout', hideSoon);

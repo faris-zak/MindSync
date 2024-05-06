@@ -209,6 +209,7 @@ section div.justPapersSection img{
 section div.justPapersSection div.justPapersSectionDetails{
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
+    padding-bottom: 0px;
 }
 
 section div.justPapersSection div.justPapersSectionDetails p.justPapersSectionTitle{
@@ -224,10 +225,12 @@ section div.justPapersSection div.justPapersSectionDetails p.justPapersSectionTi
 
 section div.justPapersSection div.justPapersSectionDetails p.justPapersSectionBody{
     opacity: 0;
-    font-size: 20px;
+    font-size: 24px;
     color: #153448;
     font-weight: 600;
-    margin: 0px;
+    transform: translateY(-35px);
+    margin: auto;
+    right: auto;
 }
 
 section div.mindsyncBrandSection{
