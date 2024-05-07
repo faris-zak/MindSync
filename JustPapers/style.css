@@ -1,0 +1,151 @@
+*{
+    text-decoration: none;
+    font-family: "Harmattan", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    transition: all 0.2s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+    background-color: white;
+}
+
+nav.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+nav.navBar div.mindsyncContainer{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: auto;
+}
+
+nav.navBar a div.mindsyncContainer img{
+    user-select: none;
+    max-width: 100%;
+    max-height: 100%;
+    width: 500px;
+}
+
+nav.navBar a div.mindsyncContainer img:hover{
+    transform: scale(105%);
+}
+
+nav.navBar a div.mindsyncContainer img:active{
+    transform: scale(100%);
+}
+
+
+@media screen and (min-width: 801px){
+    
+    div.navDivContainer{
+        width: 70%;
+        height: 65px;
+    }
+
+    div.navDivContainer div.hyperLinks{
+        padding: 10px;
+    }
+    
+    div.navDivContainer div.hyperLinks a i{
+        display: none;
+    }
+
+    div.navDivContainer div.hyperLinks a span{
+        display: block;
+    }
+    
+    div.navDivContainer div.hyperLinks a span:hover{
+        font-size: 25px;
+        color: #FCA311;
+    }
+    
+    div.navDivContainer div.hyperLinks a img{
+        width: 50px;
+    }
+    
+    div.navDivContainer div.hyperLinks a img:hover{
+        transform: translateY(none);
+        width: 55px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    div.navDivContainer div.hyperLinks a span{
+        display: none;
+    }
+
+    nav.navBar a div.mindsyncContainer img{
+        width: 250px;
+    }
+
+    div.navDivContainer div.hyperLinks a i{
+        font-size: 26px;
+        color: #14213D;
+    }
+
+    div.navDivContainer div.hyperLinks a i:hover{
+        font-size: 27px;
+        color: #14213D;
+    }
+    
+    div.navDivContainer div.hyperLinks a i:active{
+        font-size: 28px;
+        color: #FCA311;
+    }
+
+    div.navDivContainer div.hyperLinks a img{
+        width: 44px;
+    }
+
+    div.navDivContainer div.hyperLinks img:active{
+        transform: translateY(none);
+        width: 48px;
+    }
+}
+
+@media screen and (max-width:720px){
+
+    footer div.quickLink ul li{
+        display: block;
+        margin: 10px 0px;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    nav.navBar{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    nav.navBar a div.justPapersContainer img{
+        width: 200px;
+    }
+
+    footer div.quickLink ul{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    footer div.copyright p{
+        font-size: 1em;
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}

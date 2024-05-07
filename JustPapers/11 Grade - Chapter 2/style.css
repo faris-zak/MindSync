@@ -1,0 +1,84 @@
+*{
+    text-decoration: none;
+    font-family: 'Tajawal';
+    transition: all 0.2s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    text-align: center;
+    background-color: #E5E5E5;
+}
+
+header p#description{
+    font-size: 18px;
+    color: #14213D;
+}
+
+main section hr#headerlines{
+    margin: 20px 0;
+    border: none;
+    background-color: none;
+}
+
+main section{
+    margin-top: 50px;
+}
+
+main section div{
+    margin: 0;
+}
+
+main section div a{
+    text-decoration: none;
+}
+
+main section div a input{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #FCA311;
+    color: #14213D;
+    border: 2px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+main section div a input:hover{
+    background-color: #14213D;
+    color: #FCA311;
+    transform: scale(1.05);
+}
+
+main section div a input#allsubjects{
+    font-size: 23px;
+    background-color: #14213D;
+    color: #FCA311;
+}
+
+main section div a input#allsubjects:hover{
+    background-color: #FCA311;
+    color: #14213D;
+}
+
+@media screen and (max-width: 600px) {
+
+    header p#description{
+        font-size: 14px;
+    }
+
+    main section div a input{
+        font-size: 21px;
+        display: block;
+        margin: 12px auto;
+    }
+
+    main section div a input#allsubjects{
+        font-size: 20px;
+    }
+}

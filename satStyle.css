@@ -162,7 +162,7 @@ li.sections div.textEditingSection div.textEditingSectionDetails p.textEditingSe
 }
 
 section div.sectionContainer ul#list
-li.sections div.aiChatSection div.aiChatSectionDetails ul.aiChatSectionTypes,
+li.sections div.aiChatSection div.aiChatSectionDetails ul.aiChatSectionList,
 li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails ul.picturesAndVideosSectionList,
 li.sections div.textEditingSection div.textEditingSectionDetails ul.textEditingSectionList{
     list-style: none;
@@ -189,14 +189,28 @@ li.sections div.textEditingSection div.textEditingSectionDetails ul.textEditingS
 }
 
 section div.sectionContainer ul#list
-li.sections div.aiChatSection div.aiChatSectionDetails ul.aiChatSectionTypes li a,
+li.sections div.aiChatSection div.aiChatSectionDetails ul.aiChatSectionList li,
+li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails ul.picturesAndVideosSectionList li,
+li.sections div.textEditingSection div.textEditingSectionDetails ul.textEditingSectionList li{
+    margin-bottom: 20px;
+}
+
+section div.sectionContainer ul#list
+li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails ul.picturesAndVideosSectionList li a,
+li.sections div.textEditingSection div.textEditingSectionDetails ul.textEditingSectionList li a{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+section div.sectionContainer ul#list
+li.sections div.aiChatSection div.aiChatSectionDetails ul.aiChatSectionList li a,
 li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails ul.picturesAndVideosSectionList li a,
 li.sections div.textEditingSection div.textEditingSectionDetails ul.textEditingSectionList li a{
     color: #FCA311;
 }
 
 section div.sectionContainer ul#list
-li.sections div.aiChatSection div.aiChatSectionDetails ul.aiChatSectionTypes i,
+li.sections div.aiChatSection div.aiChatSectionDetails ul.aiChatSectionList i,
 li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails ul.picturesAndVideosSectionList i,
 li.sections div.textEditingSection div.textEditingSectionDetails ul.textEditingSectionList i{
     color: #14213D;
