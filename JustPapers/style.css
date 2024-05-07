@@ -283,8 +283,8 @@ li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails ul.ot
 }
 
 section div.organizations{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 section div.organizations div.omanFlagContainer{
@@ -344,7 +344,7 @@ footer div.supporting p.supporterBody{
     font-size: 22px;
     color: black;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     clear: both;
 }
 
