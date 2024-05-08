@@ -94,6 +94,18 @@ section div.chaptersSection div.chaptersSectionDetails button{
     border: 3px solid #153448;
 }
 
+section div.chaptersSection div.chaptersSectionDetails br.buttonLine{
+    display: none;
+}
+
+section div.chaptersSection div.chaptersSectionDetails button.firstChapterButton{
+    margin-left: 10px;
+}
+
+section div.chaptersSection div.chaptersSectionDetails button.secondChapterButton{
+    margin-right: 10px;
+}
+
 section div.chaptersSection div.chaptersSectionDetails button:hover{
     color: #948979;
     background-color: #153448;
@@ -107,23 +119,45 @@ section div.chaptersSection div.chaptersSectionDetails button:active{
 }
 
 
-section div.accessMethodSection{
+section div.firstChapterInfoSection{
     width: 100%;
     height: auto;
     position: relative;
 }
 
-section div.accessMethodSection div.accessMethodSectionDetails{
+section div.firstChapterInfoSection div.firstChapterInfoSectionDetails{
     padding: 0px 20px;
 }
 
-section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSectionTitle{
+section div.firstChapterInfoSection div.firstChapterInfoSectionDetails p.firstChapterInfoSectionTitle{
     font-size: 24px;
     color: #14213D;
     font-weight: 600;
 }
 
-section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSectionBody{
+section div.firstChapterInfoSection div.firstChapterInfoSectionDetails p.firstChapterInfoSectionBody{
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+section div.secondChapterInfoSection{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+section div.secondChapterInfoSection div.secondChapterInfoSectionDetails{
+    padding: 0px 20px;
+}
+
+section div.secondChapterInfoSection div.secondChapterInfoSectionDetails p.secondChapterInfoSectionTitle{
+    font-size: 24px;
+    color: #14213D;
+    font-weight: 600;
+}
+
+section div.secondChapterInfoSection div.secondChapterInfoSectionDetails p.secondChapterInfoSectionBody{
     font-size: 18px;
     color: black;
     font-weight: 500;
@@ -492,6 +526,27 @@ section div.organizations a div.omanMinistryOfEducationContainer img:hover{
     filter: grayscale(0);
 }
 
+a.toTop{
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    color: #DFD0B8;
+    padding-top: 1%;
+    font-size: 2em;
+    bottom: 10px;
+    right: 10px;
+    width: 3rem;
+    height: 3rem;
+    transition: opacity 0.3s;
+    background: transparent;
+}
+
+a.toTop:hover{
+    color: #948979;
+}
+
 footer div.supporting p.supporterBody{
     font-size: 22px;
     color: black;
@@ -544,6 +599,18 @@ footer div.supporting a div.mindSyncContainer img:hover{
         width: 250px;
     }
 
+    section div.chaptersSection div.chaptersSectionDetails br.buttonLine{
+        display: block;
+    }
+
+    section div.chaptersSection div.chaptersSectionDetails button.firstChapterButton{
+        margin-left: 0px;
+    }
+    
+    section div.chaptersSection div.chaptersSectionDetails button.secondChapterButton{
+        margin-right: 0px;
+    }
+
     section div.searchBar input#searchbar{
         width: 80%;
     }
@@ -554,6 +621,14 @@ footer div.supporting a div.mindSyncContainer img:hover{
 
     section div.organizations a div.omanMinistryOfEducationContainer img{
         width: 100px;
+    }
+
+    a.toTop:hover{
+        color: #DFD0B8;
+    }
+
+    a.toTop:active{
+        color: #948979;
     }
 
     footer div.supporting p.supporterBody{

@@ -1,3 +1,6 @@
+console.log("Connected Successfully.");
+
+
 function search_section(){
   let input = document.getElementById('searchbar').value
   input = input.toLowerCase();
@@ -11,6 +14,24 @@ function search_section(){
     x[i].style.display = "list-item";
     }
 }};
+
+
+var myButton = document.getElementById("toTop");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    myButton.style.opacity = "1";
+  } else {
+    myButton.style.opacity = "0";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 
 function clearField(){
@@ -41,20 +62,38 @@ searchbar.addEventListener('input', updateButtonVisibility);
 
 const firstChapterButton = document.getElementById('firstChapterButton');
 const secondChapterButton = document.getElementById('secondChapterButton');
+const allChaptersButton = document.getElementById('showAllChaptersEleventhGradeButton');
+const firstInfoChapter = document.getElementById('firstChapterInfoSection');
+const secondInfoChapter = document.getElementById('secondChapterInfoSection');
+const secondDownInfoChapter = document.getElementById('secondDownChapterInfoSection');
 const firstChapter = document.getElementById('firstChapterSection');
 const secondChapter = document.getElementById('secondChapterSection');
+const secondChapterSectionLine = document.getElementById('secondChapterSectionLine');
 
 
 function showFirstChapter(){
   firstChapter.style.display="block";
   secondChapter.style.display="none";
+  firstInfoChapter.style.display="block";
+  secondInfoChapter.style.display="none";
+  secondDownInfoChapter.style.display="none";
+  secondChapterSectionLine.style.display="none";
 }
 
 function showSecondChapter(){
-  firstChapter.style.display="block";
-  secondChapter.style.display="none";
+  firstChapter.style.display="none";
+  secondChapter.style.display="block";
+  firstInfoChapter.style.display="none";
+  secondInfoChapter.style.display="block";
+  secondDownInfoChapter.style.display="none";
+  secondChapterSectionLine.style.display="none";
 }
 
-firstChapterButton.addEventListener('click', showFirstChapter);
-secondChapterButton.addEventListener('click', showSecondChapter);
-
+function showAllChapter(){
+  firstChapter.style.display="block";
+  secondChapter.style.display="block";
+  firstInfoChapter.style.display="block";
+  secondInfoChapter.style.display="none";
+  secondDownInfoChapter.style.display="block";
+  secondChapterSectionLine.style.display="block";
+}

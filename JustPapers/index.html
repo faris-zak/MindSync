@@ -24,7 +24,7 @@
         <nav class="navBar">
             <a href="#"><div class="justPapersContainer"><img title="JustPapers" src="Attachments/JustPapers - word - transparent.png" alt="JustPapers"></div></a>
         </nav>
-        
+
         <main>
             <section>
                 <div class="aboutSection" id="aboutSection">
@@ -36,15 +36,23 @@
 
                 <div class="chaptersSection" id="chaptersSection">
                     <div class="chaptersSectionDetails">
-                        <button class="firstChapterButton" id="showFirstChapterEleventhGradeButton">الفصل الأول - الحادي عشر</button>
-                        <button class="secondChapterButton" id="showSecondChapterEleventhGradeButton">الفصل الثاني - الحادي عشر</button>
+                        <button class="firstChapterButton" id="showFirstChapterEleventhGradeButton" onclick="showFirstChapter();" title="Show The First Chapter">الفصل الأول - الحادي عشر</button><br class="buttonLine">
+                        <button class="secondChapterButton" id="showSecondChapterEleventhGradeButton" onclick="showSecondChapter();" title="Show The Second Chapter">الفصل الثاني - الحادي عشر</button><br>
+                        <button class="allChaptersButton" id="showAllChaptersEleventhGradeButton" onclick="showAllChapter();" title="Show All Chapters">إظهار الكل</button>
                     </div>
                 </div>
 
-                <div class="accessMethodSection" id="accessMethodSection">
-                    <div class="accessMethodSectionDetails">
-                      <p class="accessMethodSectionTitle">الحادي عشر - الفصل الأول</p>
-                      <p class="accessMethodSectionBody">يمكنك الحصول على كتب وأدلة معلم وملخصات هامة وبعض الإختبارات الخاصة بمنهج <strong><a href="https://home.moe.gov.om/" title="https://home.moe.gov.om/">وزارة التربية والتعليم</a></strong>.</p>
+                <div class="firstChapterInfoSection" id="firstChapterInfoSection">
+                    <div class="firstChapterInfoSectionDetails">
+                      <p class="firstChapterInfoSectionTitle">الحادي عشر - الفصل الأول</p>
+                      <p class="firstChapterInfoSectionBody">يمكنك الحصول على كتب وأدلة معلم وملخصات هامة وبعض الإختبارات الخاصة بمنهج <strong><a href="https://home.moe.gov.om/" title="https://home.moe.gov.om/">وزارة التربية والتعليم</a></strong>.</p>
+                    </div>
+                </div>
+
+                <div class="secondChapterInfoSection" id="secondChapterInfoSection" style="display: none;">
+                    <div class="secondChapterInfoSectionDetails">
+                      <p class="secondChapterInfoSectionTitle">الحادي عشر - الفصل الثاني</p>
+                      <p class="secondChapterInfoSectionBody">يمكنك الحصول على كتب وأدلة معلم وملخصات هامة وبعض الإختبارات الخاصة بمنهج <strong><a href="https://home.moe.gov.om/" title="https://home.moe.gov.om/">وزارة التربية والتعليم</a></strong>.</p>
                     </div>
                 </div>
 
@@ -146,6 +154,14 @@
                     </ul>
                 </div>
 
+                <hr style="height: 1.5px; background-color: #153448; border: none;" id="secondChapterSectionLine">
+
+                <div class="secondChapterInfoSection" id="secondDownChapterInfoSection">
+                    <div class="secondChapterInfoSectionDetails">
+                      <p class="secondChapterInfoSectionTitle">الحادي عشر - الفصل الثاني</p>
+                      <p class="secondChapterInfoSectionBody">يمكنك الحصول على كتب وأدلة معلم وملخصات هامة وبعض الإختبارات الخاصة بمنهج <strong><a href="https://home.moe.gov.om/" title="https://home.moe.gov.om/">وزارة التربية والتعليم</a></strong>.</p>
+                    </div>
+                </div>
                 
                 <div class="secondChapterSection" id="secondChapterSection">
                     <ul id='list'>
@@ -249,6 +265,8 @@
                 </div>
             </section>
         </main>
+
+        <a onclick="topFunction()" id="toTop" class="toTop" title="To Top"><i class="fi fi-rr-comment-arrow-up"></i></a>
 
         <footer>
             <div class="supporting">
