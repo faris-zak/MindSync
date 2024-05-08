@@ -1,43 +1,60 @@
 function search_section(){
-    let input = document.getElementById('searchbar').value
-    input = input.toLowerCase();
-    let x = document.getElementsByClassName('sections');
-    
-    for (i = 0; i < x.length; i++){
-      if (!x[i].innerHTML.toLowerCase().includes(input)){
-      x[i].style.display = "none";
-      }
-      else{
-      x[i].style.display = "list-item";
-      }
-  }};
+  let input = document.getElementById('searchbar').value
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName('sections');
   
-  
-  function clearField(){
-    document.getElementById('searchbar').value = "";
-  }
-  
-  
-  const searchbar = document.getElementById('searchbar');
-  const clearButton = document.getElementById('clearButton');
-  
-  function updateButtonVisibility() {
-    if (searchbar.value === ""){
-      clearButton.style.opacity = 0;
-      clearButton.style.marginBottom = "0px";
-      searchbar.style.marginBottom = "0px";
+  for (i = 0; i < x.length; i++){
+    if (!x[i].innerHTML.toLowerCase().includes(input)){
+    x[i].style.display = "none";
     }
     else{
-      clearButton.style.opacity = 1;
-      clearButton.style.marginBottom = "50px";
-      searchbar.style.marginBottom = "10px";
+    x[i].style.display = "list-item";
     }
+}};
+
+
+function clearField(){
+  document.getElementById('searchbar').value = "";
+}
+
+
+const searchbar = document.getElementById('searchbar');
+const clearButton = document.getElementById('clearButton');
+
+function updateButtonVisibility() {
+  if (searchbar.value === ""){
+    clearButton.style.opacity = 0;
+    clearButton.style.marginBottom = "0px";
+    searchbar.style.marginBottom = "0px";
   }
-  
-  updateButtonVisibility();
-  
-  searchbar.addEventListener('input', updateButtonVisibility);
-  
-  clearButton.addEventListener('click', function(){
-    location.reload();
-  });
+  else{
+    clearButton.style.opacity = 1;
+    clearButton.style.marginBottom = "50px";
+    searchbar.style.marginBottom = "10px";
+  }
+}
+
+updateButtonVisibility();
+
+searchbar.addEventListener('input', updateButtonVisibility);
+
+
+const firstChapterButton = document.getElementById('firstChapterButton');
+const secondChapterButton = document.getElementById('secondChapterButton');
+const firstChapter = document.getElementById('firstChapterSection');
+const secondChapter = document.getElementById('secondChapterSection');
+
+
+function showFirstChapter(){
+  firstChapter.style.display="block";
+  secondChapter.style.display="none";
+}
+
+function showSecondChapter(){
+  firstChapter.style.display="block";
+  secondChapter.style.display="none";
+}
+
+firstChapterButton.addEventListener('click', showFirstChapter);
+secondChapterButton.addEventListener('click', showSecondChapter);
+

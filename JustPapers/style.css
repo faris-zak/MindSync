@@ -82,6 +82,31 @@ section div.aboutSection div.aboutSectionDetails p.aboutSectionBody{
     margin-bottom: 0px;
 }
 
+section div.chaptersSection div.chaptersSectionDetails button{
+    cursor: pointer;
+    font-size: 18px;
+    color: #153448;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 3px solid #153448;
+}
+
+section div.chaptersSection div.chaptersSectionDetails button:hover{
+    color: #948979;
+    background-color: #153448;
+    border: none;
+}
+
+section div.chaptersSection div.chaptersSectionDetails button:active{
+    color: #DFD0B8;
+    background-color: #3C5B6F;
+    border: none;
+}
+
+
 section div.accessMethodSection{
     width: 100%;
     height: auto;
@@ -104,14 +129,14 @@ section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSec
     font-weight: 500;
 }
 
-section div.sectionContainer{
+section div.searchBar{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0px;
 }
- 
-section div.sectionContainer input#searchbar{
+
+section div.searchBar input#searchbar{
     padding: 8px;
     border-radius: 5px;
     width: 50%;
@@ -121,14 +146,14 @@ section div.sectionContainer input#searchbar{
     background-color: #f5f5f5;
 }
 
-section div.sectionContainer input#searchbar:focus{
+section div.searchBar input#searchbar:focus{
     border: 3px solid #948979;
     background-color: white;
     padding: 8px;
     font-size: 16px;
 }
 
-section div.sectionContainer button.clearButton{
+section div.searchBar button.clearButton{
     font-size: 16px;
     cursor: pointer;
     color: #153448;
@@ -139,40 +164,46 @@ section div.sectionContainer button.clearButton{
     margin-bottom: 50px;
 }
 
-section div.sectionContainer button.clearButton:hover{
+section div.searchBar button.clearButton:hover{
     padding: 6px 12px;
     border: 2px solid #153448;
-
 }
 
-section div.sectionContainer button.clearButton:active{
+section div.searchBar button.clearButton:active{
     color: #DFD0B8;
     background-color: #153448;
     border: none;
 }
 
-section div.sectionContainer button.clearButton i{
+section div.searchBar button.clearButton i{
     padding-bottom: 0px;
 }
+
+/* firstChapterSection */
+section div.firstChapterSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
  
-section div.sectionContainer ul#list{
+section div.firstChapterSection ul#list{
     list-style: none;
     padding: 0;
     margin: 0;
 }
  
-section div.sectionContainer ul#list li.sections{
+section div.firstChapterSection ul#list li.sections{
     font-size: 1.2em;
     padding: 0px;
     animation: fadeIn 0.5s ease-in-out;
 }
  
-section div.sectionContainer ul#list li.sections:last-child{
+section div.firstChapterSection ul#list li.sections:last-child{
     border-bottom: none;
 }
 
-
-section div.sectionContainer ul#list 
+section div.firstChapterSection ul#list 
 li.sections div.mathSection,
 li.sections div.sciencesSection,
 li.sections div.languageSection,
@@ -187,7 +218,7 @@ li.sections div.otherAccessoriesSection{
     position: relative;
 }
 
-section div.sectionContainer ul#list
+section div.firstChapterSection ul#list
 li.sections div.mathSection div.mathSectionDetails,
 li.sections div.sciencesSection div.sciencesSectionDetails,
 li.sections div.languageSection div.languageSectionDetails,
@@ -199,7 +230,7 @@ li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails{
 
 }
 
-section div.sectionContainer ul#list
+section div.firstChapterSection ul#list
 li.sections div.mathSection div.mathSectionDetails p.mathSectionTitle,
 li.sections div.sciencesSection div.sciencesSectionDetails p.sciencesSectionTitle,
 li.sections div.languageSection div.languageSectionDetails p.languageSectionTitle,
@@ -215,7 +246,7 @@ li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails p.oth
     direction: rtl;
 }
 
-section div.sectionContainer ul#list
+section div.firstChapterSection ul#list
 li.sections div.mathSection div.mathSectionDetails ul.mathSectionList,
 li.sections div.sciencesSection div.sciencesSectionDetails ul.sciencesSectionList,
 li.sections div.languageSection div.languageSectionDetails ul.languageSectionList,
@@ -246,7 +277,7 @@ li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails ul.ot
 	}
 }
 
-section div.sectionContainer ul#list
+section div.firstChapterSection ul#list
 li.sections div.mathSection div.mathSectionDetails ul.mathSectionList li a,
 li.sections div.sciencesSection div.sciencesSectionDetails ul.sciencesSectionList li a,
 li.sections div.languageSection div.languageSectionDetails ul.languageSectionList li a,
@@ -257,7 +288,128 @@ li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails ul.ot
     color: #948979;
 }
 
-section div.sectionContainer ul#list
+section div.firstChapterSection ul#list
+li.sections div.mathSection div.mathSectionDetails ul.mathSectionList i,
+li.sections div.sciencesSection div.sciencesSectionDetails ul.sciencesSectionList i,
+li.sections div.languageSection div.languageSectionDetails ul.languageSectionList i,
+li.sections div.islamicSection div.islamicSectionDetails ul.islamicSectionList i,
+li.sections div.hisAndGeoSection div.hisAndGeoSectionDetails ul.hisAndGeoSectionList i,
+li.sections div.individualSkillsSection div.individualSkillsSectionDetails ul.individualSkillsSectionList i,
+li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails ul.otherAccessoriesSectionList i{
+    color: #DFD0B8;
+    cursor: default;
+}
+
+/* secondChapterSection */
+section div.secondChapterSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+section div.secondChapterSection ul#list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+section div.secondChapterSection ul#list li.sections{
+    font-size: 1.2em;
+    padding: 0px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+ 
+section div.secondChapterSection ul#list li.sections:last-child{
+    border-bottom: none;
+}
+
+section div.secondChapterSection ul#list 
+li.sections div.mathSection,
+li.sections div.sciencesSection,
+li.sections div.languageSection,
+li.sections div.islamicSection,
+li.sections div.hisAndGeoSection,
+li.sections div.individualSkillsSection,
+li.sections div.otherAccessoriesSection{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    background-color: #3C5B6F;
+    position: relative;
+}
+
+section div.secondChapterSection ul#list
+li.sections div.mathSection div.mathSectionDetails,
+li.sections div.sciencesSection div.sciencesSectionDetails,
+li.sections div.languageSection div.languageSectionDetails,
+li.sections div.islamicSection div.islamicSectionDetails,
+li.sections div.hisAndGeoSection div.hisAndGeoSectionDetails,
+li.sections div.individualSkillsSection div.individualSkillsSectionDetails,
+li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails{
+    padding: 20px;
+
+}
+
+section div.secondChapterSection ul#list
+li.sections div.mathSection div.mathSectionDetails p.mathSectionTitle,
+li.sections div.sciencesSection div.sciencesSectionDetails p.sciencesSectionTitle,
+li.sections div.languageSection div.languageSectionDetails p.languageSectionTitle,
+li.sections div.islamicSection div.islamicSectionDetails p.islamicSectionTitle,
+li.sections div.hisAndGeoSection div.hisAndGeoSectionDetails p.hisAndGeoSectionTitle,
+li.sections div.individualSkillsSection div.individualSkillsSectionDetails p.individualSkillsSectionTitle,
+li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails p.otherAccessoriesSectionTitle{
+    font-size: 26px;
+    color: black;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    direction: rtl;
+}
+
+section div.secondChapterSection ul#list
+li.sections div.mathSection div.mathSectionDetails ul.mathSectionList,
+li.sections div.sciencesSection div.sciencesSectionDetails ul.sciencesSectionList,
+li.sections div.languageSection div.languageSectionDetails ul.languageSectionList,
+li.sections div.islamicSection div.islamicSectionDetails ul.islamicSectionList,
+li.sections div.hisAndGeoSection div.hisAndGeoSectionDetails ul.hisAndGeoSectionList,
+li.sections div.individualSkillsSection div.individualSkillsSectionDetails ul.individualSkillsSectionList,
+li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails ul.otherAccessoriesSectionList{
+    list-style: none;
+    padding: 0px;
+    direction: rtl;
+    
+    li{
+		margin-left: .75em;
+		margin-right: .75em;
+        margin-bottom: 15px;
+        font-size: 18px;
+	}
+	
+	&:hover{
+		a{
+			color: #153448;
+			&:hover{
+				color: #DFD0B8;
+                font-size: 19px;
+				box-shadow: 0 2px 0 0 currentcolor;
+			}
+		}
+	}
+}
+
+section div.secondChapterSection ul#list
+li.sections div.mathSection div.mathSectionDetails ul.mathSectionList li a,
+li.sections div.sciencesSection div.sciencesSectionDetails ul.sciencesSectionList li a,
+li.sections div.languageSection div.languageSectionDetails ul.languageSectionList li a,
+li.sections div.islamicSection div.islamicSectionDetails ul.islamicSectionList li a,
+li.sections div.hisAndGeoSection div.hisAndGeoSectionDetails ul.hisAndGeoSectionList li a,
+li.sections div.individualSkillsSection div.individualSkillsSectionDetails ul.individualSkillsSectionList li a,
+li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails ul.otherAccessoriesSectionList li a{
+    color: #948979;
+}
+
+section div.secondChapterSection ul#list
 li.sections div.mathSection div.mathSectionDetails ul.mathSectionList i,
 li.sections div.sciencesSection div.sciencesSectionDetails ul.sciencesSectionList i,
 li.sections div.languageSection div.languageSectionDetails ul.languageSectionList i,
@@ -392,7 +544,7 @@ footer div.supporting a div.mindSyncContainer img:hover{
         width: 250px;
     }
 
-    section div.sectionContainer input#searchbar{
+    section div.searchBar input#searchbar{
         width: 80%;
     }
 
