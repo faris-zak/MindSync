@@ -1,0 +1,22 @@
+{
+    "name":"JustPapers - مجرد ورق",
+    "short_name":"JustPapers",
+    "start_url":"index.html",
+    "display":"standalone",
+    "background_color":"white",
+    "theme_color":"#DFD0B8",
+    "scope": ".",
+    "description":"مجرد ورق - من مايندسينك، مصدر شامل للطلاب يساعدهم على تحسين مهاراتهم وتعزيز معرفتهم في مختلف المواد الدراسية.",
+    "icons":[
+    {
+    "src":"Attachments/justpaperslogo.png",                     
+    "sizes":"192x192",
+    "type":"image/png"
+    },
+    {
+    "src":"Attachments/justpaperslogo.png",
+    "sizes":"512x512",
+    "type":"image/png"
+    }
+  ]
+}

@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JustPapers - مجرد ورق</title>
         <link rel="icon" href="Attachments/JustPapers - webicon - transparent.png">
-        <link rel="manifest" href="/manifest.json">
+        <link rel="manifest" href="manifestJustPapers.json">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -277,5 +277,24 @@
         </footer>
 
         <script src="behaviour.js"></script>
+        <script>
+            window.addEventListener('load', () => {
+              registerSW();
+            });
+         
+            // Register the Service Worker
+            async function registerSW() {
+              if ('serviceWorker' in navigator) {
+                try {
+                  await navigator
+                        .serviceWorker
+                        .register('serviceworkerJustPapers.js');
+                }
+                catch (e) {
+                  console.log('SW registration failed');
+                }
+              }
+            }
+         </script>
     </body>
 </html>

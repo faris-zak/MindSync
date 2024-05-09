@@ -1,12 +1,12 @@
 {
-    "name":"MindSync",
-    "short_name":"PWA",
+    "name":"MindSync - مايندسينك",
+    "short_name":"MindSync",
     "start_url":"index.html",
     "display":"standalone",
     "background_color":"white",
     "theme_color":"#14213D",
     "scope": ".",
-    "description":"MindSync Website",
+    "description":"مايندسينك، بيئة تعليمية ملهمة وداعمة تشجع على النمو الشخصي والتحسن المستمر.",
     "icons":[
     {
     "src":"Attachments/mindsynclogo.png",                     
