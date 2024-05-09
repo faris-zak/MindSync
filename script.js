@@ -1,18 +1,37 @@
-// console.log("Connected Successfully.");
+window.addEventListener('load', () => {
+  registerSW();
+});
+// Register the Service Worker
+async function registerSW() {
+  if ('serviceWorker' in navigator) {
+    try {
+      await navigator
+            .serviceWorker
+            .register('serviceworker.js');
+    }
+    catch (e) {
+      console.log('SW registration failed');
+    }
+  }
+}
 
-// var myButton = document.getElementById("toTop");
 
-// window.onscroll = function() {scrollFunction()};
+console.log("Connected Successfully.");
 
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     myButton.style.opacity = "1";
-//   } else {
-//     myButton.style.opacity = "0";
-//   }
-// }
 
-// function topFunction() {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// }
+var topFunction = document.getElementById("mindSyncHomeIcon");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topFunction.setAttribute("href", "#");
+  } else {
+    topFunction.setAttribute("href", "index.html");
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

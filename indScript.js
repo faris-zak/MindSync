@@ -30,7 +30,7 @@ function showSoon(){
 
 function hideSoon(){
     justPapersSectionBody.style.opacity = '0';
-    justPapersSectionBody.style.transform = 'translateY(-0px)';
+    justPapersSectionBody.style.transform = 'translateY(-20px)';
     justPapersSectionDetails.style.paddingBottom = '0px';
 }
 

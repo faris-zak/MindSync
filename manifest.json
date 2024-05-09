@@ -1,0 +1,22 @@
+{
+    "name":"MindSync",
+    "short_name":"PWA",
+    "start_url":"index.html",
+    "display":"standalone",
+    "background_color":"white",
+    "theme_color":"#14213D",
+    "scope": ".",
+    "description":"MindSync Website",
+    "icons":[
+    {
+    "src":"Attachments/mindsynclogo.png",                     
+    "sizes":"192x192",
+    "type":"image/png"
+    },
+    {
+    "src":"Attachments/mindsynclogo.png",
+    "sizes":"512x512",
+    "type":"image/png"
+    }
+  ]
+}
