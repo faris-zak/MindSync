@@ -91,7 +91,7 @@ section div.chaptersSection div.chaptersSectionDetails button{
     padding: 6px 12px;
     border-radius: 5px;
     margin-bottom: 15px;
-    border: 3px solid #153448;
+    border: none;
 }
 
 section div.chaptersSection div.chaptersSectionDetails br.buttonLine{
@@ -109,13 +109,11 @@ section div.chaptersSection div.chaptersSectionDetails button.secondChapterButto
 section div.chaptersSection div.chaptersSectionDetails button:hover{
     color: #948979;
     background-color: #153448;
-    border: none;
 }
 
 section div.chaptersSection div.chaptersSectionDetails button:active{
     color: #DFD0B8;
     background-color: #3C5B6F;
-    border: none;
 }
 
 

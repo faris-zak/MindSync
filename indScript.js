@@ -19,20 +19,22 @@ mindsyncBrandSection.addEventListener('mouseout', handleMouseOut);
 
 
 const justPapersSection = document.getElementById('justPapers');
-const justPapersSectionBody = document.getElementById('justPaperSectionSoon');
+const justPapersSectionBody = document.getElementById('justPaperSectionInfo');
 const justPapersSectionDetails = document.getElementById('justPapersSectionDetails');
+const justPapersSectionButton = document.getElementById('justPapersSectionButton');
 
-function showSoon(){
+
+function showInfo(){
     justPapersSectionBody.style.opacity = '1';
     justPapersSectionBody.style.transform = 'translateY(10px)';
     justPapersSectionDetails.style.paddingBottom = '20px';
 }
 
-function hideSoon(){
+function hideInfo(){
     justPapersSectionBody.style.opacity = '0';
     justPapersSectionBody.style.transform = 'translateY(-20px)';
     justPapersSectionDetails.style.paddingBottom = '0px';
 }
 
-justPapersSection.addEventListener('mouseover', showSoon);
-justPapersSection.addEventListener('mouseout', hideSoon);
+justPapersSection.addEventListener('mouseover', showInfo);
+justPapersSection.addEventListener('mouseout', hideInfo);
