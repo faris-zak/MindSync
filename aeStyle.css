@@ -89,12 +89,12 @@ section div.sectionContainer button.clearButton{
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 50px;
+    border: none;
 }
 
 section div.sectionContainer button.clearButton:hover{
     padding: 6px 12px;
     border: 2px solid #14213D;
-
 }
 
 section div.sectionContainer button.clearButton:active{

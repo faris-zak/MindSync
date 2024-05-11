@@ -5,15 +5,15 @@ var topFunction = document.getElementById("mindSyncHomeIcon");
 
 window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
+function scrollFunction(){
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    topFunction.setAttribute("href", "#");
+    topFunction.setAttribute("href", "#Top");
   } else {
     topFunction.setAttribute("href", "index.html");
   }
 }
 
-function topFunction() {
+function topFunction(){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
