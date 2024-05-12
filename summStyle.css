@@ -423,7 +423,7 @@ section div.organizations{
     margin-bottom: 50px;
 }
 
-section div.organizations div.omanFlagContainer{
+/* section div.organizations div.omanFlagContainer{
     position: fixed;
     z-index: 1;
     bottom: 10px;
@@ -440,7 +440,7 @@ section div.organizations a div.omanFlagContainer img{
 
 section div.organizations a div.omanFlagContainer img:hover{
     cursor: default;
-}
+} */
 
 section div.organizations div.omanEducationalPortalContainer{
     display: inline-block;

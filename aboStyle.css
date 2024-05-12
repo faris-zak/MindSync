@@ -105,8 +105,12 @@ section div.featuresSection div.featuresSectionDetails ul.featuresSectionList li
     border-radius: 5px;
 }
 
-section div.featuresSection div.featuresSectionDetails ul.featuresSectionList li.feature:first-child{
+section div.featuresSection div.featuresSectionDetails ul.featuresSectionList li.feature{
     margin-bottom: 20px;
+}
+
+section div.featuresSection div.featuresSectionDetails ul.featuresSectionList li.feature:last-child{
+    margin-bottom: 0px;
 }
 
 section div.contactSection{
