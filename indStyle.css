@@ -129,7 +129,7 @@ section div.mindsyncBrandSection p span.firstWord{
     color: #FCA311;
 }
 
-section div.selfDevelopmentSection, section div.academicEducationSection, section div.servicesToolsSection{
+section div.selfDevelopmentSection, section div.academicEducationSection, section div.servicesToolsSection, section div.mindsyncsSummariesSection{
     display: inline-block;
     width: 100%;
     height: auto;
@@ -140,31 +140,27 @@ section div.selfDevelopmentSection, section div.academicEducationSection, sectio
     overflow: visible;
 }
 
-section div.selfDevelopmentSection div.subSectionDetails, section div.academicEducationSection div.subSectionDetails, section div.servicesToolsSection div.subSectionDetails{
+section div.selfDevelopmentSection div.subSectionDetails, section div.academicEducationSection div.subSectionDetails, section div.servicesToolsSection div.subSectionDetails, section div.mindsyncsSummariesSection div.subSectionDetails{
     gap: 0.5em;
     display: grid; 
     place-content: center;
 }
 
-section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle a, section div.academicEducationSection div.subSectionDetails p.subSectionTitle a, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle a{
+section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle a, section div.academicEducationSection div.subSectionDetails p.subSectionTitle a, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle a, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle a{
     font-size: 1.4em;
     font-weight: bold;
     color: black;
 }
 
-section div.selfDevelopmentSection:hover, section div.academicEducationSection:hover, section div.servicesToolsSection:hover{
-    border-color: #FCA311;
-}
-
-section div.selfDevelopmentSection:hover div.subSectionDetails p.subSectionTitle a, section div.academicEducationSection:hover div.subSectionDetails p.subSectionTitle a, section div.servicesToolsSection:hover div.subSectionDetails p.subSectionTitle a{
+section div.selfDevelopmentSection:hover div.subSectionDetails p.subSectionTitle a, section div.academicEducationSection:hover div.subSectionDetails p.subSectionTitle a, section div.servicesToolsSection:hover div.subSectionDetails p.subSectionTitle a, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle a{
     color: #14213D;
 }
 
-section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle a:hover, section div.academicEducationSection div.subSectionDetails p.subSectionTitle a:hover, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle a:hover{
+section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle a:hover, section div.academicEducationSection div.subSectionDetails p.subSectionTitle a:hover, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle a:hover, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle a:hover{
     color: #FCA311;
 }
 
-section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle:hover, section div.academicEducationSection div.subSectionDetails p.subSectionTitle:hover, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle:hover{
+section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle:hover, section div.academicEducationSection div.subSectionDetails p.subSectionTitle:hover, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle:hover, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle:hover{
     transform: scale(1.04);
 }
 
@@ -292,7 +288,7 @@ section div.opinionSection div.opinionSectionDetails p.opinionSectionAuthor{
         width: 200px;
     }
     
-    section div.selfDevelopmentSection:hover div.subSectionDetails p.subSectionTitle, section div.academicEducationSection:hover div.subSectionDetails p.subSectionTitle, section div.servicesToolsSection:hover div.subSectionDetails p.subSectionTitle{
+    section div.selfDevelopmentSection:hover div.subSectionDetails p.subSectionTitle, section div.academicEducationSection:hover div.subSectionDetails p.subSectionTitle, section div.servicesToolsSection:hover div.subSectionDetails p.subSectionTitle, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle{
         margin-bottom: 0;
     }
 }
