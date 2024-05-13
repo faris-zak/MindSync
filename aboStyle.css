@@ -40,6 +40,63 @@ section div.aboutSection div.aboutSectionDetails p.aboutSectionBody{
     margin-bottom: 0px;
 }
 
+section div.userGuideSection{
+    height: auto;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: visible;
+}
+
+section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionTitle{
+    user-select: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 00px;
+}
+
+section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionTitle:hover{
+    font-size: 25px;
+}
+
+section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionTitle:active{
+    font-size: 24px;
+}
+
+section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionBody{
+    display: none;
+}
+
+section div.userGuideSection div.userGuideSectionDetails hr{
+    display: none;
+    opacity: 0;
+    height: 1.5px;
+    background-color: #FCA311;
+    border: none;
+    margin: 0;
+}
+
+section div.userGuideSection div.userGuideSectionDetails ul.iconSectionList{
+    display: none;
+    opacity: 0;
+    width: auto;
+    padding: 0;
+}
+
+section div.userGuideSection div.userGuideSectionDetails ul li a{
+    color: #868686;
+}
+
+section div.userGuideSection div.userGuideSectionDetails ul li a:hover{
+    color: #FCA311;
+}
+
+section div.userGuideSection div.userGuideSectionDetails ul li a:active{
+    color: #14213D;
+}
+
 section div.goalSection{
     width: 100%;
     height: auto;

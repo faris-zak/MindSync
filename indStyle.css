@@ -96,6 +96,7 @@ section div.mindsyncBrandSection{
     height: 100px;
     position: relative;
     margin: 0;
+    margin-bottom: 50px;
 }
 
 section div.mindsyncBrandSection img.mindsyncLogo{
@@ -162,6 +163,14 @@ section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle a:hov
 
 section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle:hover, section div.academicEducationSection div.subSectionDetails p.subSectionTitle:hover, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle:hover, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle:hover{
     transform: scale(1.04);
+}
+
+section div.horizontal-line{
+    width: 100%;
+    height: 2px;
+    background-color: #FCA311;
+    position: relative;
+    margin: 0;
 }
 
 section div.purposeSection{
@@ -288,7 +297,7 @@ section div.opinionSection div.opinionSectionDetails p.opinionSectionAuthor{
         width: 200px;
     }
     
-    section div.selfDevelopmentSection:hover div.subSectionDetails p.subSectionTitle, section div.academicEducationSection:hover div.subSectionDetails p.subSectionTitle, section div.servicesToolsSection:hover div.subSectionDetails p.subSectionTitle, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle{
+    section div.selfDevelopmentSection:hover div.subSectionDetails p.subSectionTitle, section div.academicEducationSection:hover div.subSectionDetails p.subSectionTitle, section div.servicesToolsSection:hover div.subSectionDetails p.subSectionTitle, section div.mindsyncsSummariesSection:hover div.subSectionDetails p.subSectionTitle{
         margin-bottom: 0;
     }
 }
