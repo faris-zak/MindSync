@@ -26,13 +26,6 @@ section div.aboutSection div.aboutSectionDetails p.aboutSectionTitle{
     margin-bottom: 20px;
 }
 
-section div.aboutSection div.aboutSectionDetails hr{
-    height: 1.5px;
-    background-color: #FCA311;
-    border: none;
-    margin: 0;
-}
-
 section div.aboutSection div.aboutSectionDetails p.aboutSectionBody{
     font-size: 20px;
     color: #14213D;
@@ -40,9 +33,16 @@ section div.aboutSection div.aboutSectionDetails p.aboutSectionBody{
     margin-bottom: 0px;
 }
 
+section div.aboutSection div.aboutSectionDetails hr{
+    height: 1.5px;
+    background-color: #FCA311;
+    border: none;
+    margin: 0;
+}
+
 section div.userGuideSection{
     height: auto;
-    margin-bottom: 50px;
+    margin-top: 50px;
     position: relative;
     overflow: visible;
 }

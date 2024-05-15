@@ -27,6 +27,13 @@ section div.introSection div.introSectionDetails p.introSectionTitle{
     margin-bottom: 20px;
 }
 
+section div.introSection div.introSectionDetails p.introSectionBody{
+    font-size: 20px;
+    color: #14213D;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
 section div.introSection div.introSectionDetails hr{
     height: 1.5px;
     background-color: #FCA311;
@@ -51,9 +58,10 @@ section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSec
 }
 
 section div.accessMethodSection div.accessMethodSectionDetails p.accessMethodSectionBody{
-    font-size: 18px;
-    color: black;
+    font-size: 20px;
+    color: #14213D;
     font-weight: 500;
+    margin-bottom: 0px;
 }
 
 section div.sectionContainer{

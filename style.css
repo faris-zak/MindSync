@@ -97,7 +97,7 @@ div.navDivContainer{
     right: 0px;
     margin-left: auto;
     margin-right: auto;
-    width: 85%;
+    width: 50%;
     height: 52px;
     align-items: center;
     justify-content: space-around;
@@ -163,10 +163,16 @@ footer div.copyright p{
     user-select: none;
 }
 
+
+@media screen and (max-width: 1300px){
+    div.navDivContainer{
+        width: 80%;
+    }
+}
+
 @media screen and (min-width: 801px){
     
     div.navDivContainer{
-        width: 70%;
         height: 65px;
     }
 
@@ -260,6 +266,10 @@ footer div.copyright p{
     nav.navBar a div.oman2040VisionContainer img{
         max-width: 90%;
         max-height: 90%;
+    }
+
+    div.navDivContainer{
+        width: 85%;
     }
 
     div.navDivContainer div.hyperLinks a i{
