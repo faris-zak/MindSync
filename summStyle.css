@@ -73,6 +73,15 @@ section div.chaptersSection div.chaptersSectionDetails button.firstChapterButton
 
 section div.chaptersSection div.chaptersSectionDetails button.secondChapterButton{
     margin-right: 10px;
+    animation: borderHidden 5s ease 2s infinite alternate;
+}
+
+@keyframes borderHidden{
+    0%   {border: 2px solid transparent;}
+    25%  {border: 2px solid #14213D;}
+    50%  {border: 2px solid transparent;}
+    75%  {border: 2px solid #14213D;}
+    100% {border: 2px solid transparent;}
 }
 
 section div.firstChapterInfoSection{
@@ -316,6 +325,7 @@ section div.secondChapterSection ul#list li.sections:last-child{
 }
 
 section div.secondChapterSection ul#list 
+li.sections div.finalSection,
 li.sections div.mathSection,
 li.sections div.sciencesSection,
 li.sections div.languageSection,
@@ -331,6 +341,11 @@ li.sections div.otherAccessoriesSection{
 }
 
 section div.secondChapterSection ul#list
+li.sections div.finalSection, div.finalSectionDetails{
+    padding: 10px;
+}
+
+section div.secondChapterSection ul#list
 li.sections div.mathSection div.mathSectionDetails,
 li.sections div.sciencesSection div.sciencesSectionDetails,
 li.sections div.languageSection div.languageSectionDetails,
@@ -339,6 +354,21 @@ li.sections div.hisAndGeoSection div.hisAndGeoSectionDetails,
 li.sections div.individualSkillsSection div.individualSkillsSectionDetails,
 li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails{
     padding: 20px;
+}
+
+section div.secondChapterSection ul#list
+li.sections div.finalSection, div.finalSectionDetails p.finalSectionTitle a{
+    font-size: 22px;
+    color: black;
+    font-weight: 600;
+    padding-right: 0;
+    direction: rtl;
+}
+
+section div.secondChapterSection ul#list
+li.sections div.finalSection, div.finalSectionDetails p.finalSectionTitle a:hover{
+
+    color: #FCA311;
 
 }
 
