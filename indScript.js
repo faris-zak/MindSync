@@ -1,16 +1,16 @@
 const mindsyncBrandSection = document.getElementById('mindsyncBrand');
-const mindsyncLogo = document.getElementById('mindsyncLogo');
+const mindsyncDev = document.getElementById('mindsyncDev');
 const mindsyncWord = document.getElementById('mindsyncWord');
 
 function handleMouseOver(){
     mindsyncBrandSection.style.backgroundColor = 'white';
-    mindsyncLogo.style.opacity = '1';
+    mindsyncDev.style.opacity = '1';
     mindsyncWord.style.opacity = '0';
 }
 
 function handleMouseOut(){
     mindsyncBrandSection.style.backgroundColor = '#14213D';
-    mindsyncLogo.style.opacity = '0';
+    mindsyncDev.style.opacity = '0';
     mindsyncWord.style.opacity = '1';
 }
 

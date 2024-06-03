@@ -99,15 +99,17 @@ section div.mindsyncBrandSection{
     margin-bottom: 50px;
 }
 
-section div.mindsyncBrandSection img.mindsyncLogo{
+section div.mindsyncBrandSection p.mindsyncDevWord{
     position: absolute;
-    width: 70px;
+    font-size: 45px;
+    color: #14213D;
+    font-weight: 500;
     opacity: 0;
 }
 
 section div.mindsyncBrandSection p{
     direction: ltr;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 20px;
     opacity: 1;
 }

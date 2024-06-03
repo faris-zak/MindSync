@@ -1,20 +1,20 @@
 {
-    "name":"MindSync - مايندسينك",
-    "short_name":"MindSync",
+    "name":"MindSync Developer",
+    "short_name":"MindSync Dev",
     "start_url":"index.html",
     "display":"standalone",
     "background_color":"white",
     "theme_color":"#14213D",
     "scope": ".",
-    "description":"مايندسينك، بيئة تعليمية ملهمة وداعمة تشجع على النمو الشخصي والتحسن المستمر.",
+    "description":"مايندسينك مطورين، نسخة أقل إستقراراً من مايندسينك، أفضل تمثيل للتحسينات من الإسبوع الماضي.",
     "icons":[
     {
-    "src":"Attachments/Pictures/mindsynclogo.png",
+    "src":"Attachments/Pictures/mindsync-applogo.png",
     "sizes":"192x192",
     "type":"image/png"
     },
     {
-    "src":"Attachments/Pictures/mindsynclogo.png",
+    "src":"Attachments/Pictures/mindsynclogo-applogo.png",
     "sizes":"512x512",
     "type":"image/png"
     }
