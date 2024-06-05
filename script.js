@@ -1,21 +1,40 @@
 console.log("Connected Successfully.");
 
 
-var topFunction = document.getElementById("mindSyncHomeIcon");
+var mindSyncHomeIcon = document.getElementById("mindSyncHomeIcon");
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {smallScreenScrollFunction()};
 
-function scrollFunction(){
+function smallScreenScrollFunction(){
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    topFunction.setAttribute("href", "#Top");
+    mindSyncHomeIcon.setAttribute("href", "#top");
   } else {
-    topFunction.setAttribute("href", "index.html");
+    mindSyncHomeIcon.setAttribute("href", "index.html");
   }
 }
 
-function topFunction(){
+function mindSyncHomeIcon(){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
+// -----------------
 
+var toTop = document.getElementById("toTop");
+
+window.onscroll = function() {bigScreenScrollFunction()};
+
+function bigScreenScrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    toTop.style.opacity = "1";
+    toTop.style.paddingBottom = "100px";
+  } else {
+    toTop.style.opacity = "0";
+    toTop.style.paddingBottom = "0px";
+  }
+}
+
+function toTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

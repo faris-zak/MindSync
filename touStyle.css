@@ -57,3 +57,15 @@ section p a.contactEmail{
 section p a.contactEmail:hover{
     text-decoration: underline;
 }
+
+
+@media screen and (min-width: 1025px){
+
+    section div{
+        border-radius: 10px;
+    }
+
+    section{
+        margin-bottom: 0px;
+    }
+}
