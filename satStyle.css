@@ -149,6 +149,7 @@ section div.sectionContainer ul#list li.sections div.picturesAndVideosSection di
 }
 
 section div.sectionContainer ul#list 
+li.sections div.pomodoroSection,
 li.sections div.aiChatSection,
 li.sections div.picturesAndVideosSection,
 li.sections div.textEditingSection{
@@ -160,6 +161,7 @@ li.sections div.textEditingSection{
 }
 
 section div.sectionContainer ul#list
+li.sections div.pomodoroSection div.pomodoroSectionDetails,
 li.sections div.aiChatSection div.aiChatSectionDetails,
 li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails,
 li.sections div.textEditingSection div.textEditingSectionDetails{
@@ -168,6 +170,7 @@ li.sections div.textEditingSection div.textEditingSectionDetails{
 }
 
 section div.sectionContainer ul#list
+li.sections div.pomodoroSection div.pomodoroSectionDetails p.pomodoroSectionTitle,
 li.sections div.aiChatSection div.aiChatSectionDetails p.aiChatSectionTitle,
 li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails p.picturesAndVideosSectionTitle,
 li.sections div.textEditingSection div.textEditingSectionDetails p.textEditingSectionTitle{
@@ -233,6 +236,52 @@ li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails ul.
 li.sections div.textEditingSection div.textEditingSectionDetails ul.textEditingSectionList i{
     color: #14213D;
     cursor: default;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div#pomodoroTimer{
+    font-size: 36px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div.pomodoroButtons{
+    margin: 20px;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div.pomodoroButtons button{
+    background-color: #CCC;
+    font-size: 20px;
+    font-weight: 500;
+    color: #14213D;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div.pomodoroButtons button.start{
+    margin: 0px 0px 0px 10px;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div.pomodoroButtons button.start:hover{
+    background-color: #219a52;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div.pomodoroButtons button.pause{
+    margin: 0px 0px 0px 0px;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div.pomodoroButtons button.pause:hover{
+    background-color: gray;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div.pomodoroButtons button.reset{
+    margin: 0px 10px 0px 0px;
+}
+
+section div.sectionContainer ul#list li.sections div.pomodoroSection div.pomodoroSectionDetails div.pomodoroButtons button.reset:hover{
+    background-color: tomato;
 }
 
 

@@ -64,6 +64,21 @@
                     <button class="clearButton" id="clearButton" type="button" onclick="clearField();" title="Search Again">إبحث مره أخرى <span><i class="fi fi-rr-rotate-right"></i></span></button>
                     <ul id='list'>
                         <li class="sections">
+                            <div class="pomodoroSection" id="pomodoroTiemr">
+                                <div class="pomodoroSectionDetails">
+                                    <p class="pomodoroSectionTitle" title="Pomodoro Timer">مؤقت بومودورو</p>
+                                    <p class="pomodoroSectionBody">استخدم أداة مؤقت بومودورو من <span style="font-weight: 600; color: #FCA311;">مايندسينك</span> المدمجة لتحسين تركيزك وإدارة وقتك بشكل فعال خلال جلسات الدراسة.</p>
+                                    <div id="pomodoroTimer">25:00</div>
+                                    <div class="pomodoroButtons">
+                                        <button onclick="startTimer()" class="start">بدأ</button>
+                                        <button onclick="pauseTimer()" class="pause">إيقاف</button>
+                                        <button onclick="resetTimer()" class="reset">إعادة ضبط</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="sections">
                             <div class="aiChatSection" id="aiChat">
                                 <div class="aiChatSectionDetails">
                                     <p class="aiChatSectionTitle" title="Chatbot">محادثة الذكاء الاصطناعي</p>

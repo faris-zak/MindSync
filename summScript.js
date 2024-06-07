@@ -38,6 +38,10 @@ updateButtonVisibility();
 
 searchbar.addEventListener('input', updateButtonVisibility);
 
+clearButton.addEventListener('click', function(){
+  location.reload();
+});
+
 
 const firstChapterButton = document.getElementById('firstChapterButton');
 const secondChapterButton = document.getElementById('secondChapterButton');
