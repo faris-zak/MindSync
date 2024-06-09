@@ -95,11 +95,11 @@
                 background-color: #219a52;
             }
 
-            section div.pomodoroSection div.pomodoroSectionDetails div.buttons button#pause{
+            section div.pomodoroSection div.pomodoroSectionDetails div.buttons button#pauseContinue{
                 margin: 0px 0px 0px 0px;
             }
 
-            section div.pomodoroSection div.pomodoroSectionDetails div.buttons button#pause:hover{
+            section div.pomodoroSection div.pomodoroSectionDetails div.buttons button#pauseContinue:hover{
                 background-color: gray;
             }
 
@@ -287,7 +287,7 @@
     
                         <div id="timerButtons" class="buttons">
                             <button id="start" onclick="startButton()" title="Start">بدأ</button>
-                            <button id="pause" onclick="pauseButton()" title="Pause">إيقاف</button>
+                            <button id="pauseContinue" onclick="pauseContinueButton()" title="Pause / Continue">إيقاف</button>
                             <button id="reset" onclick="resetButton()" title="reset">إعادة ضبط</button>
                         </div>
                     </div>
@@ -318,10 +318,11 @@
             let pomodoro = document.getElementById("pomodoro-timer"); // 25m
             let short = document.getElementById("short-timer"); // 5m
             let long = document.getElementById("long-timer"); // 15m
-            let currentTimer = null;
             let timerMessage = document.getElementById("timer-message");
             let buttonsSection = document.getElementById("timerButtons");
             let alarm = new Audio("Attachments/Audio/pomodoroAlarmTimer.mp3");
+            let currentTimer = null;
+            let isPaused = false;
 
             function hideAll() {
                 let timers = document.querySelectorAll(".timer-display");
@@ -395,12 +396,19 @@
                 }
             };
 
-            function pauseButton() {
-                if (currentTimer) {
-                    clearInterval(myInterval);
-                    currentTimer.classList.remove("loop-opacity");
-                    alarm.pause();
-                }
+            function pauseContinueButton() {
+                    if (!currentTimer) return; // Exit if no timer is running
+
+                    if (!isPaused) {
+                        clearInterval(myInterval);
+                        currentTimer.classList.remove("loop-opacity");
+                        alarm.pause();
+                        document.getElementById("pauseContinue").textContent = "استئناف";
+                    } else {
+                        startTimer(currentTimer);
+                        document.getElementById("pauseContinue").textContent = "إيقاف";
+                    }
+                    isPaused = !isPaused;
             };
 
             function resetButton() {
@@ -410,6 +418,7 @@
                     currentTimer.textContent = initialDuration + ":00";
                     currentTimer.classList.remove("loop-opacity");
                     alarm.pause();
+                    document.getElementById("pauseContinue").textContent = "إيقاف";
                 }
             };
         </script>
