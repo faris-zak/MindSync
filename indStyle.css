@@ -368,6 +368,10 @@ section div.servicesToolsSection div.subSectionDetails div.newItemsBox ul.items{
     display: none;
 }
 
+section div.servicesToolsSection div.subSectionDetails div.newItemsBox ul.items li a:hover{
+    text-decoration: underline;
+}
+
 
 @media screen and (min-width: 1025px){
 
