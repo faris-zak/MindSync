@@ -22,6 +22,10 @@ const mindsyncsSummaries = document.getElementById('mindsyncsSummaries');
 const selfDevelopment = document.getElementById('selfDevelopment');
 const academicEducation = document.getElementById('academicEducation');
 const servicesTools = document.getElementById('servicesTools');
+const newItemsBox = document.getElementsByClassName('newItemsBox');
+const newText = document.getElementsByClassName('newText');
+const newItems = document.getElementById('newItems');
+
 
 const horizontalLine1 = document.getElementById('horizontalLine1');
 const horizontalLine2 = document.getElementById('horizontalLine2');
@@ -50,12 +54,25 @@ function handleMouseOut2(){
 function handleMouseOver3(){
     horizontalLine3.style.height = '3px';
     horizontalLine3.style.backgroundColor = '#14213D';
+    servicesTools.style.paddingBottom = '5px';
 }
 
 function handleMouseOut3(){
     horizontalLine3.style.height = '2px';
     horizontalLine3.style.backgroundColor = '#FCA311';
+    servicesTools.style.paddingBottom = '0px';
 }
+var x = 0;
+function newDroplist(){
+        console.log("clicked");
+
+        if(newItems.style.display === 'block'){
+            newItems.style.display = 'none';
+        } else{
+            newItems.style.display = 'block';
+        }
+        console.log(x = x+1);
+    };
 
 mindsyncsSummaries.addEventListener('mouseover', handleMouseOver1);
 mindsyncsSummaries.addEventListener('mouseout', handleMouseOut1);

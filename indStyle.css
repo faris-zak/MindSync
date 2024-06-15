@@ -115,7 +115,7 @@ section div.mindsyncBrandSection{
     justify-content: center;
     background-color: #14213D;
     width: 100%;
-    height: 100px;
+    height: 110px;
     position: relative;
     margin: 0;
     margin-bottom: 50px;
@@ -158,7 +158,6 @@ section div.mindsyncBrandSection p.minsyncWord span.firstWord{
 section div.selfDevelopmentSection, section div.academicEducationSection, section div.servicesToolsSection, section div.mindsyncsSummariesSection{
     display: inline-block;
     width: 100%;
-    height: auto;
     align-items: center;
     border-radius: 0px;
     background-color: #f5f5f5;
@@ -331,6 +330,42 @@ section div.opinionSection div.opinionSectionDetails p.opinionSectionAuthor{
     font-style: italic;
     font-weight: 500;
     margin-top: 10px;
+}
+
+section div.servicesToolsSection div.subSectionDetails div.newItemsBox{
+    margin: 0px;
+    padding: 0px;
+}
+
+section div.servicesToolsSection div.subSectionDetails div.newItemsBox p span.newText{
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 1;
+    animation: newWord 2s initial infinite;
+}
+
+@keyframes newWord{
+    50%{
+        color: #14213D;
+    }
+    100%{
+        color: #FCA311;
+    }
+}
+
+section div.servicesToolsSection div.subSectionDetails div.newItemsBox p span.newText:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 1;
+
+}
+
+section div.servicesToolsSection div.subSectionDetails div.newItemsBox ul.items{
+    padding: 0px;
+    display: none;
 }
 
 
