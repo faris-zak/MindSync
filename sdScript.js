@@ -24,11 +24,13 @@ const clearButton = document.getElementById('clearButton');
 function updateButtonVisibility() {
   if (searchbar.value === ""){
     clearButton.style.opacity = 0;
+    clearButton.style.cursor = 'default';
     clearButton.style.marginBottom = "0px";
     searchbar.style.marginBottom = "0px";
   }
   else{
     clearButton.style.opacity = 1;
+    clearButton.style.cursor = 'pointer';
     clearButton.style.marginBottom = "50px";
     searchbar.style.marginBottom = "10px";
   }

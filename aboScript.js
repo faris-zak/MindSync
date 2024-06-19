@@ -5,28 +5,24 @@ const iconSectionList = document.getElementById('iconSectionList');
 const userGuideLine = document.getElementById('userGuideLine');
 const downIcon = document.getElementById('downIcon');
 
-function showhideDiv(){
-    if(userGuideSectionBody.style.opacity === '0' &&
-       userGuideSectionBody.style.display === 'none' &&
-       userGuideLine.style.opacity === '0' &&
-       userGuideLine.style.display === 'none' &&
-       iconSectionList.style.opacity === '0' &&
-       iconSectionList.style.display === 'none'){
+function showHideDiv(){
+    if(
+       userGuideLine.style.display == 'block' &&
+       iconSectionList.style.opacity == '1' &&
+       iconSectionList.style.display == 'block' &&
+       userGuideSectionBody.style.display == 'block'){
 
-        downIcon.style.opacity = '0';
-        userGuideLine.style.opacity = '1';
-        userGuideLine.style.display = 'block';
-        iconSectionList.style.opacity = '1';
-        iconSectionList.style.display = 'block';
-        userGuideSectionBody.style.opacity = '1';
-        userGuideSectionBody.style.display = 'block';
-    } else{
         downIcon.style.opacity = '1';
-        userGuideLine.style.opacity = '0';
         userGuideLine.style.display = 'none';
         iconSectionList.style.opacity = '0';
         iconSectionList.style.display = 'none';
-        userGuideSectionBody.style.opacity = '0';
         userGuideSectionBody.style.display = 'none';
+
+    } else{
+        downIcon.style.opacity = '0';
+        userGuideLine.style.display = 'block';
+        iconSectionList.style.opacity = '1';
+        iconSectionList.style.display = 'block';
+        userGuideSectionBody.style.display = 'block';
     }
 };

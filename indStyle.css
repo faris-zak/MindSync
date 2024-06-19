@@ -332,46 +332,6 @@ section div.opinionSection div.opinionSectionDetails p.opinionSectionAuthor{
     margin-top: 10px;
 }
 
-section div.servicesToolsSection div.subSectionDetails div.newItemsBox{
-    margin: 0px;
-    padding: 0px;
-}
-
-section div.servicesToolsSection div.subSectionDetails div.newItemsBox p span.newText{
-    cursor: pointer;
-    padding: 0px;
-    margin: 0px;
-    font-size: 18px;
-    font-weight: 500;
-    opacity: 1;
-    animation: newWord 2s initial infinite;
-}
-
-@keyframes newWord{
-    50%{
-        color: #14213D;
-    }
-    100%{
-        color: #FCA311;
-    }
-}
-
-section div.servicesToolsSection div.subSectionDetails div.newItemsBox p span.newText:hover{
-    cursor: pointer;
-    text-decoration: underline;
-    opacity: 1;
-
-}
-
-section div.servicesToolsSection div.subSectionDetails div.newItemsBox ul.items{
-    padding: 0px;
-    display: none;
-}
-
-section div.servicesToolsSection div.subSectionDetails div.newItemsBox ul.items li a:hover{
-    text-decoration: underline;
-}
-
 
 @media screen and (min-width: 1025px){
 

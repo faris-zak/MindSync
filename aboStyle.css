@@ -51,35 +51,39 @@ section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionTitle
 
 section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionTitle i{
     display: block;
-    user-select: none;
     cursor: pointer;
     font-size: 22px;
+    position: absolute;
+    right: 25%;
+    left: 25%;
 }
 
 section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionTitle:hover i{
-    margin-top: 5px;
+    margin-top: 3px;
+    opacity: 1;
 }
 
-section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionTitle:active{
-    font-size: 23px;
+section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionTitle:active i{
+    margin-top: 100px;
+    opacity: 0;
 }
 
 section div.userGuideSection div.userGuideSectionDetails p.userGuideSectionBody{
     font-size: 18px;
-    opacity: 0;
     display: none;
 }
 
 section div.userGuideSection div.userGuideSectionDetails hr{
-    opacity: 0;
     display: none;
     height: 1.5px;
     background-color: #FCA311;
     border: none;
     margin: 0;
+    margin-top: 15px;
 }
 
 section div.userGuideSection div.userGuideSectionDetails ul.iconSectionList{
+    list-style: none;
     opacity: 0;
     display: none;
     width: auto;

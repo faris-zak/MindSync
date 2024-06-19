@@ -276,11 +276,11 @@ section div.sectionContainer ul#list li.sections div.pomodoroSectionDetails a bu
 
 section div.sectionContainer ul#list li.sections div.pomodoroSectionDetails a button.excternalPomodoro:hover span{
     opacity: 1;
-    margin-right: 360px;
+    margin-right: 134px;
 }
 
 section div.sectionContainer ul#list li.sections div.pomodoroSectionDetails a button.excternalPomodoro:active span{
-    margin-right: 400px;
+    margin-right: 200px;
     opacity: 0;
 }
 
