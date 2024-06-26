@@ -1,0 +1,260 @@
+*{
+    text-decoration: none;
+    font-family: 'Tajawal';
+    transition: all 0.2s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    text-align: center;
+    background-color: #E5E5E5;
+}
+
+nav.navBar{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+nav.navBar div.navDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+nav.navBar div.navDiv a div.img img{
+    user-select: none;
+    width: 300px;
+    padding-top: 5px;
+}
+
+nav.navBar div.navDiv a div.img img:hover{
+    transform: scale(110%);
+}
+
+nav.navBar div.navDiv a div.img img:active{
+    transform: scale(90%);
+}
+
+nav.navBar div.navDiv ul{
+    margin-left: auto;
+    padding-right: 0;
+}
+
+nav.navBar div.navDiv ul li{
+    list-style: none;
+    display: inline-block;
+    direction: rtl;
+}
+
+nav.navBar div.navDiv ul li a.site{
+    color: #000;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 20px;
+}
+
+nav.navBar div.navDiv ul li a.site:hover{
+    color: #FCA311;
+}
+
+nav.navBar div.navDiv div.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+nav.navBar div.navDiv div.dropdown div.dropdownContent{
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #E5E5E5;
+    min-width: 160px;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+nav.navBar div.navDiv div.dropdownContent a{
+    display: block;
+    color: #14213D;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+nav.navBar div.navDiv div.dropdownContent a:hover{
+    border-radius: 4px;
+    color: #FCA311;
+}
+
+nav.navBar div.navDiv div.dropdownContent a:active{
+    color: #14213D;
+}
+
+nav.navBar div.navDiv div.dropdownContent a:hover{
+    background-color: #f1f1f1;
+}
+
+nav.navBar div.navDiv div.dropdown:hover .dropdownContent{
+    display: block; 
+}
+
+nav.navBar div.navDiv div.dropdown .dropBtn:hover, nav.navBar div.navDiv div.dropdown .dropBtn:focus{
+    color: #FCA311;
+}
+
+nav.navBar div.navDiv button.dropBtn{
+    display: none;
+}
+
+a.toTop{
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    color: black;
+    padding-top: 1%;
+    font-size: 2em;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    transition: opacity 0.3s;
+    background: transparent;
+}
+
+a.toTop:hover{
+    color: #FCA311;
+}
+
+footer{
+    padding: 40px 0px;
+    width: 100%;
+    color: #868686;
+    font-size: 1em;
+    padding-bottom: 0;
+}
+
+footer div.contact a{
+    text-decoration: none;
+    color: #868686;
+}
+
+footer div.contact a:hover{
+    color: #c3c6ce;
+}
+
+footer div.quickLink ul{
+    width: auto;
+    padding: 0;
+}
+
+footer div.quickLink ul li{
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+footer div.quickLink ul li a{
+    color: #868686;
+}
+
+footer div.quickLink ul li a:hover{
+    color: #14213D;
+}
+
+footer div.contact a i{
+    color: #868686;
+    font-size: 1.5em;
+    margin: 0% 1%;
+}
+
+footer div.contact a i:hover{
+    color: #FCA311;
+}
+
+@media screen and (max-width: 800px){
+
+    nav.navBar div.navDiv a div.img img{
+        width: 250px;
+    }
+
+    nav.navBar div.navDiv ul li a.site{
+        display: none;
+    }
+
+    nav.navBar div.navDiv button.dropBtn{
+        display: block;
+        border: none;
+        font-size: 32px;
+        background-color: transparent;
+        color: black;
+        padding: 4px 5px;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+}
+
+@media screen and (max-width:720px){
+
+    footer div.quickLink ul li{
+        display: block;
+        margin: 10px 0px;
+    }
+
+    footer div.contact a i{
+        margin: 0% 3%;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    nav.navBar{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    nav.navBar div.navDiv a div.img img{
+        width: 180px;
+    }
+
+    nav.navBar div.navDiv div.logo a{
+        font-size: 40px;
+    }
+
+    nav.navBar div.navDiv div.logo span.oman a{
+        font-size: 16px;
+    }
+
+    nav.navBar div.navDiv button.dropBtn{
+        font-size: 25px;
+    }
+
+    nav.navBar div.navDiv div.dropdownContent a{
+        font-size: 17px;
+    }
+
+    a.toTop:hover{
+        color: black;
+    }
+
+    a.toTop:active{
+        color: #FCA311;
+    }
+
+    footer div.quickLink ul{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    footer div.copyright p{
+        font-size: 1em;
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
