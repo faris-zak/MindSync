@@ -1,16 +1,16 @@
 const mindsyncBrandSection = document.getElementById('mindsyncBrand');
-const mindsyncDev = document.getElementById('mindsyncDev');
+const mindsyncLogo = document.getElementById('mindsyncLogo');
 const mindsyncWord = document.getElementById('mindsyncWord');
 
 function handleMouseOver(){
     mindsyncBrandSection.style.backgroundColor = 'white';
-    mindsyncDev.style.opacity = '1';
+    mindsyncLogo.style.opacity = '1';
     mindsyncWord.style.opacity = '0';
 }
 
 function handleMouseOut(){
     mindsyncBrandSection.style.backgroundColor = '#14213D';
-    mindsyncDev.style.opacity = '0';
+    mindsyncLogo.style.opacity = '0';
     mindsyncWord.style.opacity = '1';
 }
 
@@ -22,10 +22,6 @@ const mindsyncsSummaries = document.getElementById('mindsyncsSummaries');
 const selfDevelopment = document.getElementById('selfDevelopment');
 const academicEducation = document.getElementById('academicEducation');
 const servicesTools = document.getElementById('servicesTools');
-const newItemsBox = document.getElementsByClassName('newItemsBox');
-const newText = document.getElementsByClassName('newText');
-const newItems = document.getElementById('newItems');
-
 
 const horizontalLine1 = document.getElementById('horizontalLine1');
 const horizontalLine2 = document.getElementById('horizontalLine2');
@@ -60,15 +56,6 @@ function handleMouseOut3(){
     horizontalLine3.style.height = '2px';
     horizontalLine3.style.backgroundColor = '#FCA311';
 }
-
-function newDroplist(){
-        if(newItems.style.display === 'block'){
-            newItems.style.display = 'none';
-
-        } else{
-            newItems.style.display = 'block';
-        }
-    };
 
 mindsyncsSummaries.addEventListener('mouseover', handleMouseOver1);
 mindsyncsSummaries.addEventListener('mouseout', handleMouseOut1);
