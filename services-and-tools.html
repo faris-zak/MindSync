@@ -39,6 +39,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>خدمات وأدوات | MindSync</title>
         <link rel="icon" href="Attachments/Pictures/mindsync-icon.png">
+        <link rel="manifest" href="manifest.json">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="satStyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -175,5 +176,24 @@
 
         <script src="satScript.js"></script>
         <script src="script.js"></script>
+                <script>
+            window.addEventListener('load', () => {
+              registerSW();
+            });
+         
+            // Register the Service Worker
+            async function registerSW() {
+              if ('serviceWorker' in navigator) {
+                try {
+                  await navigator
+                        .serviceWorker
+                        .register('serviceworker.js');
+                }
+                catch (e) {
+                  console.log('SW registration failed');
+                }
+              }
+            }
+        </script>
     </body>
 </html>
