@@ -1,0 +1,407 @@
+*{
+    text-decoration: none;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.2s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+    background-color: white;
+}
+
+nav.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+nav.navBar div.mindsyncContainer{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: auto;
+}
+
+nav.navBar a div.mindsyncContainer img{
+    user-select: none;
+    max-width: 100%;
+    max-height: 100%;
+    width: 300px;
+}
+
+nav.navBar a div.mindsyncContainer img:hover{
+    transform: scale(105%);
+}
+
+nav.navBar a div.mindsyncContainer img:active{
+    transform: scale(100%);
+}
+
+nav.navBar div.vertical-line{
+    position: relative;
+    width: 1px;
+    height: 100px;
+    margin: 0 20px;
+    background-color: black;
+}
+
+nav.navBar div.vertical-line::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: black;
+}
+
+nav.navBar div.oman2040VisionContainer{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: auto;
+}
+
+nav.navBar a div.oman2040VisionContainer img{
+    user-select: none;
+    max-width: 100%;
+    max-height: 100%;
+    width: 180px;
+}
+
+nav.navBar a div.oman2040VisionContainer img:hover{
+    transform: scale(105%);
+}
+
+nav.navBar a div.oman2040VisionContainer img:active{
+    transform: scale(100%);
+}
+
+div.navDivContainerBigScreen{
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0px 40px 0px;
+    margin-left: auto;
+    width: 50%;
+    margin-right: auto;
+}
+
+div.navDivContainerBigScreen div.hyperLinks{
+    direction: rtl;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+
+div.navDivContainerBigScreen div.hyperLinks a{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 30px;
+    color: #14213D;
+}
+
+div.navDivContainerBigScreen div.hyperLinks a:hover{
+    font-size: 26px;
+    color: #14213D;
+    text-decoration: underline;
+    text-decoration-color: #FCA311;
+}
+
+div.navDivContainerSmallScreen{
+    display: none;
+    position: sticky;
+    background-color: #f5f5f5;
+    bottom: 20px;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 52px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 6px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+div.navDivContainerSmallScreen div.hyperLinks{
+    display: flex;
+    direction: ltr;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 6px;
+}
+
+div.navDivContainerSmallScreen div.hyperLinks a{
+    font-size: 24px;
+    margin: 0 auto;
+    color: #14213D;
+}
+
+div.navDivContainerSmallScreen div.hyperLinks a:hover{
+    transform: translateY(-3px);
+    font-size: 26px;
+    color: #FCA311;
+}
+
+a.toTop{
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    padding-top: 1%;
+    right: 1rem;
+    bottom: -5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+a.toTop img{
+    width: 50px;
+}
+
+a.toTop:hover img{
+    transform: scale(1.1);
+}
+
+a.toTop:active img{
+    transform: scale(0.9);
+}
+
+footer{
+    padding: 40px 0px;
+    width: 100%;
+    color: #868686;
+    font-size: 1em;
+    padding-bottom: 0;
+}
+
+footer div.quickLink ul{
+    width: auto;
+    padding: 0;
+}
+
+footer div.quickLink ul li{
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+footer div.quickLink ul li a{
+    color: #868686;
+}
+
+footer div.quickLink ul li a:hover{
+    color: #FCA311;
+}
+
+footer div.quickLink ul li a:active{
+    color: #14213D;
+}
+
+
+@media screen and (min-width: 1025px){
+    main{
+        width: 100%;
+    }
+
+    section{
+        width: 50%;
+        margin: auto;
+    }
+
+    a.toTop{
+        display: block;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    
+    div.navDivContainerBigScreen{
+        display: none;
+    }
+
+    div.navDivContainerSmallScreen{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    div.navDivContainerSmallScreen{
+        width: 80%;
+    }
+
+    div.navDivContainerBigScreen div.hyperLinks a{
+        font-size: 22px;
+        font-weight: 500;
+        margin: 0 auto;
+        padding: 10px;
+        color: #14213D;
+    }
+    
+    div.navDivContainerBigScreen div.hyperLinks a:hover{
+        font-size: 24px;
+        color: #14213D;
+        text-decoration: underline;
+        text-decoration-color: #FCA311;
+    }
+}
+
+@media screen and (min-width: 801px){
+    
+    div.navDivContainerSmallScreen{
+        height: 65px;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks{
+        padding: 10px;
+    }
+    
+    div.navDivContainerSmallScreen div.hyperLinks a i{
+        display: none;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks a span{
+        display: block;
+    }
+    
+    div.navDivContainerSmallScreen div.hyperLinks a span:hover{
+        font-size: 25px;
+        color: #FCA311;
+    }
+    
+    div.navDivContainerSmallScreen div.hyperLinks a img{
+        width: 50px;
+    }
+    
+    div.navDivContainerSmallScreen div.hyperLinks a img:hover{
+        transform: translateY(none);
+        width: 55px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    div.navDivContainerSmallScreen div.hyperLinks a span{
+        display: none;
+    }
+
+    nav.navBar a div.mindsyncContainer img{
+        width: 250px;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks a i{
+        font-size: 26px;
+        color: #14213D;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks a i:hover{
+        font-size: 27px;
+        color: #14213D;
+    }
+    
+    div.navDivContainerSmallScreen div.hyperLinks a i:active{
+        font-size: 28px;
+        color: #FCA311;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks a img{
+        width: 44px;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks img:active{
+        transform: translateY(none);
+        width: 48px;
+    }
+}
+
+@media screen and (max-width:720px){
+
+    footer div.quickLink ul li{
+        display: block;
+        margin: 10px 0px;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    nav.navBar{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    nav.navBar a div.mindsyncContainer img{
+        width: 200px;
+    }
+
+    nav.navBar div.vertical-line{
+        width: 1px;
+        height: 80px;
+        margin: 0 10px;
+    }
+
+    nav.navBar a div.oman2040VisionContainer img{
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    div.navDivContainerSmallScreen{
+        width: 85%;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks a i{
+        font-size: 25px;
+        color: #14213D;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks a i:hover{
+        font-size: 26px;
+        color: #14213D;
+    }
+    
+    div.navDivContainerSmallScreen div.hyperLinks a i:active{
+        font-size: 27px;
+        color: #FCA311;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks a img{
+        width: 40px;
+    }
+
+    div.navDivContainerSmallScreen div.hyperLinks img:active{
+        transform: translateY(none);
+        width: 44px;
+    }
+
+    footer div.quickLink ul{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    footer div.copyright p{
+        font-size: 1em;
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
