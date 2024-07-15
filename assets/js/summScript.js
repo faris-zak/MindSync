@@ -45,40 +45,81 @@ clearButton.addEventListener('click', function(){
 });
 
 
-const firstChapterButton = document.getElementById('firstChapterButton');
-const secondChapterButton = document.getElementById('secondChapterButton');
-const allChaptersButton = document.getElementById('showAllChaptersEleventhGradeButton');
-const firstInfoChapter = document.getElementById('firstChapterInfoSection');
-const secondInfoChapter = document.getElementById('secondChapterInfoSection');
-const secondDownInfoChapter = document.getElementById('secondDownChapterInfoSection');
-const firstChapter = document.getElementById('firstChapterSection');
-const secondChapter = document.getElementById('secondChapterSection');
-const secondChapterSectionLine = document.getElementById('secondChapterSectionLine');
+const showFirstChapterEleventhGradeButton = document.getElementById('showFirstChapterEleventhGradeButton');
+const showSecondChapterEleventhGradeButton = document.getElementById('showSecondChapterEleventhGradeButton');
+
+const showFirstChapterTwelfthGradeButton = document.getElementById('showFirstChapterTwelfthGradeButton');
+const showSecondChapterTwelfthGradeButton = document.getElementById('showSecondChapterTwelfthGradeButton');
+
+const eleventhFirstChapterInfoSection = document.getElementById('eleventhFirstChapterInfoSection');
+const eleventhSecondChapterInfoSection = document.getElementById('eleventhSecondChapterInfoSection');
+
+const twelfthFirstChapterInfoSection = document.getElementById('twelfthFirstChapterInfoSection');
+const twelfthSecondChapterInfoSection = document.getElementById('twelfthSecondChapterInfoSection');
+
+// const secondDownInfoChapter = document.getElementById('secondDownChapterInfoSection');
+
+const eleventhFirstChapterSection = document.getElementById('eleventhFirstChapterSection');
+const eleventhSecondChapterSection = document.getElementById('eleventhSecondChapterSection');
+
+const twelfthFirstChapterSection = document.getElementById('twelfthFirstChapterSection');
+const twelfthSecondChapterSection = document.getElementById('twelfthSecondChapterSection');
 
 
-function showFirstChapter(){
-  firstChapter.style.display="block";
-  secondChapter.style.display="none";
-  firstInfoChapter.style.display="block";
-  secondInfoChapter.style.display="none";
-  secondDownInfoChapter.style.display="none";
-  secondChapterSectionLine.style.display="none";
+
+
+function showEleventhGrade(){
+  showFirstChapterEleventhGradeButton.style.display="inline-flex";
+  showSecondChapterEleventhGradeButton.style.display="inline-flex";
+  showFirstChapterTwelfthGradeButton.style.display="none";
+  showSecondChapterTwelfthGradeButton.style.display="none";
+  twelfthSecondChapterSection.style.display="none";
+  twelfthSecondChapterInfoSection.style.display="none";
+  twelfthFirstChapterSection.style.display="none";
+  twelfthFirstChapterInfoSection.style.display="none";
 }
 
-function showSecondChapter(){
-  firstChapter.style.display="none";
-  secondChapter.style.display="block";
-  firstInfoChapter.style.display="none";
-  secondInfoChapter.style.display="block";
-  secondDownInfoChapter.style.display="none";
-  secondChapterSectionLine.style.display="none";
+
+
+function showTwelfthGrade(){
+  showFirstChapterEleventhGradeButton.style.display="none";
+  showSecondChapterEleventhGradeButton.style.display="none";
+  showFirstChapterTwelfthGradeButton.style.display="inline-flex";
+  showSecondChapterTwelfthGradeButton.style.display="inline-flex";
+  eleventhSecondChapterSection.style.display="none";
+  eleventhSecondChapterInfoSection.style.display="none";
+  eleventhFirstChapterSection.style.display="none";
+  eleventhFirstChapterInfoSection.style.display="none";
 }
 
-function showAllChapter(){
-  firstChapter.style.display="block";
-  secondChapter.style.display="block";
-  firstInfoChapter.style.display="block";
-  secondInfoChapter.style.display="none";
-  secondDownInfoChapter.style.display="block";
-  secondChapterSectionLine.style.display="block";
+// -------------
+
+function showEleventhGradeFirstChapter(){
+  eleventhFirstChapterSection.style.display="block";
+  eleventhSecondChapterSection.style.display="none";
+  eleventhFirstChapterInfoSection.style.display="block";
+  eleventhSecondChapterInfoSection.style.display="none";
+}
+
+function showEleventhGradeSecondChapter(){
+  eleventhFirstChapterSection.style.display="none";
+  eleventhSecondChapterSection.style.display="block";
+  eleventhFirstChapterInfoSection.style.display="none";
+  eleventhSecondChapterInfoSection.style.display="block";
+}
+
+// -------------
+
+function showTwelfthGradeFirstChapter(){
+  twelfthFirstChapterSection.style.display="block";
+  twelfthSecondChapterSection.style.display="none";
+  twelfthFirstChapterInfoSection.style.display="block";
+  twelfthSecondChapterInfoSection.style.display="none";
+}
+
+function showTwelfthGradeSecondChapter(){
+  twelfthFirstChapterSection.style.display="none";
+  twelfthSecondChapterSection.style.display="block";
+  twelfthFirstChapterInfoSection.style.display="none";
+  twelfthSecondChapterInfoSection.style.display="block";
 }

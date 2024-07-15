@@ -182,6 +182,7 @@ section div.selfDevelopmentSection:hover div.subSectionDetails p.subSectionTitle
 
 section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle a:hover, section div.academicEducationSection div.subSectionDetails p.subSectionTitle a:hover, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle a:hover, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle a:hover{
     color: #FCA311;
+    text-decoration: underline;
 }
 
 section div.selfDevelopmentSection div.subSectionDetails p.subSectionTitle:hover, section div.academicEducationSection div.subSectionDetails p.subSectionTitle:hover, section div.servicesToolsSection div.subSectionDetails p.subSectionTitle:hover, section div.mindsyncsSummariesSection div.subSectionDetails p.subSectionTitle:hover{

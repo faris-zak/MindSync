@@ -33,6 +33,57 @@ section div.introSection div.introSectionDetails hr{
     margin: 0;
 }
 
+section div.educationLevel{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+section div.educationLevel div.educationLevelDetails{
+    padding: 0px 20px;
+}
+
+section div.educationLevel div.educationLevelDetails h2{
+    font-size: 24px;
+    color: #14213D;
+    font-weight: 600;
+}
+
+section div.educationLevel div.educationLevelDetails button{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #14213D;
+    cursor: pointer;
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 20px;
+    margin-bottom: 0;
+    outline: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+section div.educationLevel div.educationLevelDetails button:hover{
+    box-shadow: #14213D 0 0 0 3px, transparent 0 0 0 0;
+}
+
+section div.educationLevel div.educationLevelDetails button:focus{
+    color: #FCA311;
+}
+
 section div.chaptersSection div.chaptersSectionDetails button{
     align-items: center;
     background-color: #fff;
@@ -41,13 +92,14 @@ section div.chaptersSection div.chaptersSectionDetails button{
     box-sizing: border-box;
     color: #14213D;
     cursor: pointer;
-    display: inline-flex;
+    display: none;
     flex: 1 1 auto;
     font-size: 1.2rem;
     font-weight: 700;
     justify-content: center;
     line-height: 1;
     margin: 20px;
+    margin-top: 0;
     outline: none;
     padding: 10px 16px;
     border-radius: 5px;
@@ -63,7 +115,12 @@ section div.chaptersSection div.chaptersSectionDetails button:hover{
     box-shadow: #14213D 0 0 0 3px, transparent 0 0 0 0;
 }
 
+section div.chaptersSection div.chaptersSectionDetails button:focus{
+    color: #FCA311;
+}
+
 section div.firstChapterInfoSection{
+    display: none;
     width: 100%;
     height: auto;
     position: relative;
@@ -86,6 +143,7 @@ section div.firstChapterInfoSection div.firstChapterInfoSectionDetails p.firstCh
 }
 
 section div.secondChapterInfoSection{
+    display: none;
     width: 100%;
     height: auto;
     position: relative;
@@ -108,7 +166,7 @@ section div.secondChapterInfoSection div.secondChapterInfoSectionDetails p.secon
 }
 
 section div.searchBar{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     margin: 0px;
@@ -178,7 +236,7 @@ section div.searchBar button.clearButton:focus span{
 
 /* firstChapterSection */
 section div.firstChapterSection{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     margin: 0px;
@@ -299,7 +357,7 @@ li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails ul.ot
 
 /* secondChapterSection */
 section div.secondChapterSection{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     margin: 0px;
@@ -453,7 +511,7 @@ li.sections div.otherAccessoriesSection div.otherAccessoriesSectionDetails ul.ot
 }
 
 section div.organizations{
-    margin-top: 0px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
