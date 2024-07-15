@@ -19,19 +19,13 @@ function clearField(){
 
 
 const searchbar = document.getElementById('searchbar');
-const clearButton = document.getElementById('clearButton');
 
 function updateButtonVisibility() {
   if (searchbar.value === ""){
-    clearButton.style.opacity = 0;
-    clearButton.style.cursor = 'default';
-    clearButton.style.marginBottom = "0px";
+
     searchbar.style.marginBottom = "0px";
   }
   else{
-    clearButton.style.opacity = 1;
-    clearButton.style.cursor = 'pointer';
-    clearButton.style.marginBottom = "50px";
     searchbar.style.marginBottom = "10px";
   }
 }
@@ -40,13 +34,15 @@ updateButtonVisibility();
 
 searchbar.addEventListener('input', updateButtonVisibility);
 
-clearButton.addEventListener('click', function(){
-  location.reload();
-});
 
+const searchBarSection = document.getElementById('searchBarSection');
 
 const showFirstChapterEleventhGradeButton = document.getElementById('showFirstChapterEleventhGradeButton');
 const showSecondChapterEleventhGradeButton = document.getElementById('showSecondChapterEleventhGradeButton');
+
+const showEleventhGradeButton = document.getElementById('showEleventhGradeButton');
+const showTwelfthGradeButton = document.getElementById('showTwelfthGradeButton');
+
 
 const showFirstChapterTwelfthGradeButton = document.getElementById('showFirstChapterTwelfthGradeButton');
 const showSecondChapterTwelfthGradeButton = document.getElementById('showSecondChapterTwelfthGradeButton');
@@ -66,8 +62,6 @@ const twelfthFirstChapterSection = document.getElementById('twelfthFirstChapterS
 const twelfthSecondChapterSection = document.getElementById('twelfthSecondChapterSection');
 
 
-
-
 function showEleventhGrade(){
   showFirstChapterEleventhGradeButton.style.display="inline-flex";
   showSecondChapterEleventhGradeButton.style.display="inline-flex";
@@ -77,9 +71,16 @@ function showEleventhGrade(){
   twelfthSecondChapterInfoSection.style.display="none";
   twelfthFirstChapterSection.style.display="none";
   twelfthFirstChapterInfoSection.style.display="none";
+  showTwelfthGradeButton.style.opacity="0.6";
+  showTwelfthGradeButton.style.color="#14213D";
+  showEleventhGradeButton.style.opacity="1";
+  showEleventhGradeButton.style.color="#FCA311";
+  showSecondChapterTwelfthGradeButton.style.opacity="1";
+  showSecondChapterTwelfthGradeButton.style.color="#14213D";
+  showFirstChapterTwelfthGradeButton.style.opacity="1";
+  showFirstChapterTwelfthGradeButton.style.color="#14213D";
+  searchBarSection.style.display="none";
 }
-
-
 
 function showTwelfthGrade(){
   showFirstChapterEleventhGradeButton.style.display="none";
@@ -90,15 +91,27 @@ function showTwelfthGrade(){
   eleventhSecondChapterInfoSection.style.display="none";
   eleventhFirstChapterSection.style.display="none";
   eleventhFirstChapterInfoSection.style.display="none";
+  showTwelfthGradeButton.style.opacity="1";
+  showTwelfthGradeButton.style.color="#FCA311";
+  showEleventhGradeButton.style.opacity="0.6";
+  showEleventhGradeButton.style.color="#14213D";
+  showSecondChapterEleventhGradeButton.style.opacity="1";
+  showSecondChapterEleventhGradeButton.style.color="#14213D";
+  showFirstChapterEleventhGradeButton.style.opacity="1";
+  showFirstChapterEleventhGradeButton.style.color="#14213D";
+  searchBarSection.style.display="none";
 }
-
-// -------------
 
 function showEleventhGradeFirstChapter(){
   eleventhFirstChapterSection.style.display="block";
   eleventhSecondChapterSection.style.display="none";
   eleventhFirstChapterInfoSection.style.display="block";
   eleventhSecondChapterInfoSection.style.display="none";
+  showSecondChapterEleventhGradeButton.style.opacity="0.6";
+  showSecondChapterEleventhGradeButton.style.color="#14213D";
+  showFirstChapterEleventhGradeButton.style.opacity="1";
+  showFirstChapterEleventhGradeButton.style.color="#FCA311";
+  searchBarSection.style.display="flex";
 }
 
 function showEleventhGradeSecondChapter(){
@@ -106,15 +119,23 @@ function showEleventhGradeSecondChapter(){
   eleventhSecondChapterSection.style.display="block";
   eleventhFirstChapterInfoSection.style.display="none";
   eleventhSecondChapterInfoSection.style.display="block";
+  showSecondChapterEleventhGradeButton.style.opacity="1";
+  showSecondChapterEleventhGradeButton.style.color="#FCA311";
+  showFirstChapterEleventhGradeButton.style.opacity="0.6";
+  showFirstChapterEleventhGradeButton.style.color="#14213D";
+  searchBarSection.style.display="flex";
 }
-
-// -------------
 
 function showTwelfthGradeFirstChapter(){
   twelfthFirstChapterSection.style.display="block";
   twelfthSecondChapterSection.style.display="none";
   twelfthFirstChapterInfoSection.style.display="block";
   twelfthSecondChapterInfoSection.style.display="none";
+  showSecondChapterTwelfthGradeButton.style.opacity="0.6";
+  showSecondChapterTwelfthGradeButton.style.color="#14213D";
+  showFirstChapterTwelfthGradeButton.style.opacity="1";
+  showFirstChapterTwelfthGradeButton.style.color="#FCA311";
+  searchBarSection.style.display="flex";
 }
 
 function showTwelfthGradeSecondChapter(){
@@ -122,4 +143,9 @@ function showTwelfthGradeSecondChapter(){
   twelfthSecondChapterSection.style.display="block";
   twelfthFirstChapterInfoSection.style.display="none";
   twelfthSecondChapterInfoSection.style.display="block";
+  showSecondChapterTwelfthGradeButton.style.opacity="1";
+  showSecondChapterTwelfthGradeButton.style.color="#FCA311";
+  showFirstChapterTwelfthGradeButton.style.opacity="0.6";
+  showFirstChapterTwelfthGradeButton.style.color="#14213D";
+  searchBarSection.style.display="flex";
 }
