@@ -119,6 +119,14 @@ section div.chaptersSection div.chaptersSectionDetails button:focus{
     color: #FCA311;
 }
 
+section div.chaptersSection div.chaptersSectionDetails a{
+    display: none;
+}
+
+section div.chaptersSection div.chaptersSectionDetails a:hover{
+    text-decoration: underline;
+}
+
 section div.firstChapterInfoSection{
     display: none;
     width: 100%;
