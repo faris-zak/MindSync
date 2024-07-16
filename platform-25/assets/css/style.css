@@ -57,11 +57,73 @@ header nav h1.title p a small:hover{
     color: #14213D;
 }
 
-
 header nav p{
     margin: 0;
     font-size: 18px;
     font-weight: 400;
+}
+
+.content-wrapper{
+    display: flex;
+    flex: 1;
+}
+
+.sidebar{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    border-radius: 18px 0 0 0;
+    background-color: #f1f1f1;
+    position: relative;
+    height: auto;
+    overflow: auto;
+}
+
+.sidebar a{
+    display: block;
+    color: black;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.sidebar a:hover{
+    background-color: #14213D;
+    color: white;
+}
+
+@media screen and (max-width: 700px){
+    .content-wrapper{
+        flex-direction: column;
+        display: flex;
+    }
+    .sidebar{
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sidebar a{
+        float: left;
+        padding: 12px;
+    }
+    main{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .sidebar{
+        display: block;
+    }
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
 }
 
 main{
