@@ -82,12 +82,20 @@ footer{
     padding: 15px;
 }
 
-footer div.social-media ul{
+/* footer div.social-media ul{
     display: inline-grid;
     grid-auto-flow: row;
     grid-gap: 10px;
     justify-items: center;
     margin: auto;
+    list-style: none;
+    padding: 0;
+} */
+
+footer div.social-media ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
     list-style: none;
     padding: 0;
 }
