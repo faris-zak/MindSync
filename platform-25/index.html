@@ -38,10 +38,21 @@
 
         <div class="content-wrapper">
             <div class="sidebar">
-                <a href="#" title="Academies">أكادميات</a>
-                <a href="#" title="Chapter One">الفصل الأول</a>
-                <a href="#" title="Chapter Two">الفصل الثاني</a>
-                <a href="#" title="Students graduating 2025">طلاب دفعة 2025</a>
+                <a href="#" id="stButton" title="Academies">أكادميات</a>
+                <a href="#" id="ndButton" title="Chapter One">الفصل الأول</a>
+                <a href="#" id="rdButton" title="Chapter Two">الفصل الثاني</a>
+                <a href="#" id="thButton" title="Students graduating 2025">طلاب دفعة 2025</a>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">القائمة</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <input type="search" placeholder="إبحث.." id="myInput" onkeyup="filterFunction()">
+                  <a href="#" title="Academies">أكادميات</a>
+                  <a href="#" title="Chapter One">الفصل الأول</a>
+                  <a href="#" title="Chapter Two">الفصل الثاني</a>
+                  <a href="#" title="Students graduating 2025">طلاب دفعة 2025</a>
+                </div>
             </div>
     
             <main>
