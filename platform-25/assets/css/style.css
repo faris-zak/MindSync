@@ -37,6 +37,11 @@ header nav{
 
 header nav img{
     width: 300px;
+    user-select: none;
+}
+
+header nav hgroup{
+    cursor: default;
 }
 
 header nav hgroup h1.title{

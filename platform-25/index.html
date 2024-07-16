@@ -2,6 +2,15 @@
 <html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3VFF4P2GY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-N3VFF4P2GY');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="منصة-25، منصة مخصصة لطلبة الصف الثاني عشر دفعة 2025، سلطنة غُمان.">
     <meta name="author" content="Al-Faris Mujahid AlZakwani, الفارس بن مجاهد الزكواني">
@@ -29,10 +38,10 @@
 
         <div class="content-wrapper">
             <div class="sidebar">
-                <a href="#">أكادميات</a>
-                <a href="#">الفصل الأول</a>
-                <a href="#">الفصل الثاني</a>
-                <a href="#">طلاب دفعة 2025</a>
+                <a href="#" title="Academies">أكادميات</a>
+                <a href="#" title="Chapter One">الفصل الأول</a>
+                <a href="#" title="Chapter Two">الفصل الثاني</a>
+                <a href="#" title="Students graduating 2025">طلاب دفعة 2025</a>
             </div>
     
             <main>
@@ -75,5 +84,24 @@
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+          registerSW();
+        });
+     
+        // Register the Service Worker
+        async function registerSW() {
+          if ('serviceWorker' in navigator) {
+            try {
+              await navigator
+                    .serviceWorker
+                    .register('serviceworker.js');
+            }
+            catch (e) {
+              console.log('SW registration failed');
+            }
+          }
+        }
+     </script>
 </body>
 </html>
