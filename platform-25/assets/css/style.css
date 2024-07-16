@@ -39,7 +39,7 @@ header nav img{
     width: 300px;
 }
 
-header nav h1.title{
+header nav hgroup h1.title{
     text-align: right;
     margin: 0;
     cursor: default;
@@ -47,16 +47,16 @@ header nav h1.title{
     font-weight: 500;
 }
 
-header nav h1.title p a, small{ 
+header nav hgroup p a, small{ 
     text-decoration: none;
     color: #FCA311;
 }
 
-header nav h1.title p a small:hover{
+header nav hgroup p a small:hover{
     color: #14213D;
 }
 
-header nav p{
+header nav hgroup p{
     margin: 0;
     font-size: 18px;
     font-weight: 400;
@@ -256,6 +256,48 @@ footer div.founder a:hover, div.powered-by a:hover{
     }
 }
 
+@media screen and (max-width: 650px){
+    header nav img{
+        width: 250px;
+    }
+    
+    header nav hgroup h1.title{
+        font-size: 45px;
+    }
+
+    header nav hgroup p{
+        margin: 0;
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    header nav hgroup p a small{
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 540px){
+    header nav img{
+        width: 100px;
+    }
+    
+    header nav hgroup h1.title{
+        font-size: 40px;
+    }
+
+    header nav hgroup p{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    header nav hgroup p a small{
+        font-size: 14px;
+    }
+    
+}
+
 @media screen and (max-width: 500px){
     footer{
         font-size: 14px;
@@ -271,6 +313,12 @@ footer div.founder a:hover, div.powered-by a:hover{
         width: 28px;
         padding: 0;
         border-radius: 100px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    header nav{
+        padding: 10px;
     }
 }
 
