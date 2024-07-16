@@ -144,16 +144,6 @@ footer{
     padding: 15px;
 }
 
-/* footer div.social-media ul{
-    display: inline-grid;
-    grid-auto-flow: row;
-    grid-gap: 10px;
-    justify-items: center;
-    margin: auto;
-    list-style: none;
-    padding: 0;
-} */
-
 footer div.social-media ul{
     display: flex;
     justify-content: space-between;
@@ -188,7 +178,6 @@ footer div.social-media ul li a div{
     background-color: transparent;
     color: #14213D;
     border: 1px solid #14213D;
-    transition: all 0.2s ease;
 }
 
 footer div.social-media ul li a div:hover{
@@ -219,4 +208,93 @@ footer div.copyright span:hover{
 
 footer div.founder a:hover, div.powered-by a:hover{
     color: #FCA311;
+}
+
+@media screen and (max-width: 1400px){
+    footer{
+        position: relative;
+        display: block;
+    }
+    
+    footer div.social-media{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+    }
+
+    footer div.copyright , div.powered-by, div.founder{
+        text-align: right;
+    }
+
+    footer div.copyright p, div.powered-by p{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    footer{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 740px){
+    
+    footer{
+        padding: 20px;
+    }
+
+    footer div.social-media ul{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0;
+    }
+
+    footer div.social-media ul li a div{
+        font-size: 16px;
+        height: 30px;
+        padding: 1px 10px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    footer{
+        font-size: 14px;
+    }
+
+    footer div.social-media ul li a span{
+        display: none;
+    }
+
+    footer div.social-media ul li a div{
+        font-size: 16px;
+        height: 28px;
+        width: 28px;
+        padding: 0;
+        border-radius: 100px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    footer{
+        padding: 15px;
+    }
+    footer div.copyright , div.powered-by, div.founder{
+        text-align: center;
+    }
+
+    footer div.social-media{
+        position: relative;
+        top: 8px;
+        left: 0;
+        transform: translateY(0);
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer div.social-media ul{
+        display: inline-flex;
+    }
 }
