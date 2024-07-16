@@ -32,10 +32,7 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 20px;
+    padding: 15px;
 
 }
 
@@ -51,6 +48,16 @@ header nav h1.title{
     font-weight: 500;
 }
 
+header nav h1.title p a, small{ 
+    text-decoration: none;
+    color: #FCA311;
+}
+
+header nav h1.title p a small:hover{
+    color: #14213D;
+}
+
+
 header nav p{
     margin: 0;
     font-size: 18px;
@@ -63,5 +70,83 @@ main{
 }
 
 footer{
+    cursor: default;
     text-align: center;
+    border-top: 2px solid black;
+    color: #14213D;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+footer div.social-media ul{
+    display: inline-grid;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    justify-items: center;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+footer div.social-media ul li{
+    padding: 0;
+    
+}
+
+footer div.social-media ul li a{
+    text-decoration: none;
+}
+
+footer div.social-media ul li a span{
+    margin-right: 6px;
+    font-weight: 500;
+}
+
+footer div.social-media ul li a div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 2px 13px;
+    height: 35px;
+    border-radius: 100px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #14213D;
+    border: 1px solid #14213D;
+    transition: all 0.2s ease;
+}
+
+footer div.social-media ul li a div:hover{
+    background-color: #FCA311;
+    border: 1px solid #FCA311;
+}
+
+footer div.founder a{
+    text-decoration: none;
+    color:#333;
+    font-weight: 600;
+}
+
+footer div.copyright span{
+    color:#333;
+    font-weight: 600;
+}
+
+footer div.powered-by a{
+    text-decoration: none;
+    color:#333;
+    font-weight: 600;
+}
+
+footer div.copyright span:hover{
+    color: #FCA311;
+}
+
+footer div.founder a:hover, div.powered-by a:hover{
+    color: #FCA311;
 }
