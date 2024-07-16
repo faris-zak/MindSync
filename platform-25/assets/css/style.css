@@ -1,0 +1,46 @@
+*{
+    text-decoration: none;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.2s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: white;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+
+}
+
+header nav img{
+    width: 300px;
+}
+
+header nav h1.title{
+    cursor: default;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+
+
+body{
+    margin: 0;
+    text-align: center;
+    background-color: white;
+}

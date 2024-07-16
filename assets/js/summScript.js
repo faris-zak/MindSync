@@ -46,7 +46,7 @@ const showTwelfthGradeButton = document.getElementById('showTwelfthGradeButton')
 const eleventhFirstChapterInfoSection = document.getElementById('eleventhFirstChapterInfoSection');
 const eleventhSecondChapterInfoSection = document.getElementById('eleventhSecondChapterInfoSection');
 
-const site2025 = document.getElementById('site2025');
+const platform25 = document.getElementById('platform25');
 
 
 // const secondDownInfoChapter = document.getElementById('secondDownChapterInfoSection');
@@ -63,7 +63,7 @@ function showEleventhGrade(){
   showEleventhGradeButton.style.opacity="1";
   showEleventhGradeButton.style.color="#FCA311";
   searchBarSection.style.display="none";
-  site2025.style.display="none";
+  platform25.style.display="none";
 }
 
 function showTwelfthGrade(){
@@ -82,7 +82,7 @@ function showTwelfthGrade(){
   showFirstChapterEleventhGradeButton.style.opacity="1";
   showFirstChapterEleventhGradeButton.style.color="#14213D";
   searchBarSection.style.display="none";
-  site2025.style.display="block";
+  platform25.style.display="block";
 }
 
 function showEleventhGradeFirstChapter(){
