@@ -227,7 +227,7 @@ footer div.founder a:hover, div.powered-by a:hover{
         text-align: right;
     }
 
-    footer div.copyright p, div.powered-by p{
+    footer div.founder p, div.powered-by p{
         margin: 0;
     }
 }
