@@ -9,12 +9,12 @@
     "description":"أول موقع عُماني يقدم مصادر وأدوات متنوعة التي تمكنك من النجاح في دراستك وتحقيق إمكاناتك الكاملة.",
     "icons":[
     {
-    "src":"Attachments/Pictures/mindsynclogo.png",
+    "src":"assets/images/mindsynclogo.png",
     "sizes":"192x192",
     "type":"image/png"
     },
     {
-    "src":"Attachments/Pictures/mindsynclogo.png",
+    "src":"assets/images/mindsynclogo.png",
     "sizes":"512x512",
     "type":"image/png"
     }
