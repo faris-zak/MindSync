@@ -101,6 +101,87 @@ header nav hgroup p{
     color: white;
 }
 
+.sidebar a:last-child{
+    position: absolute;
+    top: 95%;
+    left: 13%;
+    transform: translate(-0%, -100%);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px;
+    text-decoration: none;
+    border: 1px solid #FCA311;
+    background: transparent;
+    color: #FCA311;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.sidebar a:last-child:hover{
+    color: #14213D;
+    background: #FCA311;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.sidebar a:last-child:hover::before {
+    -webkit-animation: sh02 2.5s 0s linear infinite;
+    -moz-animation: sh02 2.5s 0s linear infinite;
+    animation: sh02 2.5s 0s linear infinite;
+  }
+  
+  .sidebar a:last-child::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .sidebar a:last-child:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+.sidebar a:last-child i{
+    position: relative;
+    top: 3px;
+    left: 0px;
+}
+
 main{
     flex: 1;
     padding: 20px;
@@ -310,17 +391,22 @@ footer div.founder a:hover, div.powered-by a:hover{
         float: left;
         padding: 12px;
     }
-    main{
-        margin-left: 0;
+
+    .sidebar a:last-child{
+        position: relative;
+        top: 0;
+        left: 5px;
+        transform: translate(0, 0);
+        text-align: center;
     }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 634px){
     .sidebar{
         display: none;
     }
 
-    .dropbtn {
+    .dropbtn{
         background-color: #f1f1f1;
         color: #14213D;
         padding: 8px;
@@ -384,11 +470,30 @@ footer div.founder a:hover, div.powered-by a:hover{
       display: block;
     }
     
-    .dropdown a:hover {
+    .dropdown-content a:hover {
       background-color: #14213D;
       color: white;
     }
     
+    .dropdown-content a:last-child{
+        border-top: 1px solid #FCA311;
+        color: #FCA311;
+        text-align: center;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .dropdown-content a:last-child:hover{
+        background-color: #FCA311;
+        color: #14213D;
+    }
+
+    .dropdown-content a:last-child i{
+        position: relative;
+        top: 3px;
+        left: 0px;
+    }
+
     .show {display: block;}
 }
 
