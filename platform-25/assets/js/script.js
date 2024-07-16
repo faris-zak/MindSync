@@ -1,29 +1,6 @@
                 // Service Worker
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('serviceworker.js')
-      .then(registration => {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
 
-        registration.onupdatefound = () => {
-          const installingWorker = registration.installing;
-          installingWorker.onstatechange = () => {
-            if (installingWorker.state === 'installed') {
-              if (navigator.serviceWorker.controller) {
-                const updateNotification = document.createElement('div');
-                updateNotification.className = 'update-notification';
-                updateNotification.innerText = 'New content is available; please refresh.';
-                document.body.appendChild(updateNotification);
-              }
-            }
-          };
-        };
-      }, err => {
-        console.log('ServiceWorker registration failed: ', err);
-      });
-  });
-}
 
 
 
