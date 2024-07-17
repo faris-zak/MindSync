@@ -43,6 +43,7 @@
 #home .details h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 #home .details p {
@@ -64,7 +65,9 @@
 #home .feature h3 {
     font-size: 1.5em;
     margin-bottom: 5px;
+    font-weight: 500;
 }
+
 
 #home .feature p {
     font-size: 1em;
@@ -125,20 +128,23 @@
     left: 0px;
 }
 
-.testimonials, .updates, .contact {
+.testimonials, .updates {
     margin: 20px 0;
-}
-
-.testimonial, .update, .contact-info {
     margin-bottom: 10px;
 }
 
-.testimonial p, .update p, .contact-info p {
+.testimonials, .updates h2{
+    font-size: 1.5em;
+margin-bottom: 5px;
+font-weight: 500;
+}
+
+.testimonial p, .update p {
     font-size: 1em;
     color: #555;
 }
 
-.testimonial h3, .update h3, .contact-info h3 {
+.testimonial h3, .update h3 {
     font-size: 1.2em;
     margin-bottom: 5px;
 }
@@ -178,13 +184,17 @@
     }
 
     #home .details h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
     #home .features {
         display: inline-block;
     }
     #home .feature {
         max-width: 100%;
+    }
+
+    #home .feature h3{
+        font-size: 20px;
     }
 
     #home .cta button {
