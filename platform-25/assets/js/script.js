@@ -53,6 +53,7 @@ const studentGraduating25Button2 = document.getElementById('studentGraduating25B
 const membershipButton2 = document.getElementById('membershipButton2');
 
 
+
                 // Sidebar Animation
 const contentAnimation = document.getElementById('myDropdown');
 const animationButton = document.getElementById('animationButton');
