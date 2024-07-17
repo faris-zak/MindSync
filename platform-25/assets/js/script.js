@@ -29,11 +29,109 @@ mindsyncBrand.addEventListener("contextmenu", (event) => {
 
                 // Sidebar Buttons
 
-const stButton = document.getElementById('stButton');
-const ndButton = document.getElementById('ndButton');
-const rdButton = document.getElementById('rdButton');
-const thButton = document.getElementById('thButton');
+const academiesButton = document.getElementById('academiesButton');
+const chapter1Button = document.getElementById('chapter1Button');
+// const chapter2 = document.getElementById('chapter2Button');
+const studentGraduating25Button = document.getElementById('studentGraduating25Button');
+const membershipButton = document.getElementById('membershipButton');
 
+const academiesButton2 = document.getElementById('academiesButton2');
+const chapter1Button2 = document.getElementById('chapter1Button2');
+// const chapter2Button2 = document.getElementById('chapter2Button');
+const studentGraduating25Button2 = document.getElementById('studentGraduating25Button2');
+const membershipButton2 = document.getElementById('membershipButton2');
+
+
+                // Page Sections
+
+const academies = document.getElementById('academies');
+const chapter1 = document.getElementById('chapter-1');
+// const chapter2 = document.getElementById('chapter-2');
+const studentGraduating25 = document.getElementById('student-graduating25');
+const membership = document.getElementById('membership');
+
+                // Page Sections Functions - 1
+academiesButton.addEventListener('click', () => {
+    academies.style.display = 'block';
+    chapter1.style.display = 'none';
+    // chapter2.style.display = 'none';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'none';
+
+});
+
+chapter1Button.addEventListener('click', () => {
+    academies.style.display = 'none';
+    chapter1.style.display = 'block';
+    // chapter2.style.display = 'none';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'none';
+});
+
+// chapter2Button.addEventListener('click', () => {
+    // academies.style.display = 'none';
+    // chapter1.style.display = 'none';
+    // chapter2.style.display = 'block';
+    // studentGraduating25.style.display = 'none';
+    // membership.style.display = 'none';
+// });
+
+studentGraduating25Button.addEventListener('click', () => {
+    academies.style.display = 'none';
+    chapter1.style.display = 'none';
+    // chapter2.style.display = 'none';
+    studentGraduating25.style.display = 'block';
+    membership.style.display = 'none';
+});
+
+membershipButton.addEventListener('click', () => {
+    academies.style.display = 'none';
+    chapter1.style.display = 'none';
+    // chapter2.style.display = 'none';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'block';
+});
+
+
+                // Page Sections Functions - 2
+academiesButton2.addEventListener('click', () => {
+    academies.style.display = 'block';
+    chapter1.style.display = 'none';
+    // chapter2.style.display = 'none';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'none';
+});
+
+chapter1Button2.addEventListener('click', () => {
+    academies.style.display = 'none';
+    chapter1.style.display = 'block';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'none';
+});
+
+// chapter2Button2.addEventListener('click', () => {
+    // academies.style.display = 'none';
+    // chapter1.style.display = 'none';
+    // chapter2.style.display = 'block';
+    // studentGraduating25.style.display = 'none';
+    // membership.style.display = 'none';
+// });
+
+studentGraduating25Button2.addEventListener('click', () => {
+    academies.style.display = 'none';
+    chapter1.style.display = 'none';
+    // chapter2.style.display = 'none';
+    studentGraduating25.style.display = 'block';
+    membership.style.display = 'none';
+});
+
+membershipButton2.addEventListener('click', () => {
+    academies.style.display = 'none';
+    chapter1.style.display = 'none';
+    // chapter2.style.display = 'none';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'block';
+});
 
 
                 // Dropdown Menu
