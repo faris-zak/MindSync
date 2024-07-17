@@ -475,9 +475,8 @@ footer div.founder a:hover, div.powered-by a:hover{
     }
     
     .dropdown-content {
-      display: none;
       position: absolute;
-      top: 90px;
+      top: 80px;
       background-color: #f6f6f6;
       width: 90%;
       max-width: 300px;
@@ -485,11 +484,14 @@ footer div.founder a:hover, div.powered-by a:hover{
       max-height: 300px;
       min-height: 230;
       overflow: auto;
+      user-select: none;
       border-radius: 18px;
       box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
       border: 1px solid #f1f1f1;
       border-top: none;
-      z-index: 1;
+      z-index:-1;
+      transition: 0.5s;
+      opacity: 0;
     }
     
     .dropdown-content a{
@@ -523,21 +525,6 @@ footer div.founder a:hover, div.powered-by a:hover{
         position: relative;
         top: 3px;
         left: 0px;
-    }
-
-    .fadeInDropdown{
-        animation: fadeInDropdown 0.5s ease;
-    }
-
-    @keyframes fadeInDropdown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0px);
-        }
     }
 
     @keyframes fadeIn{

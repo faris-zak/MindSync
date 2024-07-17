@@ -166,12 +166,16 @@ const myDropdown = document.getElementById('myDropdown');
 
 function myFunction() {
 
-    if(myDropdown.style.display == 'block'){
-        myDropdown.classList.remove('fadeInDropdown'); // Remove fadeIn class
-        myDropdown.style.display = 'none';
+    if(myDropdown.style.zIndex == 1 && myDropdown.style.opacity == 1){
+        myDropdown.style.zIndex = -1;
+        myDropdown.style.opacity = 0;
+        myDropdown.style.transform = 'translateY(0)';
+        myDropdown.style.userSelect = 'none';
     } else{
-        myDropdown.style.display = 'block';
-        myDropdown.classList.add('fadeInDropdown'); // Add fadeIn class
+        myDropdown.style.zIndex = 1;
+        myDropdown.style.opacity = 1;
+        myDropdown.style.transform = 'translateY(10px)';
+        myDropdown.style.userSelect = 'auto';
     }
   }
   
