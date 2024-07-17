@@ -53,6 +53,27 @@ const studentGraduating25Button2 = document.getElementById('studentGraduating25B
 const membershipButton2 = document.getElementById('membershipButton2');
 
 
+                // Sidebar Animation
+const contentAnimation = document.getElementById('myDropdown');
+const animationButton = document.getElementById('animationButton');
+let clickCount = 0;
+
+animationButton.addEventListener('click', function() {
+    clickCount++;
+    
+    if (clickCount % 2 === 1) {
+        // First click, fade in
+        contentAnimation.classList.remove('fadeOutList'); // Remove fadeOut class if present
+        contentAnimation.classList.add('fadeInList'); // Add fadeIn class
+    } else {
+        // Second click, fade out
+        contentAnimation.classList.remove('fadeInList'); // Remove fadeIn class if present
+        contentAnimation.classList.add('fadeOutList'); // Add fadeOut class
+    }
+});
+                
+
+
                 // Page Sections
 
 const home = document.getElementById('home');

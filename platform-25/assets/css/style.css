@@ -482,33 +482,31 @@ footer div.founder a:hover, div.powered-by a:hover{
       z-index: 1;
     }
 
-    .fadeInList{
-        animation: fadeInList 0.1s ease;
-
+    .fadeInList {
+        animation: fadeIn 0.5s ease;
     }
-
-    .fadeOutList{
-        animation: fadeOutList 0.1s ease;
-    }
-
-    @keyframes fadeInList{
-        from{
+    
+    @keyframes fadeIn {
+        from {
             opacity: 0;
         }
-     
-        to{
+        to {
             opacity: 1;
         }
     }
-
-    @keyframes fadeOutList {
+    
+    .fadeOutList {
+        animation: fadeOut 0.5s ease;
+    }
+    
+    @keyframes fadeOut {
         from {
             opacity: 1;
         }
         to {
             opacity: 0;
         }
-    }
+    }    
     
     .dropdown-content a{
       color: black;
