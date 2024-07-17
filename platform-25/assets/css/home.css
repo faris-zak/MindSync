@@ -4,20 +4,19 @@
     border-radius: 18px;
 }
 
-
-
 #home .header {
     text-align: center;
     margin-bottom: 20px;
+    border-bottom: 1px solid #FCA311;
 }
 
 #home .header h1 {
-    font-size: 2.5em;
+    font-size: 45px;
     margin: 0;
 }
 
 #home .header p {
-    font-size: 1.2em;
+    font-size: 18px;
     color: #666;
 }
 
@@ -75,7 +74,7 @@
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #FCA311;
 }
 
 #home .footer h3 {
@@ -90,29 +89,39 @@
     margin-bottom: 0;
 }
 
-#home .footer div.author span{
-    cursor: default;
-    font-size: 14px;
-    color: #FCA311;
-    margin-left: 10px;
-}
-
-#home .footer div.author span:hover{
-    color: #14213D;
-}
-
 .cta {
     text-align: center;
     margin: 20px 0;
 }
 
-.cta button {
-    background-color: #FCA311;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+.cta button{
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px;
     cursor: pointer;
-    font-size: 1.2em;
+    border: 1px solid #FCA311;
+    background: transparent;
+    color: #FCA311;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.cta button:hover{
+    color: #14213D;
+    background: #FCA311;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.cta button i{
+    position: relative;
+    top: 3px;
+    left: 0px;
 }
 
 .testimonials, .updates, .contact {
@@ -135,49 +144,50 @@
 
 
 @media screen and (max-width: 768px) {
-    .header h1 {
-        font-size: 2em;
+    #home .header h1 {
+        font-size: 35px;
     }
 
-    .details h2 {
-        font-size: 1.5em;
+    #home .details h2 {
+        font-size: 24px;
     }
 
-    .feature {
+    #home .header p{
+        font-size: 17px;
+    }
+
+    #home .feature {
         max-width: 45%;
         margin-bottom: 20px;
     }
 
-    .cta button {
-        font-size: 1em;
+    #home .cta button {
+        font-size: 18px;
         padding: 8px 16px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .header h1 {
-        font-size: 1.8em;
+    #home .header h1 {
+        font-size: 26px;
     }
 
-    .details h2 {
-        font-size: 1.2em;
+    #home .header p:last-child{
+        font-size: 14px;
+    }
+
+    #home .details h2 {
+        font-size: 22px;
     }
     #home .features {
         display: inline-block;
     }
-    .feature {
+    #home .feature {
         max-width: 100%;
     }
 
-
-
-    .cta button {
-        font-size: 0.9em;
+    #home .cta button {
+        font-size: 16px;
         padding: 6px 12px;
-    }
-
-    .header nav ul li {
-        display: block;
-        margin: 5px 0;
     }
 }
