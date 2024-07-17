@@ -232,6 +232,11 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    #p25-membership {
+        padding: 10px;
+    }
+    
     .membership-content {
         padding: 10px;
     }
@@ -254,8 +259,9 @@
     }
 
     .membership-card fieldset legend{
-        font-size: 16px;
-        padding: 0 3px;
+        font-size: 13px;
+        padding: 0 2px;
+        font-weight: 400;
     }    
 
     .membership-card .form-group label,
