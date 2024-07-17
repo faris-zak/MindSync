@@ -54,11 +54,6 @@ const membershipButton2 = document.getElementById('membershipButton2');
 
 
 
-                // Sidebar Animation
-
-
-
-
                 // Page Sections
 
 const home = document.getElementById('home');
@@ -165,10 +160,20 @@ membershipButton2.addEventListener('click', () => {
 
 
 
-                // Dropdown Menu
+                    // Dropdown Menu
 
+
+const myDropdown = document.getElementById('myDropdown');
+const dropBtn = document.getElementById('animationButton');
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+
+    if(myDropdown.style.display == 'block'){
+        myDropdown.classList.remove('fadeInDropdown'); // Remove fadeIn class
+        myDropdown.style.display = 'none';
+    } else{
+        myDropdown.style.display = 'block';
+        myDropdown.classList.add('fadeInDropdown'); // Add fadeIn class
+    }
   }
   
   function filterFunction() {
