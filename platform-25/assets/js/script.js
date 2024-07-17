@@ -50,7 +50,9 @@ const chapter1 = document.getElementById('chapter-1');
 const studentGraduating25 = document.getElementById('student-graduating25');
 const membership = document.getElementById('membership');
 
+
                 // Page Sections Functions - 1
+
 academiesButton.addEventListener('click', () => {
     academies.style.display = 'block';
     chapter1.style.display = 'none';
@@ -68,13 +70,13 @@ chapter1Button.addEventListener('click', () => {
     membership.style.display = 'none';
 });
 
-// chapter2Button.addEventListener('click', () => {
-    // academies.style.display = 'none';
-    // chapter1.style.display = 'none';
-    // chapter2.style.display = 'block';
-    // studentGraduating25.style.display = 'none';
-    // membership.style.display = 'none';
-// });
+/* chapter2Button.addEventListener('click', () => {
+    academies.style.display = 'none';
+    chapter1.style.display = 'none';
+    chapter2.style.display = 'block';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'none';
+}); */
 
 studentGraduating25Button.addEventListener('click', () => {
     academies.style.display = 'none';
@@ -109,13 +111,13 @@ chapter1Button2.addEventListener('click', () => {
     membership.style.display = 'none';
 });
 
-// chapter2Button2.addEventListener('click', () => {
-    // academies.style.display = 'none';
-    // chapter1.style.display = 'none';
-    // chapter2.style.display = 'block';
-    // studentGraduating25.style.display = 'none';
-    // membership.style.display = 'none';
-// });
+/* chapter2Button2.addEventListener('click', () => {
+    academies.style.display = 'none';
+    chapter1.style.display = 'none';
+    chapter2.style.display = 'block';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'none';
+}); */
 
 studentGraduating25Button2.addEventListener('click', () => {
     academies.style.display = 'none';
@@ -132,6 +134,7 @@ membershipButton2.addEventListener('click', () => {
     studentGraduating25.style.display = 'none';
     membership.style.display = 'block';
 });
+
 
 
                 // Dropdown Menu
