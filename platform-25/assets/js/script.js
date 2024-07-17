@@ -162,9 +162,8 @@ membershipButton2.addEventListener('click', () => {
 
                     // Dropdown Menu
 
-
 const myDropdown = document.getElementById('myDropdown');
-const dropBtn = document.getElementById('animationButton');
+
 function myFunction() {
 
     if(myDropdown.style.display == 'block'){
