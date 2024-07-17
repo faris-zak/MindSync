@@ -186,12 +186,6 @@
     background-color: #bb2e3c;
 }
 
-.membership-card .form-message {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #28a745;
-}
-
 
 @media screen and (max-width: 768px) {
     .membership-card .header {
