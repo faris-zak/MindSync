@@ -30,7 +30,7 @@
         <header>
             <nav>
                 <hgroup>
-                    <h1 class="title" title="Platform-25">منصة-25</h1>
+                    <h1 id="clearFragment" class="title" title="Platform-25">منصة-25</h1>
                     <p>طُوِرَت خِصيصاً لكُم | <a href="https://x.com/hashtag/%D8%AF%D9%81%D8%B9%D8%A9_2025" title="#دفعة_2025"><small>#دفعة_2025</small></a></p>
                 </hgroup>
                 <img id="mindsyncBrand" src="assets/images/mindsync-logo.png" alt="MindSync Logo">
@@ -59,7 +59,7 @@
             </div>
     
             <main>
-                <section id="">
+                <section id="home">
                     <div class="-content">
                         <div class="header">
                             
@@ -254,5 +254,38 @@
     </footer>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/membership.js"></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            // Function to check and display content based on fragment
+            function showFragmentContent() {
+                // Get the fragment identifier from the URL
+                const fragment = window.location.hash;
+
+                // Check if a fragment exists
+                if (fragment) {
+                    // Remove the leading '#' character
+                    const fragmentId = fragment.substring(1); // Removes the '#'
+
+                    // Find the element with the corresponding ID
+                    const element = document.getElementById(fragmentId);
+
+                    if (element) {
+                        // Show the element by adding the 'active' class
+                        element.style.display = 'block';
+                    } else {
+                        console.warn(`No element found with ID '${fragmentId}' corresponding to the fragment.`);
+                    }
+                } else {
+                    console.log('No fragment identifier.');
+                }
+            }
+
+            // Call the function when the page loads
+            showFragmentContent();
+
+            // Listen for hash changes (when fragment identifier changes)
+            window.addEventListener('hashchange', showFragmentContent);
+        });
+    </script>
 </body>
 </html>

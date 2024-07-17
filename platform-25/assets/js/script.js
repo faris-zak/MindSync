@@ -1,6 +1,17 @@
-                // Service Worker
+                // Clear Fragment
+document.getElementById('clearFragment').addEventListener('click', function() {
+    // Clear fragment identifier from URL
+    history.replaceState({}, document.title, window.location.pathname);
+    
+    // Reset all other content
 
-
+    home.style.display = 'block';
+    academies.style.display = 'none';
+    chapter1.style.display = 'none';
+    // chapter2.style.display = 'none';
+    studentGraduating25.style.display = 'none';
+    membership.style.display = 'none';
+});
 
 
 
@@ -44,6 +55,7 @@ const membershipButton2 = document.getElementById('membershipButton2');
 
                 // Page Sections
 
+const home = document.getElementById('home');
 const academies = document.getElementById('academies');
 const chapter1 = document.getElementById('chapter-1');
 // const chapter2 = document.getElementById('chapter-2');
@@ -54,6 +66,7 @@ const membership = document.getElementById('membership');
                 // Page Sections Functions - 1
 
 academiesButton.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'block';
     chapter1.style.display = 'none';
     // chapter2.style.display = 'none';
@@ -63,6 +76,7 @@ academiesButton.addEventListener('click', () => {
 });
 
 chapter1Button.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'block';
     // chapter2.style.display = 'none';
@@ -71,6 +85,7 @@ chapter1Button.addEventListener('click', () => {
 });
 
 /* chapter2Button.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
     chapter2.style.display = 'block';
@@ -79,6 +94,7 @@ chapter1Button.addEventListener('click', () => {
 }); */
 
 studentGraduating25Button.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
     // chapter2.style.display = 'none';
@@ -87,6 +103,7 @@ studentGraduating25Button.addEventListener('click', () => {
 });
 
 membershipButton.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
     // chapter2.style.display = 'none';
@@ -97,6 +114,7 @@ membershipButton.addEventListener('click', () => {
 
                 // Page Sections Functions - 2
 academiesButton2.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'block';
     chapter1.style.display = 'none';
     // chapter2.style.display = 'none';
@@ -105,6 +123,7 @@ academiesButton2.addEventListener('click', () => {
 });
 
 chapter1Button2.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'block';
     studentGraduating25.style.display = 'none';
@@ -112,6 +131,7 @@ chapter1Button2.addEventListener('click', () => {
 });
 
 /* chapter2Button2.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
     chapter2.style.display = 'block';
@@ -120,6 +140,7 @@ chapter1Button2.addEventListener('click', () => {
 }); */
 
 studentGraduating25Button2.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
     // chapter2.style.display = 'none';
@@ -128,6 +149,7 @@ studentGraduating25Button2.addEventListener('click', () => {
 });
 
 membershipButton2.addEventListener('click', () => {
+    home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
     // chapter2.style.display = 'none';
