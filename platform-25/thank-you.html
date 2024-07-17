@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Tajawal", sans-serif;
+            background-color: #f8f9fa;
+        }
+        .thank-you-container {
+            text-align: center;
+            border: 2px solid #14213D;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .thank-you-container h1 {
+            color: #14213D;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .thank-you-container p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .thank-you-container a {
+            color: #FCA311;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+    <script>
+        function redirectToHome() {
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 5000); // Redirect after 5 seconds
+        }
+    </script>
+</head>
+<body onload="redirectToHome()">
+    <div class="thank-you-container">
+        <h1>شكراً لتسجيلك!</h1>
+        <p>سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ قليلة.</p>
+        <p>إذا لم يتم توجيهك تلقائيًا، <a href="index.html">اضغط هنا</a>.</p>
+    </div>
+</body>
+</html>

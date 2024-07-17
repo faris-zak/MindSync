@@ -94,7 +94,7 @@
 }
 
 .membership-card .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .membership-card .form-group label {
@@ -126,7 +126,24 @@
 .radio-group input[type="radio"] {
     margin: 0;
     width: auto;
+} 
+/* checkbox-group */
+
+.checkbox-group {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5px; 
 }
+
+.checkbox-group label[for="tOU"]{
+    margin: 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+} 
 
 .membership-card .form-buttons {
     display: flex;
@@ -188,12 +205,12 @@
 
     .membership-card .form-buttons {
         flex-direction: column;
+        gap: 15px;
     }
 
     .membership-card .form-buttons .submit,
     .membership-card .form-buttons .clear {
-        width: 100%;
-        margin-bottom: 10px;
+        width: 80%;
     }
 
     .membership-card .form-buttons .clear {

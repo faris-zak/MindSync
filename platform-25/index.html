@@ -147,13 +147,14 @@
                                 <details open>
                                     <summary>ماذا تتضمن عضوية منصة-25؟</summary>
                                     <ul>
-                                        <li>إمكانية إظهار حساب منصة إكس(تويتر) الخاص بك في قسم <a href="#student-graduating25">طلاب دفعة 2025</a>.</li>
-                                        <li>-مميزات أخرى لاحقاً-</li>
+                                        <li>إمتلاك بطاقة خاصة بك في قسم <a href="#student-graduating25">طلاب دفعة 2025</a>.</li>
+                                        <li>إمكانية إظهار حسابك الخاص لمنصة إكس(تويتر) في بطاقتك.</li>
+                                        <li style="list-style: none; font-size: 14px; color: #666; font-weight: 400;">-فوائد أخرى لاحقاً-</li>
                                     </ul>
                                 </details>
                 
                                 <details>
-                                    <summary>كيف يتم تفعيل عضوية منصة-25؟</summary>
+                                    <summary>كيف تحصل على عضوية منصة-25؟</summary>
                                     <ol>
                                         <li>كتابة إسم حسابك الموجود في إكس(تويتر)</li>
                                         <li>كتابة إسم المستخدم لحسابك الموجود في إكس(تويتر)</li>
@@ -163,25 +164,32 @@
                             </div>
                 
                             <div class="footer">
-                                <details id="membership-card-open">
+                                <details id="membership-card-open" open>
                                     <summary>التسجيل في العضوية</summary>
                                     <fieldset>
-                                        <legend>معلومات حساب إكس(تويتر)</legend>
+                                        <legend>بياناتكم الشخصية وخصوصيتكم أمانة</legend>
                                         <form id="membership-form" action="https://api.web3forms.com/submit" method="POST">
                                             <input type="hidden" name="access_key" value="2b5d0000-848d-4361-b277-887b4bcd874f">
+                                            <input type="hidden" name="redirect" value="thank-you.html">
+                                            <input type="hidden" name="subject" value="New Platform-25 Membership Request">
+
+                                            <div class="form-group">
+                                                <label for="realName">إسمك الحقيقي</label>
+                                                <input type="text" id="realName" name="realName" placeholder="مثال: فلان بن فلان الفلاني" required>
+                                            </div>
                                             
                                             <div class="form-group">
-                                                <label for="name">الأسم</label>
+                                                <label for="name">الإسم - إكس(تويتر)</label>
                                                 <input type="text" id="name" name="name" placeholder="مثال: MindSync" required>
                                             </div>
                 
                                             <div class="form-group">
-                                                <label for="username">أسم المستخدم</label>
+                                                <label for="username">إسم المستخدم - إكس(تويتر)</label>
                                                 <input type="text" id="username" name="username" placeholder="مثال: @mindsync" required>
                                             </div>
 
                                             <div class="form-group">
-                                                <label>هل تريد إظهار حسابك في قسم طلاب دفعة 2025؟</label>
+                                                <label>هل تريد إظهار حسابك الخاص لمنصة إكس(تويتر) في بطاقتك؟</label>
                                                 <div class="radio-group">
                                                     <input type="radio" id="yes" name="question" value="yes">
                                                     <label for="yes">نعم</label>
@@ -193,13 +201,22 @@
                 
                                             <div class="form-group">
                                                 <label for="message">ملاحظة</label>
-                                                <textarea id="message" name="message" placeholder="إكتب ملاحظتك هنا... (غير مطلوب)" rows="3"></textarea>
+                                                <textarea id="message" name="message" placeholder="إكتب ملاحظتك هنا... (غير مطالب به)" rows="3"></textarea>
                                             </div>
 
-                                            <small>*قد يستغرق تفعيل العضوية (يوم-يومان).</small>
+                                            <div class="form-group">
+                                                <div class="checkbox-group">
+                                                    <label for="tOU">أنا أوافق على <a href="https://mindsync.cteoman.com/terms-of-use.html" target="_blank">شروط الإستخدام</a></label>
+                                                    <input type="checkbox" id="tOU" name="tOU" required>
+                                                </div>
+                                            </div>
 
+                                            <small>*ضمان حماية بياناتكم الشخصية وخصوصيتكم عند التسجيل.</small><br>
+                                            <small>*قد يستغرق تفعيل العضوية خلال 48 ساعة.</small><br>
+                                            <small>*يمكنك إلغاء العضوية في أي وقت.</small>
+                                            
                                             <div class="form-buttons">
-                                                <input id="submitButton" class="submit" type="submit" value="إرسال" disabled>
+                                                <input id="submitButton" class="submit" type="submit" value="تسجيل" disabled>
                                                 <input class="clear" type="reset" value="مسح">
                                             </div>
                                             
