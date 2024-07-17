@@ -102,9 +102,10 @@ header nav hgroup p{
 }
 
 .sidebar a:last-child{
-    position: fixed;
-    bottom: 120px;
-    right: 23px;
+    position: absolute;
+    top: 95%;
+    left: 13%;
+    transform: translate(-0%, -100%);
     text-align: center;
     font-size: 16px;
     border-radius: 8px;
@@ -306,11 +307,6 @@ footer div.founder a:hover, div.powered-by a:hover{
     footer div.founder p, div.powered-by p{
         margin: 0;
     }
-
-    .sidebar a:last-child{
-        bottom: 160px;
-        right: 23px;
-    }
 }
 
 @media screen and (max-width: 800px){
@@ -421,8 +417,6 @@ footer div.founder a:hover, div.powered-by a:hover{
         position: relative;
         top: 0;
         left: 5px;
-        right: auto;
-        bottom: auto;
         transform: translate(0, 0);
         text-align: center;
     }
