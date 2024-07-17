@@ -396,22 +396,6 @@ footer div.founder a:hover, div.powered-by a:hover{
         display: flex;
     }
 
-    section{
-        animation: fadeIn 0.5s ease-in-out;
-    }
-    
-    @keyframes fadeIn{
-        from{
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-     
-        to{
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
     .sidebar{
         width: auto;
         height: auto;
@@ -432,6 +416,18 @@ footer div.founder a:hover, div.powered-by a:hover{
         left: 5px;
         transform: translate(0, 0);
         text-align: center;
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+     
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 }
 
@@ -542,6 +538,18 @@ footer div.founder a:hover, div.powered-by a:hover{
     }
 
     .show {display: block;}
+
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(10px);
+        }
+     
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 }
 
 @media screen and (max-width: 400px){
