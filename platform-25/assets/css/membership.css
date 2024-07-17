@@ -264,10 +264,20 @@
         font-weight: 400;
     }    
 
+    .membership-card .form-group{
+        width: 100%;
+        text-align: center;
+    }
+
+    .membership-card .form-group .radio-group{
+        justify-content: center;
+    }
+    
     .membership-card .form-group label,
     .membership-card .form-group input,
     .membership-card .form-group textarea {
         font-size: 14px;
+
     }
 
     .membership-card .form-buttons .submit,
