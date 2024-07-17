@@ -200,6 +200,10 @@
         margin-bottom: 15px;
     }
 
+    .membership-card li{
+        margin-bottom: 5px;
+    }
+
     .membership-card .header .title{
         font-size: 18px;
         margin-bottom: 5px;
