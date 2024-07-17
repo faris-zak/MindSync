@@ -1,0 +1,167 @@
+#home .home-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#home .header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#home .header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#home .header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+#home .header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#home .header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#home .header nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#home .details {
+    margin-bottom: 20px;
+}
+
+#home .details h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#home .details p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+#home .features {
+    display: flex;
+    justify-content: space-around;
+}
+
+#home .feature {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+#home .feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+#home .feature p {
+    font-size: 1em;
+    color: #777;
+}
+
+#home .footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#home .footer p {
+    font-size: 1em;
+    color: #888;
+}
+
+#home .footer .social-media {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#home .footer .social-media li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#home .footer .social-media li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.cta {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cta button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.testimonials, .updates, .contact {
+    margin: 20px 0;
+}
+
+.testimonial, .update, .contact-info {
+    margin-bottom: 10px;
+}
+
+.testimonial p, .update p, .contact-info p {
+    font-size: 1em;
+    color: #555;
+}
+
+.testimonial h3, .update h3, .contact-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .details h2 {
+        font-size: 1.5em;
+    }
+    .feature {
+        max-width: 45%;
+        margin-bottom: 20px;
+    }
+    .cta button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+    .details h2 {
+        font-size: 1.2em;
+    }
+    .feature {
+        max-width: 100%;
+    }
+    .cta button {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+    .header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}

@@ -18,6 +18,7 @@
     <link rel="icon" href="assets/images/mindsync-icon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/membership.css">
+    <link rel="stylesheet" href="assets/css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Harmattan:wght@400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
@@ -60,18 +61,85 @@
     
             <main>
                 <section id="home">
-                    <div class="-content">
+                    <div class="home-content">
+                        <!-- Header Section-->
                         <div class="header">
-                            
+                            <h1>مرحبًا بكم في منصة-25</h1>
+                            <p>منصتك التي تجمع كل ما تحتاجة كطالب في الصف 12</p>
+                            <nav>
+                                <ul>
+                                    <li><a href="#home">الصفحة الرئيسية</a></li>
+                                    <li><a href="#academies">الأكاديميات</a></li>
+                                    <li><a href="#chapter1">الفصل الأول</a></li>
+                                    <li><a href="#studentGraduating25">طلاب دفعة 2025</a></li>
+                                    <li><a href="#membership">العضوية</a></li>
+                                </ul>
+                            </nav>
                         </div>
+            
+                        <!-- قسم التفاصيل -->
                         <div class="details">
-                            
+                            <h2>عن MindSync</h2>
+                            <p>تقدم MindSync مجموعة متنوعة من الأدوات والموارد التي تهدف إلى مساعدة الطلاب في تحقيق أهدافهم الأكاديمية والشخصية.</p>
+                            <div class="features">
+                                <div class="feature">
+                                    <h3>موارد أكاديمية</h3>
+                                    <p>احصل على الأدلة الدراسية والدروس التعليمية والمزيد.</p>
+                                </div>
+                                <div class="feature">
+                                    <h3>تطوير شخصي</h3>
+                                    <p>استكشف الدورات والمواد لتعزيز مهاراتك الشخصية.</p>
+                                </div>
+                                <div class="feature">
+                                    <h3>دعم المجتمع</h3>
+                                    <p>انضم إلى مجتمع من الأفراد ذوي التفكير المماثل وتقدم معهم.</p>
+                                </div>
+                            </div>
                         </div>
+            
+                        <!-- قسم الدعوة للعمل -->
+                        <div class="cta">
+                            <button onclick="joinNow()">انضم الآن</button>
+                        </div>
+            
+                        <!-- قسم الشهادات -->
+                        <div class="testimonials">
+                            <h2>ماذا يقول مستخدمونا</h2>
+                            <div class="testimonial">
+                                <h3>جين دو</h3>
+                                <p>"لقد حولت MindSync عادات دراستي تمامًا. الموارد ممتازة والمجتمع داعم للغاية."</p>
+                            </div>
+                            <div class="testimonial">
+                                <h3>جون سميث</h3>
+                                <p>"أحب الدورات التدريبية في MindSync. لقد ساعدتني على النمو أكاديميًا وشخصيًا."</p>
+                            </div>
+                        </div>
+            
+                        <!-- قسم التحديثات الأخيرة -->
+                        <div class="updates">
+                            <h2>أحدث التحديثات</h2>
+                            <div class="update">
+                                <h3>إصدار أدلة دراسية جديدة</h3>
+                                <p>لقد أطلقنا أدلة دراسية جديدة لمواضيع مختلفة. تفقدها في قسم الأكاديميات.</p>
+                            </div>
+                            <div class="update">
+                                <h3>ندوة قادمة</h3>
+                                <p>انضم إلى ندوتنا القادمة حول تقنيات الدراسة الفعالة. سجل الآن لضمان مكانك!</p>
+                            </div>
+                        </div>
+            
+                        <!-- قسم التذييل -->
                         <div class="footer">
-                            
+                            <p>ابق على تواصل:</p>
+                            <ul class="social-media">
+                                <li><a href="https://twitter.com/mindsync" target="_blank">تويتر</a></li>
+                                <li><a href="https://facebook.com/mindsync" target="_blank">فيسبوك</a></li>
+                                <li><a href="https://instagram.com/mindsync" target="_blank">إنستغرام</a></li>
+                            </ul>
                         </div>
                     </div>
                 </section>
+            
 
                 <section id="academies">
                     <div class="-content">
@@ -231,7 +299,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer id="footerSection">
         <div class="founder" title="CEO: Al-Faris Mujahid AlZakwani">
             <p class="founder">المؤسس التنفيذي: <a href="https://www.x.com/alfaris_zak">الفارس بن مجاهد الزكواني</a></p>
         </div>
@@ -254,6 +322,7 @@
     </footer>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/membership.js"></script>
+    <script src="assets/js/home.js"></script>
     <script>
             document.addEventListener('DOMContentLoaded', function() {
             // Function to check and display content based on fragment
