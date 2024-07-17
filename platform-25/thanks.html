@@ -57,6 +57,33 @@
         .thank-you-container a:hover{
             text-decoration: underline;
         }
+
+
+        @media screen and (max-width: 768px) {
+            .thank-you-container {
+                padding: 20px;
+            }
+            .thank-you-container h1 {
+                font-size: 30px;
+            }
+            .thank-you-container p {
+                font-size: 1em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .thank-you-container {
+                width: 80%;
+                padding: 10px;
+            }
+            .thank-you-container h1 {
+                font-size: 20px;
+            }
+            .thank-you-container p {
+                font-size: 14px;
+            }
+        }
+
     </style>
 </head>
 <body onload="redirectToHome()">
@@ -66,11 +93,11 @@
         <p>إذا لم يتم توجيهك تلقائيًا، <a href="index.html">اضغط هنا</a>.</p>
     </div>
     <script>
-        function redirectToHome() {
-            setTimeout(function() {
-                window.location.href = 'index.html';
-            }, 5000);
-        }
+        // function redirectToHome() {
+        //     setTimeout(function() {
+        //         window.location.href = 'index.html';
+        //     }, 5000);
+        // }
     </script>
 </body>
 </html>
