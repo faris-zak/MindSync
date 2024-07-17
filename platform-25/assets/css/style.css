@@ -192,10 +192,6 @@ section{
     animation: fadeIn 0.5s ease-in-out;
 }
 
-section#home{
-    display: block;
-}
-
 @keyframes fadeIn{
     from{
         opacity: 0;

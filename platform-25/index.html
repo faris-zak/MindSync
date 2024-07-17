@@ -112,7 +112,6 @@
                             <h3>كلمة المؤسس التنفيذي</h3>
                             <p>"السلام عليكم ورحمة الله وبركاته، مرحباً في منصة-25، المخصصة لنجاحكم الأكاديمي، نحن جميعنا هنا لدعم وتوفير الموارد والأدوات لتحقيق أهدافنا التعليمية، فالنستمتع  بالرحلة معاً!"</p>
                         </div>
-                        
                     </div>
                 </section>
 
@@ -330,6 +329,17 @@
             // Listen for hash changes (when fragment identifier changes)
             window.addEventListener('hashchange', showFragmentContent);
         });
+
+
+        function showSectionWithoutHash() {
+            const hash = window.location.hash.substring(1); // Get the hash without the '#' character
+
+            // If there is no hash, show the default section
+            if (!hash) {
+                document.getElementById('home').style.display = 'block'; // Change 'home' to your default section ID
+            }
+        }
+        window.addEventListener('load', showSectionWithoutHash);
     </script>
 </body>
 </html>
