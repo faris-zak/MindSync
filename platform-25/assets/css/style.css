@@ -395,6 +395,23 @@ footer div.founder a:hover, div.powered-by a:hover{
         flex-direction: column;
         display: flex;
     }
+
+    section{
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+     
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
     .sidebar{
         width: auto;
         height: auto;
@@ -479,10 +496,10 @@ footer div.founder a:hover, div.powered-by a:hover{
     }
 
     .fadeInList {
-        animation: fadeIn 0.5s ease;
+        animation: fadeInDropdown 0.5s ease;
     }
     
-    @keyframes fadeIn {
+    @keyframes fadeInDropdown {
         from {
             opacity: 0;
         }
@@ -490,19 +507,6 @@ footer div.founder a:hover, div.powered-by a:hover{
             opacity: 1;
         }
     }
-    
-    .fadeOutList {
-        animation: fadeOut 0.5s ease;
-    }
-    
-    @keyframes fadeOut {
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-        }
-    }    
     
     .dropdown-content a{
       color: black;
