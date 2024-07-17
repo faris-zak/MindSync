@@ -1,7 +1,10 @@
 #home .home-content {
     padding: 20px;
     background-color: #f9f9f9;
+    border-radius: 18px;
 }
+
+
 
 #home .header {
     text-align: center;
@@ -30,7 +33,7 @@
 
 #home .header nav ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: #FCA311;
 }
 
 #home .details {
@@ -68,32 +71,34 @@
     color: #777;
 }
 
-#home .footer {
+#home .footer  {
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
     border-top: 1px solid #ddd;
 }
 
-#home .footer p {
-    font-size: 1em;
-    color: #888;
+#home .footer h3 {
+    font-size: 20px;
+    color: #14213D;
+    font-weight: 500;
 }
 
-#home .footer .social-media {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+#home .footer p{
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 0;
 }
 
-#home .footer .social-media li {
-    display: inline;
-    margin: 0 10px;
+#home .footer div.author span{
+    cursor: default;
+    font-size: 14px;
+    color: #FCA311;
+    margin-left: 10px;
 }
 
-#home .footer .social-media li a {
-    text-decoration: none;
-    color: #007bff;
+#home .footer div.author span:hover{
+    color: #14213D;
 }
 
 .cta {
@@ -102,7 +107,7 @@
 }
 
 .cta button {
-    background-color: #007bff;
+    background-color: #FCA311;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -129,37 +134,48 @@
 }
 
 
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .header h1 {
         font-size: 2em;
     }
+
     .details h2 {
         font-size: 1.5em;
     }
+
     .feature {
         max-width: 45%;
         margin-bottom: 20px;
     }
+
     .cta button {
         font-size: 1em;
         padding: 8px 16px;
     }
 }
-@media (max-width: 480px) {
+
+@media screen and (max-width: 480px) {
     .header h1 {
         font-size: 1.8em;
     }
+
     .details h2 {
         font-size: 1.2em;
+    }
+    #home .features {
+        display: inline-block;
     }
     .feature {
         max-width: 100%;
     }
+
+
+
     .cta button {
         font-size: 0.9em;
         padding: 6px 12px;
     }
+
     .header nav ul li {
         display: block;
         margin: 5px 0;

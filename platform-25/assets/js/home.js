@@ -3,3 +3,8 @@ function joinNow() {
     home.style.display = 'none';
     membership.style.display = 'block';
 }
+
+function joinLater() {
+    home.style.display = 'none';
+    membership.style.display = 'block';
+}

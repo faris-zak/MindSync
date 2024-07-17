@@ -430,13 +430,13 @@ footer div.founder a:hover, div.powered-by a:hover{
     .dropbtn{
         background-color: #f1f1f1;
         color: #14213D;
-        padding: 8px;
         font-size: 22px;
         font-weight: 600;
         width: 100%;
         border: none;
         cursor: pointer;
         text-align: center;
+        padding: 15px 16px;
       }
       
     .dropbtn:hover, .dropbtn:focus {
@@ -468,7 +468,7 @@ footer div.founder a:hover, div.powered-by a:hover{
     .dropdown-content {
       display: none;
       position: absolute;
-      top: 48px;
+      top: 62px;
       background-color: #f6f6f6;
       width: 90%;
       max-width: 300px;
@@ -480,6 +480,17 @@ footer div.founder a:hover, div.powered-by a:hover{
       border: 1px solid #f1f1f1;
       border-top: none;
       z-index: 1;
+      animation:  fadeInList 0.1s ease;
+    }
+
+    @keyframes fadeInList{
+        from{
+            opacity: 0;
+        }
+     
+        to{
+            opacity: 1;
+        }
     }
     
     .dropdown-content a{

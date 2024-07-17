@@ -20,3 +20,5 @@ document.getElementById('toggle-details').addEventListener('click', function() {
         detailsElement.open = false;
     }
 });
+
+
