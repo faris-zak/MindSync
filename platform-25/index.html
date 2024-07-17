@@ -135,71 +135,79 @@
                             <hgroup>
                                 <h1>عضوية منصة-25</h1>
                                 <p>يمكن للجميع كسب عضوية منصة-25</p>
-
                             </hgroup>
                         </div>
-                            <div class="membership-card">
-                                <div class="header">
-                                    <span class="title">عضوية منصة-25</span>
-                                    <span class="price">مجاناً</span>
-                                </div>
+                        <div class="membership-card">
+                            <div class="header">
+                                <span class="title">عضوية منصة-25</span>
+                                <span class="price">مجاناً</span>
+                            </div>
+                            <hr>
+                            <div class="details">
+                                <details open>
+                                    <summary>ماذا تتضمن عضوية منصة-25؟</summary>
+                                    <ul>
+                                        <li>إمكانية إظهار حساب منصة إكس(تويتر) الخاص بك في قسم <a href="#student-graduating25">طلاب دفعة 2025</a>.</li>
+                                        <li>-مميزات أخرى لاحقاً-</li>
+                                    </ul>
+                                </details>
+                
+                                <details>
+                                    <summary>كيف يتم تفعيل عضوية منصة-25؟</summary>
+                                    <ol>
+                                        <li>كتابة إسم حسابك الموجود في إكس(تويتر)</li>
+                                        <li>كتابة إسم المستخدم لحسابك الموجود في إكس(تويتر)</li>
+                                        <li id="tip">تتم كتابة البيانات في قسم<br><span id="toggle-details">التسجيل في العضوية &downarrow;</span></li>
+                                    </ol>
+                                </details>
+                            </div>
+                
+                            <div class="footer">
+                                <details id="membership-card-open">
+                                    <summary>التسجيل في العضوية</summary>
+                                    <fieldset>
+                                        <legend>معلومات حساب إكس(تويتر)</legend>
+                                        <form id="membership-form" action="https://api.web3forms.com/submit" method="POST">
+                                            <input type="hidden" name="access_key" value="2b5d0000-848d-4361-b277-887b4bcd874f">
+                                            
+                                            <div class="form-group">
+                                                <label for="name">الأسم</label>
+                                                <input type="text" id="name" name="name" placeholder="مثال: MindSync" required>
+                                            </div>
+                
+                                            <div class="form-group">
+                                                <label for="username">أسم المستخدم</label>
+                                                <input type="text" id="username" name="username" placeholder="مثال: @mindsync" required>
+                                            </div>
 
-                                <div class="details">
-                                    <details open>
-                                        <summary>ماذا تتضمن عضوية منصة-25؟</summary>
-                                        <ul>
-                                            <li>ظهور حساب منصة إكس(تويتر) الخاص بك في قسم <a href="#student-graduating25">طلاب دفعة 2025</a>.</li>
-                                            <li><small>مميزات أخرى لاحقاً.</small></li>
-                                        </ul>
-                                      </details>
-
-                                      <details>
-                                        <summary>كيف يتم تفعيل عضوية منصة-25؟</summary>
-                                        <ol>
-                                            <li>كتابة الأسم الموجود على حسابك إكس(تريتر)</li>
-                                            <li>كتابة أسم المستخدم الموجود على حسابك إكس(تريتر)</li>
-                                        </ol>
-                                      </details>
-                                </div>
-
-                                <div class="footer">
-                                    <details>
-                                        <summary>التسجيل في العضوية</summary>
-                                        <fieldset>
-                                            <legend>معلومات حساب إكس(تويتر)</legend>
-                                            <form action="https://api.web3forms.com/submit" method="POST">
-                                                <input type="hidden" name="access_key" value="614e7d5a-7d72-41ed-b824-81e927d7965d">
-                            
-                                                <div class="form-group">
-                                                    <input type="text" name="name" placeholder="الأسم، مثال: MindSync" required>
+                                            <div class="form-group">
+                                                <label>هل تريد إظهار حسابك في قسم طلاب دفعة 2025؟</label>
+                                                <div class="radio-group">
+                                                    <input type="radio" id="yes" name="question" value="yes">
+                                                    <label for="yes">نعم</label>
+                                                    <small>-----</small>
+                                                    <input type="radio" id="no" name="question" value="no">
+                                                    <label for="no">لا</label>
                                                 </div>
-    
-                                                <div class="form-group">
-                                                    <input type="text" name="name" placeholder="أسم المستخدم، مثال: @mindsync" required>
-                                                </div>
-                            
-                                                <div class="form-group">
-                                                    <textarea name="message" placeholder="ملاحظة..." rows="3"></textarea>
-                                                </div>
-                            
-                                                <div class="form-buttons">
-                                                    <input class="submit" type="submit" value="إرسال">
-                                                    <input class="clear" type="reset" value="مسح">
-                                                </div>
-    
-                                                <small>*قد يستغرق تفعيل العضوية (يوم-يومان).</small>
-                                            </form>
-                                        </fieldset>
-                                    </details>
-                                      
+                                            </div>
+                
+                                            <div class="form-group">
+                                                <label for="message">ملاحظة</label>
+                                                <textarea id="message" name="message" placeholder="إكتب ملاحظتك هنا... (غير مطلوب)" rows="3"></textarea>
+                                            </div>
 
-                                </div>
-                            <!-- <div class="membership-form">
+                                            <small>*قد يستغرق تفعيل العضوية (يوم-يومان).</small>
 
-                            </div> -->
-                        </div>
-                        <div class="footer">
-
+                                            <div class="form-buttons">
+                                                <input id="submitButton" class="submit" type="submit" value="إرسال" disabled>
+                                                <input class="clear" type="reset" value="مسح">
+                                            </div>
+                                            
+                                            <div class="form-message"></div>
+                                        </form>
+                                    </fieldset>
+                                </details>
+                            </div>
                         </div>
                     </div>
                 </section>

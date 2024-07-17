@@ -1,62 +1,242 @@
-section{
-    width: شعفخ;
+#p25-membership {
+    padding: 20px;
 }
 
-.membership-content .header{
+.membership-content {
+    border-radius: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership-content .header hgroup h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: #333;
+}
+
+.membership-content .header hgroup p {
+    margin: 10px 0 20px;
+    color: #666;
+}
+
+.membership-content hr{
+    height: 2px;
+    background-color: #14213D;
+    border-color: #14213D;
+    border: 0;
     margin-bottom: 20px;
 }
-.membership-content .header h1{
-    font-size: 40px;
-    color: #14213D;
-    font-weight: 500;
-    margin: 0;
+
+.membership-card {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
 }
 
-.membership-content .header p{
-    color: #FCA311;
-    margin: 0;
+.membership-card small{
+    color: #666;
 }
 
-.membership-card{
-    width: auto;
-    height: auto;
+.membership-card .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
- .membership-card .header .title {
+.membership-card .header .title {
     font-size: 24px;
-    line-height: 2rem;
-    font-weight: 700;
-    color: black;
-  }
-  
- .membership-card .header .price {
-    font-size: 30px;
-    line-height: 1;
-    font-weight: 700;
-    color: black;
-  }
+    font-weight: 500;
+    color: #FCA311;
+}
 
+.membership-card .header .price {
+    cursor: default;
+    font-size: 18px;
+    color: #28a745;
+}
 
-  details {
-    width: auto;
-    max-width: 500px;
-    min-width: 260px;
-    margin-right: 20px;
-  }
-  
-  details > summary {
-    font-size: 22px;
-    padding: 2px 6px;
-    width: auto;
-    /* background-color: #ddd; */
-    border: none;
+.membership-card details summary{
     cursor: pointer;
-  }
-  
-  details > p {
-    border-radius: 0 0 10px 10px;
-    background-color: #ddd;
-    padding: 2px 6px;
+    font-size: 18px;
+    margin: 12px;
+    margin-top: 0;
+    color: #14213D;
+    font-weight: bold;
+}
+
+.membership-card details summary:hover{
+    padding-right: 5px;
+}
+
+.membership-card li#tip{
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.membership-card li#tip span#toggle-details{
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.membership-card fieldset{
+    margin-right: 24px;
+    border: 1px solid #FCA311;
+    border-radius: 4.5px;
+}
+
+.membership-card .form-group {
+    margin-bottom: 15px;
+}
+
+.membership-card .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.membership-card .form-group input,
+.membership-card .form-group textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5px; 
+}
+
+.radio-group label[for="yes"], .radio-group label[for="no"] {
     margin: 0;
-    box-shadow: 3px 3px 4px black;
-  }
+    font-weight: 500;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0;
+    width: auto;
+}
+
+.membership-card .form-buttons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.membership-card .form-buttons .submit,
+.membership-card .form-buttons .clear {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.membership-card .form-buttons .submit {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.membership-card .form-buttons .submit:hover{
+    background-color: #0069d9;
+}
+
+.membership-card .form-buttons .clear {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.membership-card .form-buttons .clear:hover{
+    background-color: #bb2e3c;
+}
+
+.membership-card .form-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #28a745;
+}
+
+
+@media screen and (max-width: 768px) {
+    .membership-card .header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .membership-card .header .title{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .membership-card .header .price{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .membership-card .form-buttons {
+        flex-direction: column;
+    }
+
+    .membership-card .form-buttons .submit,
+    .membership-card .form-buttons .clear {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .membership-card .form-buttons .clear {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .membership-card fieldset{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .membership-content {
+        padding: 10px;
+    }
+
+    .membership-content .header hgroup h1 {
+        font-size: 26px;
+    }
+    
+    .membership-content .header hgroup p {
+        font-size: 16px;
+    }
+
+    .membership-card {
+        padding: 10px;
+    }
+
+    .membership-card .header .title,
+    .membership-card .header .price {
+        font-size: 16px;
+    }
+
+    .membership-card .form-group label,
+    .membership-card .form-group input,
+    .membership-card .form-group textarea {
+        font-size: 14px;
+    }
+
+    .membership-card .form-buttons .submit,
+    .membership-card .form-buttons .clear {
+        font-size: 14px;
+    }
+}
