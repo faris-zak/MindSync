@@ -113,6 +113,22 @@ iframe {
   margin: 20px auto 0;
 }
 
+.download-file {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+}
+
+.download-file:hover {
+  background-color: #45a049;
+}
+
   </style>
 </head>
 <body>
@@ -131,6 +147,7 @@ iframe {
       <h2 class="modal-file-name" id="modalFileName"></h2>
       <iframe id="fileFrame" src="" frameborder="0"></iframe>
       <button class="close-modal-button" id="closeModalButton">إغلاق</button>
+      <a class="download-file" id="downloadFileButton" href="" download>تحميل</a>
     </div>
   </div>
 
@@ -140,10 +157,14 @@ document.getElementById('viewFileButton').addEventListener('click', function() {
   var modal = document.getElementById('fileModal');
   var iframe = document.getElementById('fileFrame');
   var modalFileName = document.getElementById('modalFileName');
+  var downloadButton = document.getElementById('downloadFileButton');
   
   // Set the file path and name to the iframe source and modal file name
   iframe.src = filePath;
   modalFileName.innerText = filePath.split('/').pop();
+
+  // Set the file path to the download button href
+  downloadButton.href = filePath;
   
   // Display the modal
   modal.style.display = 'block';
