@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Harmattan:wght@400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <title>شكراً لإستخدامك عضوية-25!</title>
+    <style>
+        *{
+            font-family: "Tajawal", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            transition: all 0.2s ease;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .thank-you-container {
+            text-align: center;
+            border: 2px solid #14213D;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        .thank-you-container h1 {
+            color: #14213D;
+            font-size: 40px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .thank-you-container p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-container a {
+            color: #FCA311;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .thank-you-container a:hover{
+            text-decoration: underline;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .thank-you-container {
+                padding: 20px;
+            }
+            .thank-you-container h1 {
+                font-size: 30px;
+            }
+            .thank-you-container p {
+                font-size: 1em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .thank-you-container {
+                width: 80%;
+                padding: 10px;
+            }
+            .thank-you-container h1 {
+                font-size: 20px;
+            }
+            .thank-you-container p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body onload="redirectToHome()">
+    <div class="thank-you-container">
+        <h1>تم إلغاء عضويتك بنجاح!</h1>
+        <p>سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ قليلة.</p>
+        <p>إذا لم يتم توجيهك تلقائيًا، <a href="index.html">اضغط هنا</a>.</p>
+    </div>
+    <script>
+        function redirectToHome() {
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
