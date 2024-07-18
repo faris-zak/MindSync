@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const moreInfo = this.nextElementSibling;
         if (moreInfo.style.display === "none" || !moreInfo.style.display) {
           moreInfo.style.display = "block";
-          this.textContent = "Less Info";
+          this.textContent = "معلومات أقل";
         } else {
           moreInfo.style.display = "none";
-          this.textContent = "More Info";
+          this.textContent = "مزيد من المعلومات";
         }
       });
     });
