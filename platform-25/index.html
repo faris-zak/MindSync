@@ -254,9 +254,9 @@
                                                 </div>
                                             </div>
 
-                                            <small>*ضمان حماية بياناتكم الشخصية وخصوصيتكم عند التسجيل.</small><br>
+                                            <small>*ضمان حماية بياناتك الشخصية وخصوصيتك عند التسجيل.</small><br>
                                             <small>*قد يستغرق تفعيل العضوية خلال 48 ساعة.</small><br>
-                                            <small>*لا يمكنك إلغاء العضوية.</small>
+                                            <small>*يمكنك إلغاء العضوية في أي وقت.</small>
                                             
                                             <div class="form-buttons">
                                                 <input id="submitButton" class="submit" type="submit" value="تسجيل">
@@ -265,6 +265,127 @@
                                         </form>
                                     </fieldset>
                                 </details>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- 2nd Card -->
+
+                    <div class="membership-content">
+                        <div class="header">
+                            <hgroup>
+                                <h1>هل تمتك عضوية منصة-25 من قبل؟</h1>
+                                <p>يمكنك إلغاء أو تعديل العضوية في أي زمان ومكان.</p>
+                            </hgroup>
+                        </div>
+                        <div class="membership-card">
+                            <div class="header">
+                                <span class="title">عضوية منصة-25</span>
+                            </div>
+                            <hr>
+                            <div class="details">
+                                <details name="req">
+                                    <summary>تعديل العضوية</summary>
+                                    <ul>
+                                        <li>سيتم تعديل البيانات المتاحة إذا كنت تمتلك بطاقة خاصة في قسم <a href="#student-graduating25">خريجو عام 25</a>.</li>
+                                    </ul>
+                                        <fieldset style="margin-bottom: 20px;">
+                                            <legend>بياناتكم الشخصية وخصوصيتكم أمانة</legend>
+                                            <form id="membership-form" action="https://api.web3forms.com/submit" method="POST">
+                                                <input type="hidden" name="access_key" value="2b5d0000-848d-4361-b277-887b4bcd874f">
+                                                <input type="hidden" name="redirect" value="https://faris-zak.github.io/MindSync/platform-25/edit.html">
+                                                <input type="hidden" name="from_name" value="Platform-25 (MindSync)">
+                                                <input type="hidden" name="subject" value="New Platform-25 Membership Edit Request">
+    
+                                                <div class="form-group">
+                                                    <label>إسمك الحقيقي <small>-لا يمكنك تعديل إسمك الحقيقي-</small></label>
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <label for="xName">الإسم - إكس(تويتر)</label>
+                                                    <input type="text" id="xName" name="xName" placeholder="مثال: MindSync" autocomplete="off">
+                                                </div>
+                    
+                                                <div class="form-group">
+                                                    <label for="xUsername">إسم المستخدم - إكس(تويتر)</label>
+                                                    <input type="text" id="xUsername" name="xUsername" placeholder="مثال: @mindsync" autocomplete="off">
+                                                </div>
+    
+                                                <div class="form-group">
+                                                    <label>هل تريد إظهار حسابك الخاص لمنصة إكس(تويتر) في بطاقتك؟</label>
+                                                    <div class="radio-group">
+                                                        <input type="radio" id="yes" name="xAccount" value="yes">
+                                                        <label for="yes">نعم</label>
+                                                        <small>-----</small>
+                                                        <input type="radio" id="no" name="xAccount" value="no">
+                                                        <label for="no">لا</label>
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="form-group">
+                                                    <label for="note">ملاحظة</label>
+                                                    <textarea id="note" name="note" placeholder="إكتب ملاحظتك هنا... (غير مطالب به)" rows="3"></textarea>
+                                                </div>
+    
+                                                <small>*ضمان حماية بياناتك الشخصية وخصوصيتك عند التعديل.</small><br>
+                                                <small>*قد يستغرق تعديل العضوية خلال 48 ساعة.</small><br>
+                                                
+                                                <div class="form-buttons">
+                                                    <input id="submitButton" class="submit" type="submit" value="تعديل">
+                                                    <input class="clear" type="reset" value="مسح">
+                                                </div>
+                                            </form>
+                                        </fieldset>
+                                </details>
+                                <details name="req">
+                                    <summary>إلغاء العضوية</summary>
+                                    <ol>
+                                        <li>سيتم حذف بطاقتك الخاصة من قسم <a href="#student-graduating25">خريجو عام 25</a>.</li>
+                                        <li>إلغاء عضوية منصة-25 وبياناتك من منصة-25 في حال قمت بإلغاء العضوية.</li>
+                                    </ol>
+
+                                    <fieldset>
+                                        <legend>سيتم حذف بياناتك كلياً عند الإلغاء</legend>
+                                        <form id="membership-form" action="https://api.web3forms.com/submit" method="POST">
+                                            <input type="hidden" name="access_key" value="2b5d0000-848d-4361-b277-887b4bcd874f">
+                                            <input type="hidden" name="redirect" value="https://faris-zak.github.io/MindSync/platform-25/cancellation.html">
+                                            <input type="hidden" name="from_name" value="Platform-25 (MindSync)">
+                                            <input type="hidden" name="subject" value="New Platform-25 Membership Cancellation Request">
+
+                                            <div class="form-group">
+                                                <label for="realName">إسمك الحقيقي</label>
+                                                <input type="text" id="realName" name="realName" placeholder="مثال: فلان بن فلان الفلاني" autocomplete="off" required>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="xName">الإسم - إكس(تويتر)</label>
+                                                <input type="text" id="xName" name="xName" placeholder="مثال: MindSync" autocomplete="off" required>
+                                            </div>
+                
+                                            <div class="form-group">
+                                                <label for="xUsername">إسم المستخدم - إكس(تويتر)</label>
+                                                <input type="text" id="xUsername" name="xUsername" placeholder="مثال: @mindsync" autocomplete="off" required>
+                                            </div>
+                
+                                            <div class="form-group">
+                                                <label for="reasonOfCancellation">سبب الإلغاء</label>
+                                                <textarea id="note" name="reasonOfCancellation" placeholder="إكتب ملاحظتك هنا... (غير مطالب به)" rows="3"></textarea>
+                                            </div>
+
+                                            <small>*يمكنك التسجيل في العضوية مرة أخرى متى شئت.</small><br>
+                                            <small>*قد يستغرق إلغاء العضوية خلال 48 ساعة.</small><br>
+                                            
+                                            <div class="form-buttons">
+                                                <input id="submitButton" class="submit" type="submit" value="إلغاء العضوية">
+                                                <input class="clear" type="reset" value="مسح">
+                                            </div>
+                                        </form>
+                                    </fieldset>
+                                </details>
+                            </div>
+                
+                            <div class="footer">
+                                
                             </div>
                         </div>
                     </div>

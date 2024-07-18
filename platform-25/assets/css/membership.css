@@ -9,6 +9,11 @@
     padding: 20px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 70px;
+}
+
+.membership-content:last-child{
+    margin-bottom: 0;
 }
 
 .membership-content .header hgroup h1 {
