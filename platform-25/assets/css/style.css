@@ -375,7 +375,6 @@ footer div.founder a:hover, div.powered-by a:hover{
     header nav hgroup p a small{
         font-size: 15px;
     }
-    
 }
 
 @media screen and (max-width: 540px){
@@ -514,7 +513,7 @@ footer div.founder a:hover, div.powered-by a:hover{
       user-select: none;
       border-radius: 18px;
       box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
-      border: 1px solid #f1f1f1;
+      border: none;
       border-top: none;
       z-index:-1;
       transition: 0.5s;
@@ -523,7 +522,7 @@ footer div.founder a:hover, div.powered-by a:hover{
     
     .dropdown-content a{
       color: black;
-      padding: 12px 16px;
+      padding: 14px 16px;
       font-size: 16px;
       font-weight: 500;
       text-decoration: none;
