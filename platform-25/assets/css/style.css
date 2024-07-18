@@ -357,65 +357,6 @@ footer div.founder a:hover, div.powered-by a:hover{
     }
 }
 
-@media screen and (max-width: 650px){
-    header nav img{
-        width: 250px;
-    }
-    
-    header nav hgroup h1.title{
-        font-size: 45px;
-    }
-
-    header nav hgroup p{
-        margin: 0;
-        font-size: 17px;
-        font-weight: 400;
-    }
-
-    header nav hgroup p a small{
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 540px){
-    header nav img{
-        width: 100px;
-    }
-    
-    header nav hgroup h1.title{
-        font-size: 40px;
-    }
-
-    header nav hgroup p{
-        margin: 0;
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    header nav hgroup p a small{
-        font-size: 14px;
-    }
-    
-}
-
-@media screen and (max-width: 500px){
-    footer{
-        font-size: 14px;
-    }
-
-    footer div.social-media ul li a span{
-        display: none;
-    }
-
-    footer div.social-media ul li a div{
-        font-size: 16px;
-        height: 28px;
-        width: 28px;
-        padding: 0;
-        border-radius: 100px;
-    }
-}
-
 @media screen and (max-width: 700px){
     .content-wrapper{
         flex-direction: column;
@@ -454,6 +395,26 @@ footer div.founder a:hover, div.powered-by a:hover{
             opacity: 1;
             transform: translateX(0);
         }
+    }
+}
+
+@media screen and (max-width: 650px){
+    header nav img{
+        width: 250px;
+    }
+    
+    header nav hgroup h1.title{
+        font-size: 45px;
+    }
+
+    header nav hgroup p{
+        margin: 0;
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    header nav hgroup p a small{
+        font-size: 15px;
     }
 }
 
@@ -534,7 +495,7 @@ footer div.founder a:hover, div.powered-by a:hover{
       color: white;
     }
     
-    .dropdown-content a:last-child{
+    /* .dropdown-content a:last-child{
         border-top: 1px solid #FCA311;
         color: #FCA311;
         text-align: center;
@@ -551,7 +512,7 @@ footer div.founder a:hover, div.powered-by a:hover{
         position: relative;
         top: 3px;
         left: 0px;
-    }
+    } */
 
     @keyframes fadeIn{
         from{
@@ -563,6 +524,45 @@ footer div.founder a:hover, div.powered-by a:hover{
             opacity: 1;
             transform: translateX(0);
         }
+    }
+}
+
+@media screen and (max-width: 540px){
+    header nav img{
+        width: 100px;
+    }
+    
+    header nav hgroup h1.title{
+        font-size: 40px;
+    }
+
+    header nav hgroup p{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    header nav hgroup p a small{
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    footer{
+        font-size: 14px;
+    }
+
+    footer div.social-media ul li a span{
+        display: none;
+    }
+
+    footer div.social-media ul li a div{
+        font-size: 16px;
+        height: 28px;
+        width: 28px;
+        padding: 0;
+        border-radius: 100px;
     }
 }
 

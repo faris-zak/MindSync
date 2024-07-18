@@ -94,23 +94,23 @@ chapter1Button.addEventListener('click', () => {
     membership.style.display = 'none';
 }); */
 
-studentGraduating25Button.addEventListener('click', () => {
-    home.style.display = 'none';
-    academies.style.display = 'none';
-    chapter1.style.display = 'none';
-    // chapter2.style.display = 'none';
-    studentGraduating25.style.display = 'block';
-    membership.style.display = 'none';
-});
+// studentGraduating25Button.addEventListener('click', () => {
+//     home.style.display = 'none';
+//     academies.style.display = 'none';
+//     chapter1.style.display = 'none';
+//      chapter2.style.display = 'none';
+//     studentGraduating25.style.display = 'block';
+//     membership.style.display = 'none';
+// });
 
-membershipButton.addEventListener('click', () => {
-    home.style.display = 'none';
-    academies.style.display = 'none';
-    chapter1.style.display = 'none';
-    // chapter2.style.display = 'none';
-    studentGraduating25.style.display = 'none';
-    membership.style.display = 'block';
-});
+// membershipButton.addEventListener('click', () => {
+//     home.style.display = 'none';
+//     academies.style.display = 'none';
+//     chapter1.style.display = 'none';
+//      chapter2.style.display = 'none';
+//     studentGraduating25.style.display = 'none';
+//     membership.style.display = 'block';
+// });
 
 
                 // Page Sections Functions - 2
@@ -140,23 +140,23 @@ chapter1Button2.addEventListener('click', () => {
     membership.style.display = 'none';
 }); */
 
-studentGraduating25Button2.addEventListener('click', () => {
-    home.style.display = 'none';
-    academies.style.display = 'none';
-    chapter1.style.display = 'none';
-    // chapter2.style.display = 'none';
-    studentGraduating25.style.display = 'block';
-    membership.style.display = 'none';
-});
+// studentGraduating25Button2.addEventListener('click', () => {
+//     home.style.display = 'none';
+//     academies.style.display = 'none';
+//     chapter1.style.display = 'none';
+//     chapter2.style.display = 'none';
+//     studentGraduating25.style.display = 'block';
+//     membership.style.display = 'none';
+// });
 
-membershipButton2.addEventListener('click', () => {
-    home.style.display = 'none';
-    academies.style.display = 'none';
-    chapter1.style.display = 'none';
-    // chapter2.style.display = 'none';
-    studentGraduating25.style.display = 'none';
-    membership.style.display = 'block';
-});
+// membershipButton2.addEventListener('click', () => {
+//     home.style.display = 'none';
+//     academies.style.display = 'none';
+//     chapter1.style.display = 'none';
+//     chapter2.style.display = 'none';
+//     studentGraduating25.style.display = 'none';
+//     membership.style.display = 'block';
+// });
 
 
 
