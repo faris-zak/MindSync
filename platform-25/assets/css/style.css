@@ -128,7 +128,7 @@ header nav hgroup p{
     color: white;
 }
 
-.sidebar a:last-child{
+/* .sidebar a:last-child{
     position: absolute;
     top: 95%;
     left: 13%;
@@ -207,7 +207,7 @@ header nav hgroup p{
     position: relative;
     top: 3px;
     left: 0px;
-}
+} */
 
 main{
     flex: 1;
