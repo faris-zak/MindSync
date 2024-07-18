@@ -2,6 +2,16 @@
 
 const form = document.getElementById('membership-form');
 const submitButton = document.getElementById('submitButton');
+const xAccount = document.getElementById('xAccount');
+const xPlatform = document.getElementById('xPlatform');
+
+xAccount.addEventListener('change', () =>{
+    if(xAccount.checked){
+        xPlatform.style.display = 'block';
+    } else {
+        xPlatform.style.display = 'none';
+    }
+})
 
 
 submitButton.addEventListener('submit', function(event) {

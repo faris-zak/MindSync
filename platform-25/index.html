@@ -217,28 +217,37 @@
                                             <input type="hidden" name="subject" value="New Platform-25 Membership Request">
 
                                             <div class="form-group">
-                                                <label for="realName">إسمك الحقيقي</label>
+                                                <label for="realName">إسمك الحقيقي<sup style="color: red;">*</sup></label>
                                                 <input type="text" id="realName" name="realName" placeholder="مثال: فلان بن فلان الفلاني" autocomplete="off" required>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="xName">الإسم - إكس(تويتر)</label>
-                                                <input type="text" id="xName" name="xName" placeholder="مثال: MindSync" autocomplete="off" required>
-                                            </div>
-                
-                                            <div class="form-group">
-                                                <label for="xUsername">إسم المستخدم - إكس(تويتر)</label>
-                                                <input type="text" id="xUsername" name="xUsername" placeholder="مثال: @mindsync" autocomplete="off" required>
                                             </div>
 
                                             <div class="form-group">
-                                                <label>هل تريد إظهار حسابك الخاص لمنصة إكس(تويتر) في بطاقتك؟</label>
-                                                <div class="radio-group">
-                                                    <input type="radio" id="yes" name="xAccount" value="yes">
-                                                    <label for="yes">نعم</label>
-                                                    <small>-----</small>
-                                                    <input type="radio" id="no" name="xAccount" value="no">
-                                                    <label for="no">لا</label>
+                                                <div class="checkbox-group">
+                                                    <label for="xAccount">التسجيل بحساب إكس(تويتر)</label>
+                                                    <input type="checkbox" id="xAccount" name="xAccount">
+                                                </div>
+                                            </div>
+
+                                            <div id="xPlatform">
+                                                <div class="form-group">
+                                                    <label for="xName">الإسم - إكس(تويتر)<sup style="color: red;">*</sup></label>
+                                                    <input type="text" id="xName" name="xName" placeholder="مثال: MindSync" autocomplete="off">
+                                                </div>
+                    
+                                                <div class="form-group">
+                                                    <label for="xUsername">إسم المستخدم - إكس(تويتر)<sup style="color: red;">*</sup></label>
+                                                    <input type="text" id="xUsername" name="xUsername" placeholder="مثال: @mindsync" autocomplete="off">
+                                                </div>
+    
+                                                <div class="form-group">
+                                                    <label>هل تريد إظهار حسابك الخاص لمنصة إكس(تويتر) في بطاقتك؟<sup style="color: red;">*</sup></label>
+                                                    <div class="radio-group">
+                                                        <input type="radio" id="yes" name="xAccountShow" value="yes">
+                                                        <label for="yes">نعم</label>
+                                                        <small>-----</small>
+                                                        <input type="radio" id="no" name="xAccountShow" value="no">
+                                                        <label for="no">لا</label>
+                                                    </div>
                                                 </div>
                                             </div>
                 
@@ -249,7 +258,7 @@
 
                                             <div class="form-group">
                                                 <div class="checkbox-group">
-                                                    <label for="termsOfUse">أنا أوافق على <a href="https://mindsync.cteoman.com/terms-of-use.html" target="_blank">شروط الإستخدام</a></label>
+                                                    <label for="termsOfUse">أنا أوافق على <a href="https://mindsync.cteoman.com/terms-of-use.html" target="_blank">شروط الإستخدام</a><sup style="color: red;">*</sup></label>
                                                     <input type="checkbox" id="termsOfUse" name="termsOfUse" required>
                                                 </div>
                                             </div>
@@ -288,6 +297,7 @@
                                     <summary>تعديل العضوية</summary>
                                     <ul>
                                         <li>سيتم تعديل البيانات المتاحة إذا كنت تمتلك بطاقة خاصة في قسم <a href="#student-graduating25">خريجو عام 25</a>.</li>
+                                        <li>إذا كنت مسجل بدون حساب إكس(تويتر) فلا داعي لملء الخانات الخاصة به.</li>
                                     </ul>
                                         <fieldset style="margin-bottom: 20px;">
                                             <legend>بياناتكم الشخصية وخصوصيتكم أمانة</legend>
@@ -341,6 +351,7 @@
                                     <summary>إلغاء العضوية</summary>
                                     <ol>
                                         <li>سيتم حذف بطاقتك الخاصة من قسم <a href="#student-graduating25">خريجو عام 25</a>.</li>
+                                        <li>إذا كنت مسجل بدون حساب إكس(تويتر) فلا داعي لملء الخانات الخاصة به.</li>
                                         <li>إلغاء عضوية منصة-25 وبياناتك من منصة-25 في حال قمت بإلغاء العضوية.</li>
                                     </ol>
 
@@ -353,18 +364,18 @@
                                             <input type="hidden" name="subject" value="New Platform-25 Membership Cancellation Request">
 
                                             <div class="form-group">
-                                                <label for="realName">إسمك الحقيقي</label>
+                                                <label for="realName">إسمك الحقيقي<sup style="color: red;">*</sup></label>
                                                 <input type="text" id="realName" name="realName" placeholder="مثال: فلان بن فلان الفلاني" autocomplete="off" required>
                                             </div>
                                             
                                             <div class="form-group">
                                                 <label for="xName">الإسم - إكس(تويتر)</label>
-                                                <input type="text" id="xName" name="xName" placeholder="مثال: MindSync" autocomplete="off" required>
+                                                <input type="text" id="xName" name="xName" placeholder="مثال: MindSync" autocomplete="off">
                                             </div>
                 
                                             <div class="form-group">
                                                 <label for="xUsername">إسم المستخدم - إكس(تويتر)</label>
-                                                <input type="text" id="xUsername" name="xUsername" placeholder="مثال: @mindsync" autocomplete="off" required>
+                                                <input type="text" id="xUsername" name="xUsername" placeholder="مثال: @mindsync" autocomplete="off">
                                             </div>
                 
                                             <div class="form-group">

@@ -105,6 +105,10 @@
     padding-bottom: 5px;
 }
 
+.membership-card #xPlatform{
+    display: none;
+}
+
 .membership-card .form-group {
     margin-bottom: 20px;
 }
@@ -145,7 +149,7 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    gap: 5px; 
+    gap: 6px; 
 }
 
 .checkbox-group label[for="tOU"]{
