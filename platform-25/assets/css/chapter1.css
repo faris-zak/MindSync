@@ -192,11 +192,20 @@
       overflow-x: auto;
       white-space: nowrap;
       padding: 10px 0;
+      margin-bottom: 10px;
   }
   
   .slide {
       display: inline-flex;
-      margin-right: 15px;
+      margin: 0 15px;
+  }
+
+  .slide:first-child {
+    margin-right: 5px;
+  }
+
+  .slide:last-child{
+    margin-left: 5px;
   }
 
 
