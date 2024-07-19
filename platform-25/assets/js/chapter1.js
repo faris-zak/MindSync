@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             var modalFileName = document.getElementById('modalFileName');
             var downloadButton = document.getElementById('downloadFileButton');
             var openFileButton = document.getElementById('openFileButton');
+            var printButton = document.getElementById('printFileButton');
             
             // Extract the file name from the file path
             var fileName = filePath.split('/').pop();
@@ -49,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Set the file path to the open file button href
             openFileButton.href = filePath;
             
+            // Set the file path to the print button data attribute
+            printButton.setAttribute('data-file-path', filePath);
+            
             // Display the modal
             modal.style.display = 'block';
         });
@@ -56,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get the close button elements
     var span = document.getElementById('closeButton');
-    var closeModalButton = document.getElementById('closeModalButton');
 
     // Function to close the modal
     function closeModal() {
@@ -64,9 +67,23 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none';
     }
 
+    // Function to print the file
+    function printFile(filePath) {
+        var printWindow = window.open(filePath, '_blank');
+        printWindow.onload = function() {
+            printWindow.print();
+        };
+    }
+
+    // Add event listener for the print button
+    var printButton = document.getElementById('printFileButton');
+    printButton.addEventListener('click', function() {
+        var filePath = this.getAttribute('data-file-path');
+        printFile(filePath);
+    });
+
     // When the user clicks on span (x) or the close button, close the modal
     span.onclick = closeModal;
-    closeModalButton.onclick = closeModal;
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
@@ -75,4 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     };
-});                        
+});

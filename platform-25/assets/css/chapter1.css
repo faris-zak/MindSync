@@ -148,8 +148,7 @@
     align-items: center;
   }
   
-  .close-button,
-  .close-modal-button {
+  .close-button{
     background-color: #f44336;
     color: white;
     border: none;
@@ -162,8 +161,7 @@
     right: 10px;
   }
   
-  .close-button:hover,
-  .close-modal-button:hover {
+  .close-button:hover{
     background-color: #d32f2f;
   }
   
@@ -209,7 +207,24 @@
   }
   
   .open-file:hover {
-    background-color: #4c6baf;
+    background-color: #5172b9;
+  }
+
+  .print-file {
+    background-color: #f48236;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+  }
+  
+  .print-file:hover {
+    background-color: #e67022;
   }
   
   .slider {
