@@ -1,14 +1,35 @@
   .academies-content{
-    display: flex;  /* Enable flexbox for side-by-side layout */
-    justify-content: center; /* Align items horizontally */
-    align-items: center; /* Align items vertically */
-    flex-wrap: wrap; /* Wrap items if they exceed the container width */
-    gap: 20px;
-    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 18px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
   }
+
+  .academies-content hgroup {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FCA311;
+    display: block;  /* Enable flexbox for side-by-side layout */
+}
+
+.academies-content hgroup h1 {
+    font-size: 45px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.academies-content hgroup p {
+    font-size: 18px;
+    color: #666;
+}
+
+.cards{
+  display: flex;  /* Enable flexbox for side-by-side layout */
+  justify-content: center; /* Align items horizontally */
+  align-items: center; /* Align items vertically */
+  flex-wrap: wrap; /* Wrap items if they exceed the container width */
+  gap: 20px;
+}
   
   .academy-card {
     cursor: default;
@@ -163,7 +184,13 @@
     background-color: #FCA311;
     border: 1px solid #FCA311;
 }
-  
+
+
+@media screen and (max-width: 768px) {
+  .academies-content hgroup h1 {
+      font-size: 35px;
+  }
+} 
 
 @media screen and (max-width: 650px){
     .academies-content{
@@ -196,4 +223,14 @@
     .academy-card.footer a {
         font-size: 0.8em;
     }
+}
+
+@media screen and (max-width: 480px) {
+  .academies-content hgroup h1 {
+      font-size: 26px;
+  }
+
+  .academies-content hgroup p{
+      font-size: 16px;
+  }
 }

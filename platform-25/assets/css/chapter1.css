@@ -1,0 +1,94 @@
+.chapter1-content{
+    background-color: #f9f9f9;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .chapter1-content .header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FCA311;
+    display: block;  /* Enable flexbox for side-by-side layout */
+}
+
+.chapter1-content .header #search-bar {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 9px;
+    border: none;
+}
+
+.chapter1-content .header #search-bar:focus {
+    outline: 1px solid #FCA311;
+    color: #14213D;
+}
+
+.chapter1-content .header h1 {
+    font-size: 45px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.chapter1-content .header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.subject {
+    margin-bottom: 20px;
+}
+
+.subject summary {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subject .content {
+    padding: 10px;
+}
+
+/* #chapter-1 .math {
+}
+
+#chapter-1 .science {
+}
+
+#chapter-1 .videos {
+}
+
+#chapter-1 .photos {
+    
+}
+
+#chapter-1 .pdf {
+    
+} */
+
+
+@media screen and (max-width: 768px) {
+    .chapter1-content .header h1 {
+        font-size: 35px;
+    }
+  } 
+
+@media screen and (max-width: 500px){
+    .subject-card {
+        width: 100%;
+    }
+    .chapter1-content .header #search-bar {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chapter1-content .header h1 {
+        font-size: 26px;
+    }
+  
+    .chapter1-content .header p{
+        font-size: 16px;
+    }
+  }
