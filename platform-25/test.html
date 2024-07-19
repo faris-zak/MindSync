@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Harmattan:wght@400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
   <style>
+    *{
+      font-family: "Tajawal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.2s ease;
+    }
     body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
-  margin: 0;
-  font-family: Arial, sans-serif;
 }
 
 .card {
@@ -20,25 +28,27 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: auto;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 .card-info {
-  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .file-name {
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 1.2em;
+  font-weight: 600;
+  font-size: 20px;
   word-wrap: break-word;
 }
 
 .view-file {
-  background-color: #007bff;
+  background-color: #FCA311;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -48,7 +58,7 @@
 }
 
 .view-file:hover {
-  background-color: #0056b3;
+  background-color: #e68e00;
 }
 
 /* Modal styles */
@@ -73,13 +83,14 @@
   border: 1px solid #888;
   width: 80%;
   max-width: 700px;
-  border-radius: 8px;
+  border-radius: 9px;
   position: relative;
 }
 
-.modal-file-name {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+.modal .modal-content div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .close-button,
@@ -103,6 +114,7 @@
 
 iframe {
   width: 100%;
+  border-radius: 8px;
   height: 400px;
   border: none;
 }
@@ -129,68 +141,114 @@ iframe {
   background-color: #45a049;
 }
 
+.slider {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+
+}
+
+.slide {
+    display: inline-flex;
+    gap: 20px;
+}
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="card-info">
-        <span class="file-name" id="fileLocation" style="display: none;">assets/pdf/cv.pdf</span>
-      <span class="file-name" id="fileName">cv.pdf</span>
-      <button class="view-file" id="viewFileButton">إظهار الملف</button>
-    </div>
-  </div>
 
-  <!-- Modal Structure -->
-  <div id="fileModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" id="closeButton">&times;</span>
-      <h2 class="modal-file-name" id="modalFileName"></h2>
-      <iframe id="fileFrame" src="" frameborder="0"></iframe>
-      <button class="close-modal-button" id="closeModalButton">إغلاق</button>
-      <a class="download-file" id="downloadFileButton" href="" download>تحميل</a>
+  <div class="slider">
+    <div class="slide">
+        <div class="card">
+            <div class="card-info">
+                <button class="view-file" data-file-path="assets/pdf/">إظهار الملف</button>
+                <span class="file-name"></span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-info">
+                <button class="view-file" data-file-path="assets/pdf/">إظهار الملف</button>
+                <span class="file-name"></span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-info">
+                <button class="view-file" data-file-path="assets/pdf/">إظهار الملف</button>
+                <span class="file-name"></span>
+            </div>
+        </div>
+        <!-- Add more cards as needed -->
     </div>
-  </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="fileModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="closeButton">&times;</span>
+        <h2 class="modal-file-title" id="modalFileName"></h2>
+        <iframe id="fileFrame" src="" frameborder="0"></iframe>
+        <div>
+          <button class="close-modal-button" id="closeModalButton">إغلاق</button>
+          <a class="download-file" id="downloadFileButton" href="" download>تحميل</a>
+        </div>
+    </div>
+</div>
+
 
   <script>
-document.getElementById('viewFileButton').addEventListener('click', function() {
-  var filePath = document.getElementById('fileLocation').innerText;
-  var modal = document.getElementById('fileModal');
-  var iframe = document.getElementById('fileFrame');
-  var modalFileName = document.getElementById('modalFileName');
-  var downloadButton = document.getElementById('downloadFileButton');
-  
-  // Set the file path and name to the iframe source and modal file name
-  iframe.src = filePath;
-  modalFileName.innerText = filePath.split('/').pop();
+document.addEventListener('DOMContentLoaded', () => {
+    // Set file names in span tags based on data-file-path
+    document.querySelectorAll('.view-file').forEach(button => {
+        var filePath = button.getAttribute('data-file-path');
+        var fileName = filePath.split('/').pop();
+        button.nextElementSibling.innerText = fileName;
+    });
 
-  // Set the file path to the download button href
-  downloadButton.href = filePath;
-  
-  // Display the modal
-  modal.style.display = 'block';
+    // Add event listeners to buttons
+    document.querySelectorAll('.view-file').forEach(button => {
+        button.addEventListener('click', function() {
+            var filePath = this.getAttribute('data-file-path');
+            var modal = document.getElementById('fileModal');
+            var iframe = document.getElementById('fileFrame');
+            var modalFileName = document.getElementById('modalFileName');
+            var downloadButton = document.getElementById('downloadFileButton');
+            
+            // Extract the file name from the file path
+            var fileName = filePath.split('/').pop();
+            
+            // Set the file path and name to the iframe source and modal file name
+            iframe.src = filePath;
+            modalFileName.innerText = fileName;
+            
+            // Set the file path to the download button href
+            downloadButton.href = filePath;
+            
+            // Display the modal
+            modal.style.display = 'block';
+        });
+    });
+
+    // Get the close button elements
+    var span = document.getElementById('closeButton');
+    var closeModalButton = document.getElementById('closeModalButton');
+
+    // Function to close the modal
+    function closeModal() {
+        var modal = document.getElementById('fileModal');
+        modal.style.display = 'none';
+    }
+
+    // When the user clicks on span (x) or the close button, close the modal
+    span.onclick = closeModal;
+    closeModalButton.onclick = closeModal;
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        var modal = document.getElementById('fileModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
 });
-
-// Get the close button elements
-var span = document.getElementById('closeButton');
-var closeModalButton = document.getElementById('closeModalButton');
-
-// Function to close the modal
-function closeModal() {
-  var modal = document.getElementById('fileModal');
-  modal.style.display = 'none';
-}
-
-// When the user clicks on <span> (x) or the close button, close the modal
-span.onclick = closeModal;
-closeModalButton.onclick = closeModal;
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  var modal = document.getElementById('fileModal');
-  if (event.target == modal) {
-    closeModal();
-  }
-}
 
   </script>
 </body>
