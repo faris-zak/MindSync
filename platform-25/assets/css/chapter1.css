@@ -233,7 +233,13 @@
         color: #14213D;
         margin-bottom: 10px;
     }
-  } 
+  }
+
+  @media screen and (max-width: 635px) {
+    .view-file span {
+        display: none;
+    }
+  }
 
 @media screen and (max-width: 500px){
     .subject-card {
