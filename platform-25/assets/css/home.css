@@ -218,6 +218,15 @@ font-weight: 500;
     border-radius: 9px;
     position: relative;
   }
+
+  .modal .modal-content h2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
   
   .modal .modal-content div{
     display: flex;
