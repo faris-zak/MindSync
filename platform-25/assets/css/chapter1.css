@@ -37,41 +37,200 @@
     color: #666;
 }
 
-.subject {
-    margin-bottom: 20px;
+.subject summary {
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.subject summary {
-    font-size: 18px;
-    font-weight: bold;
+.chapter1-content .details .subject .subject-title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.chapter1-content .details .subject .subject-item{
+    font-size: 20px;
+    color: #14213D;
+    margin-bottom: 10px;
+}
+
+.subject {
+    margin-bottom: 20px;
 }
 
 .subject .content {
     padding: 10px;
 }
 
-/* #chapter-1 .math {
-}
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: auto;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .file-name {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    word-wrap: break-word;
+  }
+  
+  .view-file {
+    background-color: #FCA311;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .view-file:hover {
+    background-color: #e68e00;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 9px;
+    position: relative;
+  }
 
-#chapter-1 .science {
-}
+  .modal .modal-content h2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .modal .modal-content div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close-button,
+  .close-modal-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .close-button:hover,
+  .close-modal-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  iframe {
+    width: 100%;
+    border-radius: 8px;
+    height: 400px;
+    border: none;
+  }
+  
+  .close-modal-button {
+    position: static;
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .download-file {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+  }
+  
+  .download-file:hover {
+    background-color: #45a049;
+  }
+  
+  .slider {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+  }
+  
+  .slide {
+      display: inline-flex;
+      margin-right: 15px;
+  }
 
-#chapter-1 .videos {
-}
-
-#chapter-1 .photos {
-    
-}
-
-#chapter-1 .pdf {
-    
-} */
 
 
 @media screen and (max-width: 768px) {
     .chapter1-content .header h1 {
         font-size: 35px;
     }
+
+    .chapter1-content .details .subject .subject-title{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .chapter1-content .details .subject .subject-item{
+        font-size: 18px;
+        color: #14213D;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        padding: 10px;
+      }
+      
+      .file-name {
+        display: block;
+        font-weight: 600;
+        font-size: 18px;
+        word-wrap: break-word;
+      }
+
+      .view-file {
+        padding: 6px 14px;
+      }
   } 
 
 @media screen and (max-width: 500px){
@@ -91,4 +250,20 @@
     .chapter1-content .header p{
         font-size: 16px;
     }
+
+    .card {
+        padding: 8px;
+      }
+      
+      .file-name {
+        font-size: 16px;
+      }
+
+      .card-info {
+        gap: 10px;
+      }
+
+      .view-file {
+        padding: 4px 12px;
+      }
   }

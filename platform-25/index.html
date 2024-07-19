@@ -297,10 +297,10 @@
                         </div>
                         <div class="details">
                             <details class="subject" name="req" data-subject="math, Advanced mathematics, رياضيات متقدمة, الرياضيات المتقدمة">
-                                <summary>الرياضيات المتقدمة</summary>
+                                <summary class="subject-title">الرياضيات المتقدمة</summary>
                                 <div class="content">
                                     <details name="subreq">
-                                        <summary>الكتب</summary>
+                                        <summary class="subject-item">الكتب</summary>
                                         <div class="slider">
                                             <div class="slide">
                                                 <div class="card">
@@ -334,29 +334,57 @@
                                         </div>
                                     </details>
                                     <details name="subreq">
-                                        <summary >ملخصات</summary>
+                                        <summary class="subject-item">ملخصات</summary>
                                     </details>
                                     <details name="subreq">
-                                        <summary>إختبارات</summary>
+                                        <summary class="subject-item">إختبارات</summary>
                                     </details>
                                 </div>
                             </details>
 
                             <details class="subject" name="req" data-subject="math, basic mathematics, رياضيات أساسية, الرياضيات الأساسية">
-                                <summary>الرياضيات الأساسية</summary>
+                                <summary class="subject-title">الرياضيات الأساسية</summary>
                                 <div class="content">
-                                    <div class="videos">
-                                        <h3>Videos</h3>
-                                        <!-- Videos content goes here -->
-                                    </div>
-                                    <div class="photos">
-                                        <h3>Photos</h3>
-                                        <!-- Photos content goes here -->
-                                    </div>
-                                    <div class="pdfs">
-                                        <h3>PDF Files</h3>
-                                        <!-- PDF files content goes here -->
-                                    </div>
+                                    <details name="subreq">
+                                        <summary class="subject-item">الكتب</summary>
+                                        <div class="slider">
+                                            <div class="slide">
+                                                <div class="card">
+                                                    <div class="card-info">
+                                                        <button class="view-file" data-file-path="assets/pdf/cv.pdf">إظهار الملف</button>
+                                                        <span class="file-name"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slide">
+                                                <div class="card">
+                                                    <div class="card-info">
+                                                        <button class="view-file" data-file-path="assets/pdf/">إظهار الملف</button>
+                                                        <span class="file-name"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="fileModal" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close-button" id="closeButton">&times;</span>
+                                                <h2 class="modal-file-title" id="modalFileName"></h2>
+                                                <iframe id="fileFrame" src="" frameborder="0"></iframe>
+                                                <div>
+                                                  <button class="close-modal-button" id="closeModalButton">إغلاق</button>
+                                                  <a class="download-file" id="downloadFileButton" href="" download>تحميل</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                    <details name="subreq">
+                                        <summary class="subject-item">ملخصات</summary>
+                                    </details>
+                                    <details name="subreq">
+                                        <summary class="subject-item">إختبارات</summary>
+                                    </details>
                                 </div>
                             </details>
                         </div>
