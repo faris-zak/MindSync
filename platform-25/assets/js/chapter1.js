@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             var iframe = document.getElementById('fileFrame');
             var modalFileName = document.getElementById('modalFileName');
             var downloadButton = document.getElementById('downloadFileButton');
+            var openFileButton = document.getElementById('openFileButton');
             
             // Extract the file name from the file path
             var fileName = filePath.split('/').pop();
@@ -44,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Set the file path to the download button href
             downloadButton.href = filePath;
+            
+            // Set the file path to the open file button href
+            openFileButton.href = filePath;
             
             // Display the modal
             modal.style.display = 'block';
@@ -71,4 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     };
-});
+});                        
