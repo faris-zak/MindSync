@@ -277,12 +277,11 @@ font-weight: 500;
       overflow-x: auto;
       white-space: nowrap;
       padding: 10px 0;
-  
   }
   
   .slide {
       display: inline-flex;
-      gap: 20px;
+      margin-right: 15px;
   }
 
 
