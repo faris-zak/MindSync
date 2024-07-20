@@ -281,6 +281,7 @@ footer{
     color: #464646;
     text-decoration: none;
     font-size: 16px;
+    cursor: pointer;
   }
   
   .share-options a:hover {
@@ -482,7 +483,7 @@ footer div.founder a:hover, div.powered-by a:hover{
         padding: 15px 16px;
       }
       
-    .dropbtn:hover, .dropbtn:focus {
+    .dropbtn:hover{
       background-color: #FCA311;
     }
     

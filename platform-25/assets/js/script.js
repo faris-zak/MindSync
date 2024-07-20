@@ -161,16 +161,18 @@ chapter1Button2.addEventListener('click', () => {
                     // Dropdown Menu
 
 const myDropdown = document.getElementById('myDropdown');
-const animationButton = document.getElementById('animationButton');
+const dropButton = document.getElementById('dropButton');
 
-function myFunction() {
+function dropButtonFunction() {
 
     if(myDropdown.style.zIndex == 1 && myDropdown.style.opacity == 1){
+        dropButton.style.backgroundColor = '#f1f1f1';
         myDropdown.style.zIndex = -1;
         myDropdown.style.opacity = 0;
         myDropdown.style.transform = 'translateY(0)';
         myDropdown.style.userSelect = 'none';
     } else{
+        dropButton.style.backgroundColor = '#FCA311';
         myDropdown.style.zIndex = 1;
         myDropdown.style.opacity = 1;
         myDropdown.style.transform = 'translateY(10px)';
@@ -194,7 +196,8 @@ function myFunction() {
   }
 
   document.addEventListener('click', (event) => {
-    if (!animationButton.contains(event.target) && !myDropdown.contains(event.target)) {
+    if (!dropButton.contains(event.target) && !myDropdown.contains(event.target)) {
+        dropButton.style.backgroundColor = '#f1f1f1';
         myDropdown.style.zIndex = -1;
         myDropdown.style.opacity = 0;
         myDropdown.style.transform = 'translateY(0)';
