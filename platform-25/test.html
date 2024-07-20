@@ -9,163 +9,73 @@
   <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Harmattan:wght@400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: auto;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .card-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .file-name {
-    display: block;
-    font-weight: 600;
-    font-size: 18px;
-    word-wrap: break-word;
-  }
-  
-  .view-file {
-    background-color: #FCA311;
-    color: white;
-    border: none;
-    padding: 6px 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  
-  .view-file:hover {
-    background-color: #e68e00;
-  }
-  
-  /* Modal styles */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-  }
-  
-  .modal-content {
-    background-color: white;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 700px;
-    border-radius: 9px;
-    position: relative;
-  }
-
-  .modal .modal-content h2{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 10px;
-    padding-left: 10px;
-  }
-  
-  .modal .modal-content div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .close-button{
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .close-button:hover{
-    background-color: #d32f2f;
-  }
-  
-  iframe {
-    width: 100%;
-    border-radius: 8px;
-    height: 400px;
-    border: none;
-  }
-  
-  .close-modal-button {
-    position: static;
-    display: block;
-    margin: 20px auto 0;
-  }
-  
-  .download-file {
-    background-color: #4caf50;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 4px;
-    display: block;
-    width: fit-content;
-    margin: 20px auto 0;
-  }
-  
-  .download-file:hover {
-    background-color: #45a049;
-  }
-
-  .open-file {
-    background-color: #5d82d3;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 4px;
-    display: block;
-    width: fit-content;
-    margin: 20px auto 0;
-  }
-  
-  .open-file:hover {
-    background-color: #5172b9;
-  }
-
-  .print-file {
-    background-color: #f48236;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    display: block;
-    width: fit-content;
-    margin: 20px auto 0;
-  }
-  
-  .print-file:hover {
-    background-color: #e67022;
-  }
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 10px 0;
+    }
+    .card-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .view-file {
+        background-color: #f0ad4e;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .view-file:hover {
+        background-color: #ec971f;
+    }
+    .file-name {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    .close-button, .close-modal-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close-button:hover, .close-modal-button:hover,
+    .close-button:focus, .close-modal-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .modal-file-title {
+        margin-top: 0;
+    }
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
 </style>
 </head>
 <body>
