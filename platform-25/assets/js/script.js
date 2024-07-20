@@ -258,6 +258,7 @@ function dropButtonFunction() {
   
     document.addEventListener('click', (event) => {
       if (!shareButton.contains(event.target) && !shareOptions.contains(event.target)) {
+        shareBox.style.backgroundColor = 'transparent';
         shareOptions.style.zIndex = -1;
         shareOptions.style.opacity = 0;
         shareOptions.style.transform = 'translateY(0)';
