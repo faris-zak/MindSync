@@ -217,17 +217,39 @@ function dropButtonFunction() {
     const currentURL = window.location.href;
   
     shareButton.addEventListener('click', () => {
-        if(shareOptions.style.zIndex == 1 && shareOptions.style.opacity == 1){
+      function applyStyles(x) {
+        if (x.matches) { 
+          if(shareOptions.style.zIndex == 1 && shareOptions.style.opacity == 1){
             shareOptions.style.zIndex = -1;
             shareOptions.style.opacity = 0;
-            shareOptions.style.transform = 'translateY(0)';
+            shareOptions.style.transform = 'translateY(20px)';
             shareOptions.style.userSelect = 'none';
         } else{
             shareOptions.style.zIndex = 1;
             shareOptions.style.opacity = 1;
-            shareOptions.style.transform = 'translateY(10px)';
+            shareOptions.style.transform = 'translateY(-100px)';
             shareOptions.style.userSelect = 'auto';
-        }    });
+        }
+        } else {
+          if(shareOptions.style.zIndex == 1 && shareOptions.style.opacity == 1){
+            shareOptions.style.zIndex = -1;
+            shareOptions.style.opacity = 0;
+            shareOptions.style.transform = 'translateY(20px)';
+            shareOptions.style.userSelect = 'none';
+        } else{
+            shareOptions.style.zIndex = 1;
+            shareOptions.style.opacity = 1;
+            shareOptions.style.transform = 'translateY(-120px)';
+            shareOptions.style.userSelect = 'auto';
+        }
+        }
+      }
+      
+      const x = window.matchMedia("(min-width: 1401px)");
+      applyStyles(x);
+      x.addListener(applyStyles);
+
+      });
   
     document.addEventListener('click', (event) => {
       if (!shareButton.contains(event.target) && !shareOptions.contains(event.target)) {
@@ -237,6 +259,7 @@ function dropButtonFunction() {
         shareOptions.style.userSelect = 'none';
       }
     });
+    
 
     copyLink.addEventListener('click', (event) => {
         event.preventDefault();
@@ -267,18 +290,20 @@ function dropButtonFunction() {
             const icon = link.querySelector('i');
             link.textContent = ''; // Clear existing text
     
-            // Change icon and text
+            // Change icon and text and color
             icon.classList.remove('fa-link');
             icon.classList.add('fa-check');
             link.appendChild(icon);
+            link.style.color = '#FCA311';
             link.appendChild(document.createTextNode(' تم نسخ الرابط'));
     
             // Optional: Revert the icon and text back after a few seconds
             setTimeout(() => {
                 icon.classList.remove('fa-check');
                 icon.classList.add('fa-link');
-                link.textContent = ''; // Clear existing text
+                link.textContent = ''; // Clear existing text 
                 link.appendChild(icon);
+                link.style.color = '#464646';
                 link.appendChild(document.createTextNode(' نسخ الرابط'));
             }, 2000);
             

@@ -245,11 +245,11 @@ footer{
 }
 
 .share-options {
-    position: fixed;
+    position: absolute;
     width: 150px;
     height: auto;
-    bottom: 120px;
-    left: 0;
+    bottom: 20px;
+    left: 20px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -356,6 +356,12 @@ footer div.copyright span:hover{
 
 footer div.founder a:hover, div.powered-by a:hover{
     color: #FCA311;
+}
+
+@media screen and (min-width: 1401px){
+    .share-options {
+        left: 50px;
+      }
 }
 
 @media screen and (max-width: 1400px){
@@ -641,4 +647,9 @@ footer div.founder a:hover, div.powered-by a:hover{
     footer div.social-media ul{
         display: inline-flex;
     }
+
+    .share-options {
+        left: 30%;
+        transform: translateX(-50%);
+      }
 }
