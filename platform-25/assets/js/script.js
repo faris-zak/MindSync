@@ -212,6 +212,7 @@ function dropButtonFunction() {
     const shareButton = document.getElementById('shareButton');
     const shareOptions = document.getElementById('shareOptions');
     const copyLink = document.getElementById('copyLink');
+    const shareBox = document.getElementById('shareBox');
   
     const shareText = "حبيت أشارك معكم منصة-25، إلي تجمع كل شيء تحتاجه كطالب في الصف الثاني عشر ببساطة. 🌐📚!\n\n🌟 تعرّف على منصة-25! 🌟\n\n";
     const currentURL = window.location.href;
@@ -220,11 +221,13 @@ function dropButtonFunction() {
       function applyStyles(x) {
         if (x.matches) { 
           if(shareOptions.style.zIndex == 1 && shareOptions.style.opacity == 1){
+            shareBox.style.backgroundColor = 'transparent';
             shareOptions.style.zIndex = -1;
             shareOptions.style.opacity = 0;
             shareOptions.style.transform = 'translateY(20px)';
             shareOptions.style.userSelect = 'none';
         } else{
+            shareBox.style.backgroundColor = '#FCA311';
             shareOptions.style.zIndex = 1;
             shareOptions.style.opacity = 1;
             shareOptions.style.transform = 'translateY(-100px)';
@@ -232,11 +235,13 @@ function dropButtonFunction() {
         }
         } else {
           if(shareOptions.style.zIndex == 1 && shareOptions.style.opacity == 1){
+            shareBox.style.backgroundColor = 'transparent';
             shareOptions.style.zIndex = -1;
             shareOptions.style.opacity = 0;
             shareOptions.style.transform = 'translateY(20px)';
             shareOptions.style.userSelect = 'none';
         } else{
+            shareBox.style.backgroundColor = '#FCA311';
             shareOptions.style.zIndex = 1;
             shareOptions.style.opacity = 1;
             shareOptions.style.transform = 'translateY(-120px)';
