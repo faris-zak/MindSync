@@ -248,6 +248,11 @@
     margin-left: 5px;
   }
 
+@media screen and (max-width: 900px) {
+  .view-file span {
+      display: none;
+  }
+}
 
 @media screen and (max-width: 768px) {
     .chapter1-content .header h1 {
@@ -263,12 +268,6 @@
         font-size: 18px;
         color: #14213D;
         margin-bottom: 10px;
-    }
-  }
-
-  @media screen and (max-width: 635px) {
-    .view-file span {
-        display: none;
     }
   }
 
