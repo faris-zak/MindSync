@@ -1,169 +1,194 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEST</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Harmattan:wght@400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Harmattan:wght@400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    font-family: "Tajawal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.2s ease;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  margin: 0;
+}
 
-  <style>
-    .card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        border: 1px solid #ccc;
-        margin: 10px 0;
-    }
-    .card-info {
-        display: flex;
-        flex-direction: column;
-    }
-    .view-file {
-        background-color: #f0ad4e;
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        text-align: center;
-    }
-    .view-file:hover {
-        background-color: #ec971f;
-    }
-    .file-name {
-        margin-top: 10px;
-        font-weight: bold;
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.4);
-        padding-top: 60px;
-    }
-    .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-    .close-button, .close-modal-button {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .close-button:hover, .close-modal-button:hover,
-    .close-button:focus, .close-modal-button:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .modal-file-title {
-        margin-top: 0;
-    }
-    iframe {
-        width: 100%;
-        height: 400px;
-    }
-</style>
+.share-container {
+  position: relative;
+}
+
+.share-button {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #FCA311;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.share-button:hover {
+  background-color: #df8e0c;
+}
+
+.share-options {
+  display: none;
+  position: absolute;
+  width: 130px;
+  height: auto;
+  transform: translate(-25px,-180px);
+  top: 50px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.share-options ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.share-options li {
+  margin: 15px 0;
+}
+
+.share-options li:first-child{
+    margin: 0;
+}
+
+.share-options li:last-child{
+    margin: 0;
+}
+
+.share-options a {
+  color: #464646;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.share-options a:hover {
+  color: #FCA311;
+  padding-right: 3px;
+}
+
+.share-options a:hover i{
+    padding-left: 2px;
+}
+    </style>
 </head>
 <body>
-<div class="slide">
-    <div class="card">
-        <div class="card-info">
-            <button class="view-file" data-file-path="assets/pdf/cv.pdf">
-                <span>إظهار الملف</span>
-                <i class="fa-regular fa-eye"></i>
-            </button>
-            <span class="file-name"></span>
-        </div>
-    </div>
-</div>
+    <div class="share-container">
+        <div class="share-options" id="shareOptions">
+            <ul>
+              <li><a href="#" id="shareTwitter"><i class="fa-brands fa-x-twitter"></i> إكس</a></li>
+              <li><a href="#" id="shareWhatsapp"><i class="fa-brands fa-whatsapp"></i> واتساب</a></li>
+              <li><a href="#" id="copyLink"><i class="fa-solid fa-link"></i> نسخ الرابط</a></li>
+            </ul>
+          </div>
+        <button class="share-button" id="shareButton"><i class="fa-solid fa-arrow-up-from-bracket"></i> مشاركة</button>
+      </div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const shareButton = document.getElementById('shareButton');
+  const shareOptions = document.getElementById('shareOptions');
+  const copyLink = document.getElementById('copyLink');
 
-<div id="fileModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button" id="closeButton">&times;</span>
-        <h2 class="modal-file-title" id="modalFileName"></h2>
-        <iframe id="fileFrame" src="" frameborder="0"></iframe>
-        <div>
-            <button class="close-modal-button" id="closeModalButton">إغلاق</button>
-            <a class="open-file" id="openFileButton" href="" target="_blank">فتح</a>
-            <a class="download-file" id="downloadFileButton" href="" download>تحميل</a>
-        </div>
-    </div>
-</div>
+  const shareText = "حبيت أشارك معكم موقع منصة-25، إلي يجمع كل شيء تحتاجه كطالب في الصف الثاني عشر ببساطة. 🌐📚!\n\n🌟 تعرّف على موقع منصة-25! 🌟\n\n";
+  const currentURL = window.location.href;
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-    // Set file names in span tags based on data-file-path
-    document.querySelectorAll('.view-file').forEach(button => {
-        var filePath = button.getAttribute('data-file-path');
-        var fileName = filePath.split('/').pop();
-        button.nextElementSibling.innerText = fileName;
-    });
+  shareButton.addEventListener('click', () => {
+    shareOptions.style.display = shareOptions.style.display === 'block' ? 'none' : 'block';
+  });
 
-    // Add event listeners to buttons
-    document.querySelectorAll('.view-file').forEach(button => {
-        button.addEventListener('click', function() {
-            var filePath = this.getAttribute('data-file-path');
-            var modal = document.getElementById('fileModal');
-            var iframe = document.getElementById('fileFrame');
-            var modalFileName = document.getElementById('modalFileName');
-            var downloadButton = document.getElementById('downloadFileButton');
-            var openFileButton = document.getElementById('openFileButton');
-            
-            // Extract the file name from the file path
-            var fileName = filePath.split('/').pop();
-            
-            // Set the file path and name to the iframe source and modal file name
-            iframe.src = filePath;
-            modalFileName.innerText = fileName;
-            
-            // Set the file path to the download button href
-            downloadButton.href = filePath;
-            
-            // Set the file path to the open file button href
-            openFileButton.href = filePath;
-            
-            // Display the modal
-            modal.style.display = 'block';
-        });
-    });
-
-    // Get the close button elements
-    var span = document.getElementById('closeButton');
-    var closeModalButton = document.getElementById('closeModalButton');
-
-    // Function to close the modal
-    function closeModal() {
-        var modal = document.getElementById('fileModal');
-        modal.style.display = 'none';
+  document.addEventListener('click', (event) => {
+    if (!shareButton.contains(event.target) && !shareOptions.contains(event.target)) {
+      shareOptions.style.display = 'none';
     }
+  });
 
-    // When the user clicks on span (x) or the close button, close the modal
-    span.onclick = closeModal;
-    closeModalButton.onclick = closeModal;
+  copyLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    try {
+        // Create a temporary input element to hold the URL
+        const dummy = document.createElement('input');
+        
+        // Construct the URL to be copied
+        const url = `${shareText} ${currentURL}`;
+        
+        // Append the input element to the document body
+        document.body.appendChild(dummy);
+        
+        // Set the value of the input element to the URL
+        dummy.value = url;
+        
+        // Select the content of the input element
+        dummy.select();
+        
+        // Copy the selected content to the clipboard
+        document.execCommand('copy');
+        
+        // Remove the temporary input element from the document body
+        document.body.removeChild(dummy);
+        
+        // Change the icon and text of the link
+        const link = document.getElementById('copyLink');
+        const icon = link.querySelector('i');
+        link.textContent = ''; // Clear existing text
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        var modal = document.getElementById('fileModal');
-        if (event.target == modal) {
-            closeModal();
-        }
-    };
+        // Change icon and text
+        icon.classList.remove('fa-link');
+        icon.classList.add('fa-check');
+        link.appendChild(icon);
+        link.appendChild(document.createTextNode(' تم نسخ الرابط'));
+
+        // Optional: Revert the icon and text back after a few seconds
+        setTimeout(() => {
+            icon.classList.remove('fa-check');
+            icon.classList.add('fa-link');
+            link.textContent = ''; // Clear existing text
+            link.appendChild(icon);
+            link.appendChild(document.createTextNode(' نسخ الرابط'));
+        }, 2000);
+        
+    } catch (error) {
+        // Handle any errors that occur during the copy process
+        console.error('Failed to copy link: ', error);
+    }
 });
 
-</script>
+
+
+  document.getElementById('shareTwitter').addEventListener('click', (event) => {
+    event.preventDefault();
+    const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(shareText)}`;
+    window.open(url, '_blank');
+  });
+
+  document.getElementById('shareWhatsapp').addEventListener('click', (event) => {
+    event.preventDefault();
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + ' ' + currentURL)}`;
+    window.open(url, '_blank');
+  });
+});
+
+
+
+    </script>
 </body>
 </html>

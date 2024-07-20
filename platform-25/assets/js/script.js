@@ -13,8 +13,6 @@ document.getElementById('clearFragment').addEventListener('click', function() {
     membership.style.display = 'none';
 });
 
-
-
                 // MindSync Logo Tuning
 
 const mindsyncBrand = document.getElementById('mindsyncBrand');
@@ -163,6 +161,7 @@ chapter1Button2.addEventListener('click', () => {
                     // Dropdown Menu
 
 const myDropdown = document.getElementById('myDropdown');
+const animationButton = document.getElementById('animationButton');
 
 function myFunction() {
 
@@ -193,3 +192,108 @@ function myFunction() {
       }
     }
   }
+
+  document.addEventListener('click', (event) => {
+    if (!animationButton.contains(event.target) && !myDropdown.contains(event.target)) {
+        myDropdown.style.zIndex = -1;
+        myDropdown.style.opacity = 0;
+        myDropdown.style.transform = 'translateY(0)';
+        myDropdown.style.userSelect = 'none';
+    }
+  });
+
+
+
+                    // Share List
+  document.addEventListener('DOMContentLoaded', () => {
+    const shareButton = document.getElementById('shareButton');
+    const shareOptions = document.getElementById('shareOptions');
+    const copyLink = document.getElementById('copyLink');
+  
+    const shareText = "حبيت أشارك معكم منصة-25، إلي تجمع كل شيء تحتاجه كطالب في الصف الثاني عشر ببساطة. 🌐📚!\n\n🌟 تعرّف على منصة-25! 🌟\n\n";
+    const currentURL = window.location.href;
+  
+    shareButton.addEventListener('click', () => {
+        if(shareOptions.style.zIndex == 1 && shareOptions.style.opacity == 1){
+            shareOptions.style.zIndex = -1;
+            shareOptions.style.opacity = 0;
+            shareOptions.style.transform = 'translateY(0)';
+            shareOptions.style.userSelect = 'none';
+        } else{
+            shareOptions.style.zIndex = 1;
+            shareOptions.style.opacity = 1;
+            shareOptions.style.transform = 'translateY(10px)';
+            shareOptions.style.userSelect = 'auto';
+        }    });
+  
+    document.addEventListener('click', (event) => {
+      if (!shareButton.contains(event.target) && !shareOptions.contains(event.target)) {
+        shareOptions.style.zIndex = -1;
+        shareOptions.style.opacity = 0;
+        shareOptions.style.transform = 'translateY(0)';
+        shareOptions.style.userSelect = 'none';
+      }
+    });
+
+    copyLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        try {
+            // Create a temporary input element to hold the URL
+            const dummy = document.createElement('input');
+            
+            // Construct the URL to be copied
+            const url = `${shareText} ${currentURL}`;
+            
+            // Append the input element to the document body
+            document.body.appendChild(dummy);
+            
+            // Set the value of the input element to the URL
+            dummy.value = url;
+            
+            // Select the content of the input element
+            dummy.select();
+            
+            // Copy the selected content to the clipboard
+            document.execCommand('copy');
+            
+            // Remove the temporary input element from the document body
+            document.body.removeChild(dummy);
+            
+            // Change the icon and text of the link
+            const link = document.getElementById('copyLink');
+            const icon = link.querySelector('i');
+            link.textContent = ''; // Clear existing text
+    
+            // Change icon and text
+            icon.classList.remove('fa-link');
+            icon.classList.add('fa-check');
+            link.appendChild(icon);
+            link.appendChild(document.createTextNode(' تم نسخ الرابط'));
+    
+            // Optional: Revert the icon and text back after a few seconds
+            setTimeout(() => {
+                icon.classList.remove('fa-check');
+                icon.classList.add('fa-link');
+                link.textContent = ''; // Clear existing text
+                link.appendChild(icon);
+                link.appendChild(document.createTextNode(' نسخ الرابط'));
+            }, 2000);
+            
+        } catch (error) {
+            // Handle any errors that occur during the copy process
+            console.error('Failed to copy link: ', error);
+        }
+    });    
+  
+    document.getElementById('shareTwitter').addEventListener('click', (event) => {
+      event.preventDefault();
+      const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(shareText)}`;
+      window.open(url, '_blank');
+    });
+  
+    document.getElementById('shareWhatsapp').addEventListener('click', (event) => {
+      event.preventDefault();
+      const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + ' ' + currentURL)}`;
+      window.open(url, '_blank');
+    });
+  });
