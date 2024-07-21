@@ -162,16 +162,19 @@ chapter1Button2.addEventListener('click', () => {
 
 const myDropdown = document.getElementById('myDropdown');
 const dropButton = document.getElementById('dropButton');
+const dropButtonIcon = document.getElementById('dropButtonIcon');
 
 function dropButtonFunction() {
 
     if(myDropdown.style.zIndex == 1 && myDropdown.style.opacity == 1){
+        dropButtonIcon.style.transform = 'rotateZ(0deg)';
         dropButton.style.backgroundColor = '#f1f1f1';
         myDropdown.style.zIndex = -1;
         myDropdown.style.opacity = 0;
         myDropdown.style.transform = 'translateY(0)';
         myDropdown.style.userSelect = 'none';
     } else{
+        dropButtonIcon.style.transform = 'rotateZ(-90deg)';
         dropButton.style.backgroundColor = '#FCA311';
         myDropdown.style.zIndex = 1;
         myDropdown.style.opacity = 1;
@@ -197,6 +200,7 @@ function dropButtonFunction() {
 
   document.addEventListener('click', (event) => {
     if (!dropButton.contains(event.target) && !myDropdown.contains(event.target)) {
+        dropButtonIcon.style.transform = 'rotateZ(0deg)';
         dropButton.style.backgroundColor = '#f1f1f1';
         myDropdown.style.zIndex = -1;
         myDropdown.style.opacity = 0;

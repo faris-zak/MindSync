@@ -423,7 +423,7 @@ footer div.founder a:hover, div.powered-by a:hover{
         border-radius: 0;
         margin-bottom: 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
     .sidebar a{
@@ -482,11 +482,16 @@ footer div.founder a:hover, div.powered-by a:hover{
         color: #14213D;
         font-size: 22px;
         font-weight: 600;
-        width: 100%;
+        width: auto;
         border: none;
         cursor: pointer;
-        text-align: center;
-        padding: 15px 16px;
+        text-align: right;
+        border-radius: 18px 0 0 18px;
+        padding: 10px 16px;
+      }
+
+      .dropbtn i{
+        transition: 0.3s ease-in-out;
       }
       
     .dropbtn:hover{
@@ -511,15 +516,16 @@ footer div.founder a:hover, div.powered-by a:hover{
     .dropdown {
       position: relative;
       display: flex;
-      justify-content: center;
+      justify-content: right;
       align-items: center;
     }
     
     .dropdown-content {
       position: absolute;
-      top: 80px;
+      top: 60px;
       background-color: #f6f6f6;
       width: 90%;
+      right: 20px;
       max-width: 300px;
       min-width: 230px;
       max-height: 300px;
@@ -627,6 +633,10 @@ footer div.founder a:hover, div.powered-by a:hover{
 }
 
 @media screen and (max-width: 370px){
+    .dropdown-content {
+        top: 55px;
+    }
+
     footer{
         padding: 15px;
     }
