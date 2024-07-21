@@ -8,9 +8,13 @@ document.getElementById('clearFragment').addEventListener('click', function() {
     home.style.display = 'block';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
+    academiesButton.style.backgroundColor = '#f1f1f1';
+    academiesButton2.style.backgroundColor = '#f1f1f1';
+    chapter1Button.style.backgroundColor = '#f1f1f1';
+    chapter1Button2.style.backgroundColor = '#f1f1f1';
     // chapter2.style.display = 'none';
-    studentGraduating25.style.display = 'none';
-    membership.style.display = 'none';
+    // studentGraduating25.style.display = 'none';
+    // membership.style.display = 'none';
 });
 
                 // MindSync Logo Tuning
@@ -65,6 +69,10 @@ const membership = document.getElementById('membership');
                 // Page Sections Functions - 1
 
 academiesButton.addEventListener('click', () => {
+    academiesButton.style.backgroundColor = '#ccc';
+    academiesButton2.style.backgroundColor = '#ccc';
+    chapter1Button.style.backgroundColor = '#f1f1f1';
+    chapter1Button2.style.backgroundColor = '#f1f1f1';
     home.style.display = 'none';
     academies.style.display = 'block';
     chapter1.style.display = 'none';
@@ -75,6 +83,10 @@ academiesButton.addEventListener('click', () => {
 });
 
 chapter1Button.addEventListener('click', () => {
+    academiesButton.style.backgroundColor = '#f1f1f1';
+    academiesButton2.style.backgroundColor = '#f1f1f1';
+    chapter1Button.style.backgroundColor = '#ccc';
+    chapter1Button2.style.backgroundColor = '#ccc';
     home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'block';
@@ -113,6 +125,10 @@ chapter1Button.addEventListener('click', () => {
 
                 // Page Sections Functions - 2
 academiesButton2.addEventListener('click', () => {
+    academiesButton.style.backgroundColor = '#ccc';
+    academiesButton2.style.backgroundColor = '#ccc';
+    chapter1Button.style.backgroundColor = '#f1f1f1';
+    chapter1Button2.style.backgroundColor = '#f1f1f1';
     home.style.display = 'none';
     academies.style.display = 'block';
     chapter1.style.display = 'none';
@@ -122,6 +138,10 @@ academiesButton2.addEventListener('click', () => {
 });
 
 chapter1Button2.addEventListener('click', () => {
+    academiesButton.style.backgroundColor = '#f1f1f1';
+    academiesButton2.style.backgroundColor = '#f1f1f1';
+    chapter1Button.style.backgroundColor = '#ccc';
+    chapter1Button2.style.backgroundColor = '#ccc';
     home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'block';
