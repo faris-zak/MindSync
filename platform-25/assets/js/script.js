@@ -36,10 +36,6 @@ const x = window.matchMedia("(max-width: 540px)");
 applyStyles(x);
 x.addListener(applyStyles);
 
-mindsyncBrand.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-});
-
 
 
                 // Sidebar Buttons
