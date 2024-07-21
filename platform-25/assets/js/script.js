@@ -17,6 +17,8 @@ document.getElementById('clearFragment').addEventListener('click', function() {
     // membership.style.display = 'none';
 });
 
+
+
                 // MindSync Logo Tuning
 
 const mindsyncBrand = document.getElementById('mindsyncBrand');
