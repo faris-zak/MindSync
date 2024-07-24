@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             var iframe = document.getElementById('fileFrame');
             var modalFileName = document.getElementById('modalFileName');
             var downloadButton = document.getElementById('downloadFileButton');
-            var openFileButton = document.getElementById('openFileButton');
             var printButton = document.getElementById('printFileButton');
             
             // Extract the file name from the file path
@@ -46,9 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Set the file path to the download button href
             downloadButton.href = filePath;
-            
-            // Set the file path to the open file button href
-            openFileButton.href = filePath;
             
             // Set the file path to the print button data attribute
             printButton.setAttribute('data-file-path', filePath);

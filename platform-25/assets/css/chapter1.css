@@ -106,6 +106,11 @@
   .view-file:hover {
     background-color: #e68e00;
   }
+
+  .view-file span{
+    margin-right: 8px;
+  }
+
   
   /* Modal styles */
   .modal {
@@ -194,6 +199,10 @@
     background-color: #45a049;
   }
 
+  .download-file span{
+    margin-right: 8px;
+  }
+
   .open-file {
     background-color: #5d82d3;
     color: white;
@@ -208,6 +217,10 @@
   
   .open-file:hover {
     background-color: #5172b9;
+  }
+
+  .open-file span{
+    margin-right: 8px;
   }
 
   .print-file {
@@ -225,6 +238,10 @@
   
   .print-file:hover {
     background-color: #e67022;
+  }
+
+  .print-file span{
+    margin-right: 8px;
   }
   
   .slider {
@@ -278,6 +295,18 @@
     .chapter1-content .header #search-bar {
         width: 90%;
     }
+
+    .download-file span{
+      display: none;
+    }
+
+    .open-file span{
+      display: none;
+    }
+
+    .print-file span{
+      display: none;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -301,7 +330,7 @@
         gap: 10px;
       }
 
-      .view-file {
-        padding: 4px 12px;
+      .view-file{
+        padding: 6px 10px;
       }
   }
