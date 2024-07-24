@@ -108,6 +108,7 @@ header nav hgroup p{
     margin: 0;
     padding: 0;
     width: 200px;
+    min-width: 160px;
     border-radius: 18px 0 0 0;
     background-color: #f1f1f1;
     position: relative;
@@ -387,6 +388,12 @@ footer div.founder a:hover, div.powered-by a:hover{
     }
 }
 
+@media screen and (max-width: 900px){
+    .sidebar{
+        width: 180px;
+    }
+}
+
 @media screen and (max-width: 800px){
     footer{
         font-size: 16px;
@@ -412,6 +419,12 @@ footer div.founder a:hover, div.powered-by a:hover{
     }
 }
 
+@media screen and (max-width: 768px){
+    .sidebar{
+        width: 165px;
+    }
+}
+
 @media screen and (max-width: 700px){
     .content-wrapper{
         flex-direction: column;
@@ -427,6 +440,7 @@ footer div.founder a:hover, div.powered-by a:hover{
         justify-content: space-around;
         align-items: center;
     }
+    
     .sidebar a{
         float: left;
         padding: 12px;
