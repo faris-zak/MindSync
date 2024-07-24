@@ -147,7 +147,7 @@
     padding-left: 10px;
   }
   
-  .modal .modal-content div{
+  .modal .modal-content div.control{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,14 +288,7 @@
     }
   }
 
-@media screen and (max-width: 500px){
-    .subject-card {
-        width: 100%;
-    }
-    .chapter1-content .header #search-bar {
-        width: 90%;
-    }
-
+  @media screen and (max-width: 600px) {
     .download-file span{
       display: none;
     }
@@ -306,6 +299,16 @@
 
     .print-file span{
       display: none;
+    }
+  }
+
+@media screen and (max-width: 500px){
+    .subject-card {
+        width: 100%;
+    }
+
+    .chapter1-content .header #search-bar {
+        width: 90%;
     }
 }
 
