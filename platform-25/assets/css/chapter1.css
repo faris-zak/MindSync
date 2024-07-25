@@ -95,6 +95,7 @@
   
   .view-file {
     background-color: #FCA311;
+    text-decoration: none;
     color: white;
     border: none;
     padding: 6px 14px;
