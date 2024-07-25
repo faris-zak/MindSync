@@ -18,62 +18,67 @@ document.getElementById('search-bar').addEventListener('keyup', function() {
 
 
                         // File Card
-    document.addEventListener('DOMContentLoaded', () => {
-        // Set file names in span tags based on data-file-path
-        document.querySelectorAll('.view-file').forEach(button => {
-            const filePath = button.getAttribute('data-file-path');
-            const fileName = filePath.split('/').pop();
-            button.nextElementSibling.innerText = fileName;
-        });
-    
-        // Add event listeners to buttons
-        document.querySelectorAll('.view-file').forEach(button => {
-            button.addEventListener('click', function() {
-                const filePath = this.getAttribute('data-file-path');
-                const fileName = filePath.split('/').pop();
-                
-                const modal = document.getElementById('fileModal');
-                const iframe = document.getElementById('fileFrame');
-                const modalFileName = document.getElementById('modalFileName');
-                const downloadButton = document.getElementById('downloadFileButton');
-                const printButton = document.getElementById('printFileButton');
-                
-                // Set the file path and name to the iframe source and modal file name
-                iframe.src = filePath;
-                modalFileName.innerText = fileName;
-                
-                // Set the file path to the download button href
-                downloadButton.href = filePath;
-                
-                // Set the file path to the print button data attribute
-                printButton.setAttribute('data-file-path', filePath);
-                
-                // Display the modal
-                modal.style.display = 'block';
-            });
-        });
+document.addEventListener('DOMContentLoaded', () => {
+    // Set file names in span tags based on data-file-path
+    document.querySelectorAll('.view-file').forEach(button => {
+        const filePath = button.getAttribute('data-file-path');
+        const fileName = filePath.split('/').pop();
+        button.nextElementSibling.innerText = fileName;
+    });
 
-    // Get the close button elements
-    var span = document.getElementById('closeButton');
+    // Add event listeners to buttons
+    document.querySelectorAll('.view-file').forEach(button => {
+        button.addEventListener('click', function() {
+            const filePath = this.getAttribute('data-file-path');
+            const fileName = filePath.split('/').pop();
+            const googleDriveLink = this.getAttribute('data-google-drive-link');
+            
+            const modal = document.getElementById('fileModal');
+            const iframe = document.getElementById('fileFrame');
+            const modalFileName = document.getElementById('modalFileName');
+            const downloadButton = document.getElementById('downloadFileButton');
+            const printButton = document.getElementById('printFileButton');
+            const openFileButton = document.getElementById('openFileButton');
+            
+            // Set the file path and name to the iframe source and modal file name
+            iframe.src = filePath;
+            modalFileName.innerText = fileName;
+            
+            // Set the file path to the download button href
+            downloadButton.href = filePath;
+            
+            // Set the file path to the print button data attribute
+            printButton.setAttribute('data-file-path', filePath);
+            
+            // Set the unique Google Drive link
+            openFileButton.href = googleDriveLink;
+            
+            // Display the modal
+            modal.style.display = 'block';
+        });
+    });
+
+    // Get the close button element
+    const span = document.getElementById('closeButton');
 
     // Function to close the modal
     function closeModal() {
-        var modal = document.getElementById('fileModal');
+        const modal = document.getElementById('fileModal');
         modal.style.display = 'none';
     }
 
     // Function to print the file
     function printFile(filePath) {
-        var printWindow = window.open(filePath, '_blank');
+        const printWindow = window.open(filePath, '_blank');
         printWindow.onload = function() {
             printWindow.print();
         };
     }
 
     // Add event listener for the print button
-    var printButton = document.getElementById('printFileButton');
+    const printButton = document.getElementById('printFileButton');
     printButton.addEventListener('click', function() {
-        var filePath = this.getAttribute('data-file-path');
+        const filePath = this.getAttribute('data-file-path');
         printFile(filePath);
     });
 
@@ -82,7 +87,7 @@ document.getElementById('search-bar').addEventListener('keyup', function() {
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        var modal = document.getElementById('fileModal');
+        const modal = document.getElementById('fileModal');
         if (event.target == modal) {
             closeModal();
         }
