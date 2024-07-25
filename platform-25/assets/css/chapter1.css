@@ -142,7 +142,11 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    float: left;
+    text-align: center;
     margin-top: 0;
+    font-size: 15px;
+    width: 80%;
     margin-bottom: 10px;
     padding-left: 10px;
   }
