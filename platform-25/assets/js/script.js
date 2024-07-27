@@ -249,7 +249,7 @@ function dropButtonFunction() {
     const copyLink = document.getElementById('copyLink');
     const shareBox = document.getElementById('shareBox');
   
-    const shareText = "حبيت أشارك معكم منصة-25، إلي تجمع كل شيء تحتاجه كطالب في الصف الثاني عشر ببساطة. 🌐📚!\n\n🌟 تعرّف على منصة-25! 🌟\n\n";
+    const shareText = "حبيت أشارك معكم منصة-25، إلي تجمع كل شيء تحتاجه كطالب في الصف الثاني عشر بأبسط ما يمكن. 🌐📚!\n\n🌟 تعرّف على منصة-25! 🌟\n\n";
     const currentURL = window.location.href;
   
     shareButton.addEventListener('click', () => {
