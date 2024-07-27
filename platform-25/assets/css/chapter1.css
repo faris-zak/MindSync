@@ -39,6 +39,10 @@
   background-color: #5172b9;
 }
 
+.all-subjects span {
+  margin-right: 8px;
+}
+
 .chapter1-content .header #search-bar:focus {
     outline: 1px solid #FCA311;
     color: #14213D;
