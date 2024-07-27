@@ -1,0 +1,21 @@
+{
+    "name": "MindSync Platform-25",
+    "short_name": "Platform-25",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white",
+    "icons": [
+      {
+        "src": "assets/images/mindsynclogo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/images/mindsynclogo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
