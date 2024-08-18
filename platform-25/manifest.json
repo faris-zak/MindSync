@@ -1,7 +1,7 @@
 {
     "name": "منصة-25",
     "short_name": "منصة-25",
-    "start_url": "/platform-25/",
+    "start_url": "platform-25/",
     "scope":".",
     "display": "standalone",
     "background_color": "white",
