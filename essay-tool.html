@@ -92,14 +92,14 @@
         <main>
             <section>
                 <h1>كتابة مقال</h1>
-                <input type="text" id="titleInput" placeholder="اكتب عنوان الملف" />
+                <input type="text" id="titleInput" placeholder="اكتب عنوان المقال" />
                 <textarea id="essayInput" rows="10" cols="50" oninput="updateCounts()"></textarea>
                 <input type="file" id="fileInput" accept=".txt" />
                 <p>عدد الكلمات: <span id="wordCount">0</span></p>
                 <p>عدد الحروف: <span id="letterCount">0</span></p>
-                <button onclick="saveEssay()">حفظ النص</button>
+                <button onclick="saveEssay()">حفظ المقال</button>
                 <button onclick="reset()">إعادة ضبط</button>
-                <button onclick="uploadFile()">إدراج ملف</button>
+                <button onclick="uploadFile()">إدراج مقال</button>
 
                 <hr>
 
@@ -111,7 +111,7 @@
 
                 <hr>
 
-                <h3>File History</h3>
+                <h3>سجل المقالات</h3>
                 <ul id="fileHistory" style="list-style: none;"></ul>
                 <button onclick="resetHistory()">إعادة ضبط السجل</button>
                 <br>
