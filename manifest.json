@@ -3,8 +3,8 @@
     "short_name":"MindSync",
     "start_url":"index.html",
     "display":"standalone",
-    "background_color":"white",
-    "theme_color":"#14213D",
+    "background_color": "white",
+    "theme_color": "white",
     "scope": ".",
     "description":"أول موقع عُماني يقدم مصادر وأدوات متنوعة التي تمكنك من النجاح في دراستك وتحقيق إمكاناتك الكاملة.",
     "icons":[

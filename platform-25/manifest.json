@@ -1,10 +1,12 @@
 {
     "name": "منصة-25",
     "short_name": "منصة-25",
-    "start_url": "/",
+    "start_url": "/platform-25/",
+    "scope":"/platform-25/",
     "display": "standalone",
     "background_color": "white",
     "theme_color": "white",
+    "description":"خصيصاً لكم #دفعة_2025",
     "icons": [
       {
         "src": "assets/images/mindsynclogo.png",
