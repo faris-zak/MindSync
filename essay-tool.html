@@ -92,14 +92,22 @@
         <main>
             <section>
                 <h1>كتابة مقال</h1>
-                <input type="text" id="titleInput" placeholder="اكتب عنوان المقال" />
-                <textarea id="essayInput" rows="10" cols="50" oninput="updateCounts()"></textarea>
-                <input type="file" id="fileInput" accept=".txt" />
-                <p>عدد الكلمات: <span id="wordCount">0</span></p>
-                <p>عدد الحروف: <span id="letterCount">0</span></p>
+                <label for="essayTitle">عنوان المقال:</label>
+                <input type="text" name="essayTitle" id="titleInput" placeholder="اكتب عنوان المقال" />
+                <br>
+                <br>
+                <label for="essayContent">محتوى المقال:</label>
+                <textarea id="essayInput" name="essayContent" rows="10" cols="50" oninput="updateCounts()"></textarea>
+                <br>
+                <label for="selectedFile">ملف المقال:</label>
+                <input type="file" name="selectedFile" id="fileInput" accept=".txt" /><br>
+                <button onclick="uploadFile()">إدراج مقال</button>
+                <br><br>
+                <small>عدد الكلمات: <span id="wordCount">0</span></small><br>
+                <small>عدد الحروف: <span id="letterCount">0</span></small>
+                <br><br>
                 <button onclick="saveEssay()">حفظ المقال</button>
                 <button onclick="reset()">إعادة ضبط</button>
-                <button onclick="uploadFile()">إدراج مقال</button>
 
                 <hr>
 
@@ -154,7 +162,7 @@
                 historyList.innerHTML = '';
                 fileHistory.forEach(file => {
                     const listItem = document.createElement('li');
-                    listItem.textContent = `File: ${file.title}, Size: ${file.size} bytes, Date: ${file.date}`;
+                    listItem.textContent = `المقال: ${file.title}, الحجم: ${file.size} بايت, التاريخ: ${file.date}`;
                     historyList.appendChild(listItem);
                 });
             }
