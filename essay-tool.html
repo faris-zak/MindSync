@@ -91,23 +91,31 @@
     <body>
         <main>
             <section>
+                <h1>كتابة مقال</h1>
                 <input type="text" id="titleInput" placeholder="اكتب عنوان الملف" />
                 <textarea id="essayInput" rows="10" cols="50" oninput="updateCounts()"></textarea>
                 <input type="file" id="fileInput" accept=".txt" />
                 <p>عدد الكلمات: <span id="wordCount">0</span></p>
                 <p>عدد الحروف: <span id="letterCount">0</span></p>
                 <button onclick="saveEssay()">حفظ النص</button>
-                <button onclick="clearEssay()">مسح الكل</button>
+                <button onclick="reset()">إعادة ضبط</button>
                 <button onclick="uploadFile()">إدراج ملف</button>
+
+                <hr>
 
                 <div>
                     <h3>معلومات الملف:</h3>
-                    <p>أسم الملف: <span id="fileName"></span></p>
-                    <p>حجم الملف: <span id="fileSize">0</span> بايت</p>
-                    <p>نوع الملف: <span id="fileType">غير معرف</span></p>
-
+                    <small>أسم الملف: <span id="fileName"></span></small><br>
+                    <small>حجم الملف: <span id="fileSize">0</span> بايت</small>
                 </div>
 
+                <hr>
+
+                <h3>File History</h3>
+                <ul id="fileHistory" style="list-style: none;"></ul>
+                <button onclick="resetHistory()">إعادة ضبط السجل</button>
+                <br>
+                <hr>
 
                 <!-- <div class="noteSection">
                     <div class="noteSectionDetails" title="Notes">
@@ -126,71 +134,115 @@
 
         <footer>
             <div class="copyright" title="All rights reserved &copy; MindSync 2024">
-                <p style="color: #4c71c2;">جميع الحقوق محفوظة &copy; مايندسينك 2024</p>
+                <p>جميع الحقوق محفوظة &copy; مايندسينك 2024</p>
             </div>
         </footer>
 
         <script>
-function updateCounts() {
-    const text = document.getElementById("essayInput").value;
-    const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
-    const letterCount = text.replace(/\s+/g, '').length;
-
-    document.getElementById("wordCount").textContent = wordCount;
-    document.getElementById("letterCount").textContent = letterCount;
-}
-
-function uploadFile() {
-    const fileInput = document.getElementById("fileInput");
-    const file = fileInput.files[0];
+            let fileHistory = [];
     
-    if (file && file.type === "text/plain") {
-        const reader = new FileReader();
-        
-        reader.onload = function(event) {
-            const text = event.target.result;
-            document.getElementById("essayInput").value = text;
-            updateCounts();
-        };
-        
-        reader.readAsText(file);
+            function loadHistory() {
+                const history = localStorage.getItem('fileHistory');
+                if (history) {
+                    fileHistory = JSON.parse(history);
+                    displayHistory();
+                }
+            }
+    
+            function displayHistory() {
+                const historyList = document.getElementById('fileHistory');
+                historyList.innerHTML = '';
+                fileHistory.forEach(file => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `File: ${file.title}, Size: ${file.size} bytes, Date: ${file.date}`;
+                    historyList.appendChild(listItem);
+                });
+            }
+    
+            function addToHistory(title, size) {
+                const now = new Date();
+                const date = now.toLocaleString();
+                const fileDetails = { title, size, date };
+                fileHistory.push(fileDetails);
+                localStorage.setItem('fileHistory', JSON.stringify(fileHistory));
+                displayHistory();
+            }
+    
+            function updateCounts() {
+                const text = document.getElementById("essayInput").value;
+                const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+                const letterCount = text.replace(/\s+/g, '').length;
+            
+                document.getElementById("wordCount").textContent = wordCount;
+                document.getElementById("letterCount").textContent = letterCount;
+            }
+    
+            function uploadFile() {
+                const fileInput = document.getElementById("fileInput");
+                const file = fileInput.files[0];
+    
+                if (file && file.type === "text/plain") {
+                    const reader = new FileReader();
+    
+                    reader.onload = function(event) {
+                        const text = event.target.result;
+                        document.getElementById("essayInput").value = text;
+                        updateCounts();
+                    };
+    
+                    reader.readAsText(file);
+                
+                    const fileNameWithoutExtension = file.name.replace(/\.[^/.]+$/, "");
+                    document.getElementById("titleInput").value = fileNameWithoutExtension;
+                    document.getElementById("fileName").textContent = file.name;
+                    document.getElementById("fileSize").textContent = file.size;
+    
+                    // Add to history
+                    addToHistory(fileNameWithoutExtension, file.size);
+                } else {
+                    alert("يرجى تحميل ملف .txt صالح.");
+                    document.getElementById("titleInput").value = "";
+                    document.getElementById("fileName").textContent = "";
+                    document.getElementById("fileSize").textContent = "0";
+                }
+            }
+    
+            function saveEssay() {
+                const text = document.getElementById("essayInput").value;
+                const titleInput = document.getElementById("titleInput").value.trim();
+                const now = new Date();
+                const formattedDate = now.toISOString().split('T')[0];
+                const defaultTitle = `Essay (${formattedDate})`;
+                const title = titleInput.length > 0 ? titleInput : defaultTitle;
+                const blob = new Blob([text], { type: "text/plain" });
+                const link = document.createElement("a");
+                link.href = URL.createObjectURL(blob);
+                link.download = `${title}.txt`;
+                link.click();
+                URL.revokeObjectURL(link.href);
+    
+                // Add to history
+                addToHistory(title, blob.size);
+            }
+    
+            function reset() {
+                document.getElementById("essayInput").value = "";
+                document.getElementById("titleInput").value = "";
+                document.getElementById("fileInput").value = "";
+                document.getElementById("fileName").textContent = "";
+                document.getElementById("fileSize").textContent = "0";
+                updateCounts();
+            }
 
-        const fileNameWithoutExtension = file.name.replace(/\.[^/.]+$/, "");
-        document.getElementById("titleInput").value = fileNameWithoutExtension;
-        document.getElementById("fileName").textContent = file.name;
-        document.getElementById("fileSize").textContent = file.size;
-        document.getElementById("fileType").textContent = file.type;
-    } else {
-        alert("Please upload a valid .txt file.");
-        document.getElementById("titleInput").value = "";
-        document.getElementById("fileName").textContent = "";
-        document.getElementById("fileSize").textContent = "0";
-        document.getElementById("fileType").textContent = "غير معرف";
-    }
-}
-
-
-function saveEssay() {
-    const text = document.getElementById("essayInput").value;
-    const titleInput = document.getElementById("titleInput").value.trim();
-    const now = new Date();
-    const formattedDate = now.toISOString().split('T')[0];
-    const defaultTitle = `Essay (${formattedDate})`;
-    const title = titleInput.length > 0 ? titleInput : defaultTitle;
-    const blob = new Blob([text], { type: "text/plain" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = `${title}.txt`;
-    link.click();
-    URL.revokeObjectURL(link.href);
-}
-
-function clearEssay(){
-    document.getElementById("essayInput").value = "";
-    document.getElementById("titleInput").value = "";
-    updateCounts();
-}
-
+            function resetHistory() {
+            fileHistory = [];
+            localStorage.removeItem('fileHistory');
+            displayHistory();
+            }
+    
+            // Load history on page load
+            window.onload = loadHistory;
+    
         </script>
     </body>
 </html>
