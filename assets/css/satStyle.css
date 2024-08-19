@@ -150,6 +150,7 @@ section div.sectionContainer ul#list li.sections div.picturesAndVideosSection di
 
 section div.sectionContainer ul#list 
 li.sections div.pomodoroSection,
+li.sections div.essayToolSection,
 li.sections div.aiChatSection,
 li.sections div.picturesAndVideosSection,
 li.sections div.textEditingSection{
@@ -162,6 +163,7 @@ li.sections div.textEditingSection{
 
 section div.sectionContainer ul#list
 li.sections div.pomodoroSection div.pomodoroSectionDetails,
+li.sections div.essayToolSection div.essayToolSectionDetails,
 li.sections div.aiChatSection div.aiChatSectionDetails,
 li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails,
 li.sections div.textEditingSection div.textEditingSectionDetails{
@@ -171,6 +173,7 @@ li.sections div.textEditingSection div.textEditingSectionDetails{
 
 section div.sectionContainer ul#list
 li.sections div.pomodoroSection div.pomodoroSectionDetails p.pomodoroSectionTitle,
+li.sections div.essayToolSection div.essayToolSectionDetails p.essayToolSectionTitle,
 li.sections div.aiChatSection div.aiChatSectionDetails p.aiChatSectionTitle,
 li.sections div.picturesAndVideosSection div.picturesAndVideosSectionDetails p.picturesAndVideosSectionTitle,
 li.sections div.textEditingSection div.textEditingSectionDetails p.textEditingSectionTitle{
@@ -239,7 +242,7 @@ li.sections div.textEditingSection div.textEditingSectionDetails ul.textEditingS
 }
 
 
-section div.sectionContainer ul#list li.sections div.pomodoroSectionDetails a button.excternalPomodoro{
+section div.sectionContainer ul#list li.sections div.pomodoroSectionDetails a button.excternalPomodoro, button.excternalEssayTool{
     align-items: center;
     background-color: #fff;
     box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
@@ -280,6 +283,26 @@ section div.sectionContainer ul#list li.sections div.pomodoroSectionDetails a bu
 }
 
 section div.sectionContainer ul#list li.sections div.pomodoroSectionDetails a button.excternalPomodoro:active span{
+    margin-right: 200px;
+    opacity: 0;
+}
+
+section div.sectionContainer ul#list li.sections div.essayToolSectionDetails a button.excternalEssayTool:hover{
+    box-shadow: #14213D 0 0 0 3px, transparent 0 0 0 0;
+    padding-left: 35px;
+}
+
+section div.sectionContainer ul#list li.sections div.essayToolSectionDetails a button.excternalEssayTool span{
+    position: absolute;
+    opacity: 0;
+}
+
+section div.sectionContainer ul#list li.sections div.essayToolSectionDetails a button.excternalEssayTool:hover span{
+    opacity: 1;
+    margin-right: 105px;
+}
+
+section div.sectionContainer ul#list li.sections div.essayToolSectionDetails a button.excternalEssayTool:active span{
     margin-right: 200px;
     opacity: 0;
 }

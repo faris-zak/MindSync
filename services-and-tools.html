@@ -88,8 +88,8 @@
                 </div>
 
                 <div class="sectionContainer">
-                    <input id="searchbar" onkeyup="search_section();" type="text" name="search" placeholder="إبحث - مثال: تحرير النصوص...">
-                    <button class="clearButton" id="clearButton" type="button" onclick="clearField();" title="Search Again">إبحث مره أخرى <span><i class="fi fi-rr-rotate-right"></i></span></button>
+                    <input id="searchbar" onkeyup="searchSection()" type="text" name="search" placeholder="إبحث - مثال: تحرير النصوص...">
+                    <!-- <button class="clearButton" id="clearButton" type="button" onclick="clearField();" title="Search Again">إبحث مره أخرى <span><i class="fi fi-rr-rotate-right"></i></span></button> -->
                     <ul id='list'>
                         <li class="sections">
                             <div class="pomodoroSection" id="pomodoroTechnique">
@@ -102,11 +102,11 @@
                         </li>
 
                         <li class="sections">
-                            <div class="pomodoroSection" id="pomodoroTechnique">
-                                <div class="pomodoroSectionDetails">
-                                    <p class="pomodoroSectionTitle" title="Pomodoro Technique">كتابة مقال <sup><small style="color: #FCA311; font-weight: 500;">تجريبي</small></sup></p>
-                                    <p class="pomodoroSectionBody">استخدم أداة كتابة مقال من <span style="font-weight: 600; color: #FCA311;">مايندسينك</span> لكتابة النصوص.</p>
-                                    <a href="essay-tool.html"><button class="excternalPomodoro" role="button" title="External Pomodoro Technique">كتابة مقال<span>&#8592;</span></button></a>
+                            <div class="essayToolSection" id="essayTool">
+                                <div class="essayToolSectionDetails">
+                                    <p class="essayToolSectionTitle" title="Essay Tool">كتابة مقال <sup><small style="color: #FCA311; font-weight: 500;">تجريبي</small></sup></p>
+                                    <p class="essayToolSectionBody">استخدم أداة كتابة مقال من <span style="font-weight: 600; color: #FCA311;">مايندسينك</span> لكتابة النصوص.</p>
+                                    <a href="essay-tool.html"><button class="excternalEssayTool" role="button" title="External Essay Tool">كتابة مقال<span>&#8592;</span></button></a>
                                 </div>
                             </div>
                         </li>
@@ -188,5 +188,6 @@
         </footer>
 
         <script src="assets/js/script.js"></script>
+        <script src="assets/js/satScript.js"></script>
     </body>
 </html>
