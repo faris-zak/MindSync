@@ -37,9 +37,9 @@
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="استخدم تقنية بومودورو من مايندسينك المدمجة لتحسين تركيزك وإدارة وقتك بشكل فعال خلال جلسات الدراسة.">
+        <meta name="description" content="أفضل تجربة من مايندسينك لكتابة المقالات والنصوص.">
         <meta name="author" content="Al-Faris Mujahid AlZakwani, الفارس بن مجاهد الزكواني">
-        <meta name="keywords" content="MindSync, mindsync, education, academic, summaries, مايندسينك, ملخصات, ملخصات مسايندسينك, تعليم, أكاديمي, تعليم أكاديمي, عمان, بومودورو، تقنية بومودورو، تنظيم الوقت، مذاكره">
+        <meta name="keywords" content="MindSync, mindsync, education, academic, summaries, مايندسينك, ملخصات, ملخصات مسايندسينك, تعليم, أكاديمي, تعليم أكاديمي, عمان, مقال، كتابة، كتابة مقال، مذاكره">
         <title>كتابة مقال | MindSync</title>
         <link rel="icon" href="assets/images/mindsync-icon.png">
         <link rel="manifest" href="manifest.json">
@@ -53,77 +53,141 @@
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
         <style>
-            html{
-                user-select: none;
-            }
-            body {
-            font-family: Arial, sans-serif;
-            direction: rtl;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        textarea {
-            width: 100%;
-            height: 300px;
-            padding: 10px;
-            margin-bottom: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        p {
-            font-size: 18px;
-        }
+
+
+.essayToolSection {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h3 {
+    color: #14213D;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px auto;
+}
+
+h3, label{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #FCA311;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #e38c00;
+}
+
+.return {
+    margin: 0;
+    margin-top: 20px;
+    background-color: #6c757d;
+}
+
+.return:hover {
+    background-color: #5a6268;
+}
+
+small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#fileHistory {
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+#fileHistory li {
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+ul{
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .essayToolSection {
+        padding: 15px;
+    }
+
+    input[type="text"], textarea {
+        font-size: 1em;
+    }
+}
+
 
         </style>
     </head>
     <body>
         <main>
             <section>
-                <h1>كتابة مقال</h1>
-                <label for="essayTitle">عنوان المقال:</label>
-                <input type="text" name="essayTitle" id="titleInput" placeholder="اكتب عنوان المقال" />
-                <br>
-                <br>
-                <label for="essayContent">محتوى المقال:</label>
-                <textarea id="essayInput" name="essayContent" rows="10" cols="50" oninput="updateCounts()"></textarea>
-                <br>
-                <label for="selectedFile">ملف المقال:</label>
-                <input type="file" name="selectedFile" id="fileInput" accept=".txt" /><br>
-                <button onclick="uploadFile()">إدراج مقال</button>
-                <br><br>
-                <small>عدد الكلمات: <span id="wordCount">0</span></small><br>
-                <small>عدد الحروف: <span id="letterCount">0</span></small>
-                <br><br>
-                <button onclick="saveEssay()">حفظ المقال</button>
-                <button onclick="reset()">إعادة ضبط</button>
+                <div class="essayToolSection" id="essayTool">
+                    <div class="pomodoroSectionDetails">
+                    
+                    <h1>كتابة مقال</h1>
+                    <p>جرب كتابة مقال وعطينا رأيك <a href="https://forms.gle/FA6cM3svD79GUu8C7" title="Impression and observation" style="text-decoration: underline;">هنا!</a></p>
+                    <hr>
+                    <label for="essayTitle">عنوان المقال:</label>
+                    <input type="text" name="essayTitle" id="titleInput" placeholder="اكتب عنوان المقال" />
+                    
+                    <label for="essayContent">محتوى المقال:</label>
+                    <textarea id="essayInput" name="essayContent" rows="10" cols="50" oninput="updateCounts()"></textarea>
+                    <hr>
+                    <label for="selectedFile">ملف المقال:</label>
+                    <p>إذا كان لديك ملف سابق يمكنك التعديل عليه، قم بإدراجه ادناه وانقر على "إدراج مقال".</p>
+                    <input type="file" name="selectedFile" id="fileInput" accept=".txt" /><br><br>
+                    <button onclick="uploadFile()">إدراج مقال</button>
+                    <hr>
+                    <div>
+                        <h3>معلومات المقال:</h3>
+                        <small>أسم المقال: <span id="fileName"></span></small>
+                        <small>حجم المقال: <span id="fileSize">0</span> بايت</small>
+                        <small>عدد الكلمات: <span id="wordCount">0</span></small>
+                        <small>عدد الحروف: <span id="letterCount">0</span></small>
+                    </div>
+                    <br>
+                    <button onclick="saveEssay()">حفظ المقال</button>
+                    <button onclick="reset()">إعادة ضبط</button>
 
-                <hr>
-
-                <div>
-                    <h3>معلومات الملف:</h3>
-                    <small>أسم الملف: <span id="fileName"></span></small><br>
-                    <small>حجم الملف: <span id="fileSize">0</span> بايت</small>
+                    <hr>
+                    <h3>سجل المقالات</h3>
+                    <ul id="fileHistory" style="list-style: none;"></ul>
+                    <button onclick="resetHistory()">إعادة ضبط السجل</button>
                 </div>
-
-                <hr>
-
-                <h3>سجل المقالات</h3>
-                <ul id="fileHistory" style="list-style: none;"></ul>
-                <button onclick="resetHistory()">إعادة ضبط السجل</button>
-                <br>
-                <hr>
+            </div>
 
                 <!-- <div class="noteSection">
                     <div class="noteSectionDetails" title="Notes">
@@ -180,10 +244,27 @@
                 const text = document.getElementById("essayInput").value;
                 const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
                 const letterCount = text.replace(/\s+/g, '').length;
-            
+
                 document.getElementById("wordCount").textContent = wordCount;
                 document.getElementById("letterCount").textContent = letterCount;
+
+                // Update file size approximation
+                const blob = new Blob([text], { type: "text/plain" });
+                document.getElementById("fileSize").textContent = blob.size;
+
+                // Update file name based on title input
+                const titleInput = document.getElementById("titleInput").value.trim();
+                const defaultFileName = "بدون عنوان";
+                document.getElementById("fileName").textContent = titleInput.length > 0 ? titleInput : defaultFileName;
             }
+
+            // Event listener to update the file name dynamically as the user types in the title input
+            document.getElementById("titleInput").addEventListener("input", function() {
+                const titleInput = document.getElementById("titleInput").value.trim();
+                const defaultFileName = "بدون عنوان";
+                document.getElementById("fileName").textContent = titleInput.length > 0 ? titleInput : defaultFileName;
+            });
+
     
             function uploadFile() {
                 const fileInput = document.getElementById("fileInput");
@@ -208,7 +289,7 @@
                     // Add to history
                     addToHistory(fileNameWithoutExtension, file.size);
                 } else {
-                    alert("يرجى تحميل ملف .txt صالح.");
+                    alert("يرجى إدراج ملف .txt صالح.");
                     document.getElementById("titleInput").value = "";
                     document.getElementById("fileName").textContent = "";
                     document.getElementById("fileSize").textContent = "0";
@@ -238,7 +319,7 @@
                 document.getElementById("titleInput").value = "";
                 document.getElementById("fileInput").value = "";
                 document.getElementById("fileName").textContent = "";
-                document.getElementById("fileSize").textContent = "0";
+                document.getElementById("fileSize").value = "0";
                 updateCounts();
             }
 
@@ -250,7 +331,6 @@
     
             // Load history on page load
             window.onload = loadHistory;
-    
         </script>
     </body>
 </html>
