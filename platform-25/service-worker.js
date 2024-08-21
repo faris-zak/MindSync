@@ -22,7 +22,7 @@ self.addEventListener('install', (event) => {
           '/assets/images/oman-2040-vision.png',
           '/assets/images/oman-academy.png',
           '/assets/images/oman-flag.jpg',
-          '/assets/images/sadim.webp',
+          '/assets/images/sadim.png',
           '/assets/images/searchicon.png',
           '/assets/js/academies.js',
           '/assets/js/chapter1.js',
