@@ -10,6 +10,7 @@ self.addEventListener('install', (event) => {
         '/pomodoro-technique.html',
         '/self-development.html',
         '/services-and-tools.html',
+        '/essay-tool.html',
         '/summaries.html',
         '/terms-of-use.html',
       

@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
           '/assets/css/home.css',
           '/assets/css/membership.css',
           '/assets/css/style.css',
-          '/assets/images/alwarsha.jpg',
+          '/assets/images/tafawqi.jpg',
           '/assets/images/eduexa.png',
           '/assets/images/esrar.png',
           '/assets/images/himam-academy.png',
