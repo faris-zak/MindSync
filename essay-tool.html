@@ -97,6 +97,12 @@ small {
     font-size: 0.9em;
 }
 
+#saveNotification{
+    color: rgb(29, 161, 29);
+    font-weight: bold;
+    font-size: 14px;
+}
+
 #fileHistory {
     margin-top: 20px;
     padding-left: 0;
@@ -154,10 +160,13 @@ ul{
                     <br>
                     <button onclick="saveEssay()">حفظ المقال</button>
                     <button onclick="reset()">إعادة ضبط</button>
+                    <p id="saveNotification"></p>
 
                     <hr>
                     <h3>سجل المقالات</h3>
-                    <ul id="fileHistory" style="list-style: none;"></ul>
+                    <ul id="fileHistory" style="list-style: none;">
+                        <li>سجل مقالاتك فارغ.</li>
+                    </ul>
                     <button onclick="resetHistory()">إعادة ضبط السجل</button>
                 </div>
             </div>
@@ -185,7 +194,7 @@ ul{
 
         <script>
             let fileHistory = [];
-    
+
             function loadHistory() {
                 const history = localStorage.getItem('fileHistory');
                 if (history) {
@@ -193,7 +202,7 @@ ul{
                     displayHistory();
                 }
             }
-    
+
             function displayHistory() {
                 const historyList = document.getElementById('fileHistory');
                 historyList.innerHTML = '';
@@ -202,8 +211,22 @@ ul{
                     listItem.textContent = `المقال: ${file.title}, الحجم: ${file.size} بايت, التاريخ: ${file.date}`;
                     historyList.appendChild(listItem);
                 });
+
+                historyList.innerHTML = '';
+
+                if (fileHistory.length === 0) {
+                    const emptyMessage = document.createElement('li');
+                    emptyMessage.textContent = "سجل مقالاتك فارغ.";
+                    historyList.appendChild(emptyMessage);
+                } else {
+                    fileHistory.forEach(file => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `المقال: ${file.title}, الحجم: ${file.size} بايت, التاريخ: ${file.date}`;
+                        historyList.appendChild(listItem);
+                });
+                }
             }
-    
+
             function addToHistory(title, size) {
                 const now = new Date();
                 const date = now.toLocaleString();
@@ -212,7 +235,7 @@ ul{
                 localStorage.setItem('fileHistory', JSON.stringify(fileHistory));
                 displayHistory();
             }
-    
+
             function updateCounts() {
                 const text = document.getElementById("essayInput").value;
                 const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
@@ -231,6 +254,33 @@ ul{
                 document.getElementById("fileName").textContent = titleInput.length > 0 ? titleInput : defaultFileName;
             }
 
+            // Auto-save functions
+            function autoSaveEssay() {
+                const essayTitle = document.getElementById('titleInput').value;
+                const essayContent = document.getElementById('essayInput').value;
+
+                localStorage.setItem('autoSavedTitle', essayTitle);
+                localStorage.setItem('autoSavedContent', essayContent);
+            }
+
+            function loadAutoSavedEssay() {
+                const savedTitle = localStorage.getItem('autoSavedTitle');
+                const savedContent = localStorage.getItem('autoSavedContent');
+
+                if (savedTitle) {
+                    document.getElementById('titleInput').value = savedTitle;
+                    document.getElementById('fileName').textContent = savedTitle; // Update file name display
+                }
+
+                if (savedContent) {
+                    document.getElementById('essayInput').value = savedContent;
+                    updateCounts(); // Update counts after loading
+                }
+            }
+
+            // Set up auto-save to trigger every 5 seconds
+            setInterval(autoSaveEssay, 5000);
+
             // Event listener to update the file name dynamically as the user types in the title input
             document.getElementById("titleInput").addEventListener("input", function() {
                 const titleInput = document.getElementById("titleInput").value.trim();
@@ -238,27 +288,26 @@ ul{
                 document.getElementById("fileName").textContent = titleInput.length > 0 ? titleInput : defaultFileName;
             });
 
-    
             function uploadFile() {
                 const fileInput = document.getElementById("fileInput");
                 const file = fileInput.files[0];
-    
+
                 if (file && file.type === "text/plain") {
                     const reader = new FileReader();
-    
+
                     reader.onload = function(event) {
                         const text = event.target.result;
                         document.getElementById("essayInput").value = text;
                         updateCounts();
                     };
-    
+
                     reader.readAsText(file);
                 
                     const fileNameWithoutExtension = file.name.replace(/\.[^/.]+$/, "");
                     document.getElementById("titleInput").value = fileNameWithoutExtension;
                     document.getElementById("fileName").textContent = file.name;
                     document.getElementById("fileSize").textContent = file.size;
-    
+
                     // Add to history
                     addToHistory(fileNameWithoutExtension, file.size);
                 } else {
@@ -268,7 +317,7 @@ ul{
                     document.getElementById("fileSize").textContent = "0";
                 }
             }
-    
+
             function saveEssay() {
                 const text = document.getElementById("essayInput").value;
                 const titleInput = document.getElementById("titleInput").value.trim();
@@ -282,11 +331,17 @@ ul{
                 link.download = `${title}.txt`;
                 link.click();
                 URL.revokeObjectURL(link.href);
-    
+
                 // Add to history
                 addToHistory(title, blob.size);
+
+                // Notification
+                document.getElementById("saveNotification").textContent = "تم حفظ المقال في جهازك بنجاح!";
+                setTimeout(() => {
+                    document.getElementById("saveNotification").textContent = "";
+                }, 2000);
             }
-    
+
             function reset() {
                 document.getElementById("essayInput").value = "";
                 document.getElementById("titleInput").value = "";
@@ -297,13 +352,16 @@ ul{
             }
 
             function resetHistory() {
-            fileHistory = [];
-            localStorage.removeItem('fileHistory');
-            displayHistory();
+                fileHistory = [];
+                localStorage.removeItem('fileHistory');
+                displayHistory();
             }
-    
-            // Load history on page load
-            window.onload = loadHistory;
+
+            // Load history and auto-saved content on page load
+            window.onload = function() {
+                loadHistory();
+                loadAutoSavedEssay();
+            };
         </script>
     </body>
 </html>
