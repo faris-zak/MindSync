@@ -143,7 +143,9 @@ ul{
                     <input type="text" name="essayTitle" id="titleInput" placeholder="اكتب عنوان المقال" />
                     
                     <label for="essayContent">محتوى المقال:</label>
-                    <textarea id="essayInput" name="essayContent" rows="10" cols="50" oninput="updateCounts()"></textarea>
+                    <textarea id="essayInput" name="essayContent" rows="10" cols="50" oninput="updateCounts()" spellcheck="true"></textarea>
+                    <h3>الأخطاء الإملائية:</h3>
+                    <ul id="errorList" style="list-style: none; color: red;"></ul>
                     <hr>
                     <label for="selectedFile">ملف المقال:</label>
                     <p>إذا كان لديك ملف سابق يمكنك التعديل عليه، قم بإدراجه ادناه وانقر على "إدراج مقال".</p>
@@ -192,6 +194,7 @@ ul{
             </div>
         </footer>
 
+        <script src="assets/js/languageTool.js"></script>
         <script>
             let fileHistory = [];
 
