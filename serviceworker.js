@@ -22,6 +22,9 @@ self.addEventListener('install', (event) => {
         '/assets/js/sdScript.js',
         '/assets/js/summScript.js',
         '/assets/js/touScript.js',
+        '/serviceworker.js',
+
+        '/manifest.json',
 
         '/assets/css/aboStyle.css',
         '/assets/css/aeStyle.css',
@@ -57,7 +60,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
       return response || fetch(event.request).catch(() => {
-        returnnewResponse('Network error occurred', {
+        return new Response('Network error occurred', {
           status: 408,
           statusText: 'Network error',
         });
