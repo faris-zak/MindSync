@@ -28,6 +28,8 @@ document.getElementById('clearFragment').addEventListener('click', function() {
     chapter1Button2.style.backgroundColor = '#f1f1f1';
     chapter1Button.style.backgroundColor = '#f1f1f1';
     chapter1Button2.style.backgroundColor = '#f1f1f1';
+    chapter2Button.style.backgroundColor = '#f1f1f1';
+    chapter2Button2.style.backgroundColor = '#f1f1f1';
     // studentGraduating25.style.display = 'none';
     // membership.style.display = 'none';
 });
