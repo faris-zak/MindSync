@@ -1,3 +1,16 @@
+                // Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, (error) => {
+      console.log('ServiceWorker registration failed: ', error);
+    });
+  });
+}
+
+
+
                 // Clear Fragment
 document.getElementById('clearFragment').addEventListener('click', function() {
     // Clear fragment identifier from URL
@@ -8,11 +21,13 @@ document.getElementById('clearFragment').addEventListener('click', function() {
     home.style.display = 'block';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
+    chapter2.style.display = 'none';
     academiesButton.style.backgroundColor = '#f1f1f1';
     academiesButton2.style.backgroundColor = '#f1f1f1';
     chapter1Button.style.backgroundColor = '#f1f1f1';
     chapter1Button2.style.backgroundColor = '#f1f1f1';
-    // chapter2.style.display = 'none';
+    chapter1Button.style.backgroundColor = '#f1f1f1';
+    chapter1Button2.style.backgroundColor = '#f1f1f1';
     // studentGraduating25.style.display = 'none';
     // membership.style.display = 'none';
 });
@@ -42,13 +57,13 @@ x.addListener(applyStyles);
 
 const academiesButton = document.getElementById('academiesButton');
 const chapter1Button = document.getElementById('chapter1Button');
-// const chapter2 = document.getElementById('chapter2Button');
+const chapter2Button = document.getElementById('chapter2Button');
 const studentGraduating25Button = document.getElementById('studentGraduating25Button');
 const membershipButton = document.getElementById('membershipButton');
 
 const academiesButton2 = document.getElementById('academiesButton2');
 const chapter1Button2 = document.getElementById('chapter1Button2');
-// const chapter2Button2 = document.getElementById('chapter2Button');
+const chapter2Button2 = document.getElementById('chapter2Button2');
 const studentGraduating25Button2 = document.getElementById('studentGraduating25Button2');
 const membershipButton2 = document.getElementById('membershipButton2');
 
@@ -59,7 +74,7 @@ const membershipButton2 = document.getElementById('membershipButton2');
 const home = document.getElementById('home');
 const academies = document.getElementById('academies');
 const chapter1 = document.getElementById('chapter-1');
-// const chapter2 = document.getElementById('chapter-2');
+const chapter2 = document.getElementById('chapter-2');
 const studentGraduating25 = document.getElementById('student-graduating25');
 const membership = document.getElementById('membership');
 
@@ -71,10 +86,12 @@ academiesButton.addEventListener('click', () => {
     academiesButton2.style.backgroundColor = '#ccc';
     chapter1Button.style.backgroundColor = '#f1f1f1';
     chapter1Button2.style.backgroundColor = '#f1f1f1';
+    chapter2Button.style.backgroundColor = '#f1f1f1';
+    chapter2Button2.style.backgroundColor = '#f1f1f1';
     home.style.display = 'none';
     academies.style.display = 'block';
     chapter1.style.display = 'none';
-    // chapter2.style.display = 'none';
+    chapter2.style.display = 'none';
     studentGraduating25.style.display = 'none';
     membership.style.display = 'none';
 
@@ -85,22 +102,30 @@ chapter1Button.addEventListener('click', () => {
     academiesButton2.style.backgroundColor = '#f1f1f1';
     chapter1Button.style.backgroundColor = '#ccc';
     chapter1Button2.style.backgroundColor = '#ccc';
+    chapter2Button.style.backgroundColor = '#f1f1f1';
+    chapter2Button2.style.backgroundColor = '#f1f1f1';
     home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'block';
-    // chapter2.style.display = 'none';
+    chapter2.style.display = 'none';
     studentGraduating25.style.display = 'none';
     membership.style.display = 'none';
 });
 
-/* chapter2Button.addEventListener('click', () => {
+chapter2Button.addEventListener('click', () => {
+    academiesButton.style.backgroundColor = '#f1f1f1';
+    academiesButton2.style.backgroundColor = '#f1f1f1';
+    chapter1Button.style.backgroundColor = '#f1f1f1';
+    chapter1Button2.style.backgroundColor = '#f1f1f1';
+    chapter2Button.style.backgroundColor = '#ccc';
+    chapter2Button2.style.backgroundColor = '#ccc';
     home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
     chapter2.style.display = 'block';
     studentGraduating25.style.display = 'none';
     membership.style.display = 'none';
-}); */
+});
 
 // studentGraduating25Button.addEventListener('click', () => {
 //     home.style.display = 'none';
@@ -127,10 +152,12 @@ academiesButton2.addEventListener('click', () => {
     academiesButton2.style.backgroundColor = '#ccc';
     chapter1Button.style.backgroundColor = '#f1f1f1';
     chapter1Button2.style.backgroundColor = '#f1f1f1';
+    chapter2Button.style.backgroundColor = '#f1f1f1';
+    chapter2Button2.style.backgroundColor = '#f1f1f1';
     home.style.display = 'none';
     academies.style.display = 'block';
     chapter1.style.display = 'none';
-    // chapter2.style.display = 'none';
+    chapter2.style.display = 'none';
     studentGraduating25.style.display = 'none';
     membership.style.display = 'none';
 });
@@ -140,21 +167,30 @@ chapter1Button2.addEventListener('click', () => {
     academiesButton2.style.backgroundColor = '#f1f1f1';
     chapter1Button.style.backgroundColor = '#ccc';
     chapter1Button2.style.backgroundColor = '#ccc';
+    chapter2Button.style.backgroundColor = '#f1f1f1';
+    chapter2Button2.style.backgroundColor = '#f1f1f1';
     home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'block';
+    chapter2.style.display = 'none';
     studentGraduating25.style.display = 'none';
     membership.style.display = 'none';
 });
 
-/* chapter2Button2.addEventListener('click', () => {
+chapter2Button2.addEventListener('click', () => {
+    academiesButton.style.backgroundColor = '#f1f1f1';
+    academiesButton2.style.backgroundColor = '#f1f1f1';
+    chapter1Button.style.backgroundColor = '#f1f1f1';
+    chapter1Button2.style.backgroundColor = '#f1f1f1';
+    chapter2Button.style.backgroundColor = '#ccc';
+    chapter2Button2.style.backgroundColor = '#ccc';
     home.style.display = 'none';
     academies.style.display = 'none';
     chapter1.style.display = 'none';
     chapter2.style.display = 'block';
     studentGraduating25.style.display = 'none';
     membership.style.display = 'none';
-}); */
+});
 
 // studentGraduating25Button2.addEventListener('click', () => {
 //     home.style.display = 'none';
@@ -186,6 +222,7 @@ function dropButtonFunction() {
 
     if(myDropdown.style.zIndex == 1 && myDropdown.style.opacity == 1){
         dropButtonIcon.style.transform = 'rotateZ(0deg)';
+        dropButtonIcon.style.marginLeft = '0';
         dropButton.style.backgroundColor = '#f1f1f1';
         myDropdown.style.zIndex = -1;
         myDropdown.style.opacity = 0;
@@ -193,6 +230,7 @@ function dropButtonFunction() {
         myDropdown.style.userSelect = 'none';
     } else{
         dropButtonIcon.style.transform = 'rotateZ(-90deg)';
+        dropButtonIcon.style.marginLeft = '3px';
         dropButton.style.backgroundColor = '#FCA311';
         myDropdown.style.zIndex = 1;
         myDropdown.style.opacity = 1;
@@ -219,6 +257,7 @@ function dropButtonFunction() {
   document.addEventListener('click', (event) => {
     if (!dropButton.contains(event.target) && !myDropdown.contains(event.target)) {
         dropButtonIcon.style.transform = 'rotateZ(0deg)';
+        dropButtonIcon.style.marginLeft = '0';
         dropButton.style.backgroundColor = '#f1f1f1';
         myDropdown.style.zIndex = -1;
         myDropdown.style.opacity = 0;
@@ -236,7 +275,7 @@ function dropButtonFunction() {
     const copyLink = document.getElementById('copyLink');
     const shareBox = document.getElementById('shareBox');
   
-    const shareText = "حبيت أشارك معكم منصة-25، إلي تجمع كل شيء تحتاجه كطالب في الصف الثاني عشر بأبسط ما يمكن. 🌐📚!\n\n";
+    const shareText = "حبيت أشارك معكم منصة-25، إلي تجمع كل شيء تحتاجه كطالب في الصف الثاني عشر بأبسط ما يمكن. 🌐📚!\n\n🌟 تعرّف على منصة-25! 🌟\n\n";
     const currentURL = window.location.href;
   
     shareButton.addEventListener('click', () => {

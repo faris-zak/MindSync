@@ -123,6 +123,7 @@ header nav hgroup p{
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    border-radius: 10px;
 }
 
 .sidebar a:hover{
@@ -501,12 +502,16 @@ footer div.founder a:hover, div.powered-by a:hover{
         border: none;
         cursor: pointer;
         text-align: right;
-        border-radius: 18px 0 0 18px;
+        border-radius: 10px 0 0 10px;
         padding: 10px 16px;
       }
 
       .dropbtn i{
         transition: 0.3s ease-in-out;
+      }
+
+      .dropbtn:hover i{
+        transform: translateX(2px) rotate(-10deg);
       }
       
     .dropbtn:hover{
@@ -547,7 +552,7 @@ footer div.founder a:hover, div.powered-by a:hover{
       min-height: 230;
       overflow: auto;
       user-select: none;
-      border-radius: 18px;
+      border-radius: 10px;
       box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
       border: none;
       border-top: none;

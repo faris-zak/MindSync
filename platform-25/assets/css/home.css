@@ -43,34 +43,50 @@
 
 #home .details {
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 #home .details h2 {
-    font-size: 2em;
+    font-size: 30px;
     margin-bottom: 10px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
-#home .details p {
+#home .details ul {
     font-size: 1.1em;
     color: #555;
+    list-style: none;
+    padding: 0;
+    line-height: 2;
 }
 
 #home .features {
     display: flex;
     justify-content: space-around;
+    border-top: 1px solid #FCA311;
+    margin: 0;
+    cursor: default;
 }
 
 #home .feature {
     flex: 1;
     padding: 10px;
     text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#home .feature:hover{
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #home .feature h3 {
     font-size: 1.5em;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -81,7 +97,7 @@
 
 #home .footer  {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
     padding-top: 10px;
     border-top: 1px solid #FCA311;
 }
@@ -89,13 +105,37 @@
 #home .footer h3 {
     font-size: 20px;
     color: #14213D;
-    font-weight: 500;
+    font-weight: bold;
 }
 
-#home .footer p{
-    font-size: 16px;
-    color: #777;
+#home .footer .ceo-image {
+    width: 60px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 40px;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 10px;
+    float: right;
+    transition: all 1s ease;
+    z-index: 1;
+    user-select: none;
+}
+
+#home .footer .ceo-image:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.5) translateX(-2px);
+    border-radius: 50%;
+}
+
+.ceo-quote {
+    font-size: 16px;
+    font-style: italic;
+    color: #444;
+    padding: 10px;
+    border-left: 4px solid #FCA311;
+    display: inline-block;
+    text-align: justify;
 }
 
 /* .cta {
@@ -202,8 +242,30 @@ font-weight: 500;
         font-size: 20px;
     }
 
+    #home .footer .ceo-image {
+        margin-right: 20px;
+    }
+    
+    .ceo-quote {
+        margin: 10px 20px;
+    }
+
     #home .cta button {
         font-size: 16px;
         padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #home .footer h3{
+        font-size: 18px;
+    }
+
+    #home .footer .ceo-image {
+        margin-right: 0px;
+    }
+    
+    .ceo-quote {
+        margin: 10px 10px;
     }
 }
